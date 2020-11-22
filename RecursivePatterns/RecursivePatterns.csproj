@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
-		<LangVersion>preview</LangVersion>
+		<LangVersion>9.0</LangVersion>
 		<TargetFramework>netcoreapp3.1</TargetFramework>
 		<UseWindowsForms>true</UseWindowsForms>
 	</PropertyGroup>
