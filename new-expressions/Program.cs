@@ -22,8 +22,8 @@ namespace NewExpressions
             {
                 ConsoleWriter.WriteConsoleColorNewLine(
                     new ColoredString(ConsoleColor.White, $"{person.Id} "), 
-                    new ColoredString(ConsoleColor.Yellow, $"{person.FullName}"));
-                
+                    new ColoredString(ConsoleColor.Yellow, $"{person.FullName}"),
+                    new ColoredString(ConsoleColor.Red, $"{(person is Manager ? " manager" : " employee")}"));
             }
 
             Console.ReadLine();

@@ -24,15 +24,7 @@ namespace NewExpressions.Classes
             {
                 var item = strings[index];
                 Console.ForegroundColor = item.Color;
-                if (index == strings.Length - 1)
-                {
-                    Console.Write($"{item.Text}\n");
-                }
-                else
-                {
-                    Console.Write($"{item.Text}");
-                }
-
+                Console.Write(index == strings.Length - 1 ? $"{item.Text}\n" : $"{item.Text}");
             }
 
             Console.ForegroundColor = originalColor;
