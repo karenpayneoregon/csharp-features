@@ -14,7 +14,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "new-expression", "new-expre
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forum question only", "Forum question only", "{FAE01675-7EEE-445D-81FC-DC6364D160AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Relational-Pattern-Matching", "Relational-Pattern-Matching\Relational-Pattern-Matching.csproj", "{0C96179A-72BF-44BA-85E5-EFE71AD87544}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Relational-Pattern-Matching", "Relational-Pattern-Matching\Relational-Pattern-Matching.csproj", "{0C96179A-72BF-44BA-85E5-EFE71AD87544}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async-Enumerables", "Async-Enumerables\Async-Enumerables.csproj", "{4343B29E-15FB-4460-AC71-C124984EADC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +36,10 @@ Global
 		{0C96179A-72BF-44BA-85E5-EFE71AD87544}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C96179A-72BF-44BA-85E5-EFE71AD87544}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C96179A-72BF-44BA-85E5-EFE71AD87544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4343B29E-15FB-4460-AC71-C124984EADC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4343B29E-15FB-4460-AC71-C124984EADC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4343B29E-15FB-4460-AC71-C124984EADC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4343B29E-15FB-4460-AC71-C124984EADC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
