@@ -1,6 +1,6 @@
 # About
 
-Various code samples for C#8 and C#9. Most examples will be done using Windows Forms rather than console projects as Windows Forms can be viewed as replacing console projects when the code presented makes no use of forms other than presentation of code samples.
+Various code samples for C#8 and C#9. Most examples will be done using Windows Forms in some case rather than console projects as Windows Forms can be viewed as replacing console projects when the code presented makes no use of forms other than presentation of code samples.
 
 >Code samples will be added over time.
 

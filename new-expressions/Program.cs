@@ -8,7 +8,9 @@ namespace NewExpressions
     {
         static void Main(string[] args)
         {
-
+            /*
+             * new expression or target typing
+             */
             List<Person> people = new();
 
             foreach (var person in Mocked.PeopleList())
