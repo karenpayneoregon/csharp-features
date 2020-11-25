@@ -6,41 +6,44 @@ using System.Linq;
 using System.Reflection.Emit;
 using ExtensionsLibrary;
 using Ranges_examples.Classes;
+using Spectre.Console;
+using Spectre.Console.Rendering;
 
 namespace Ranges_examples
 {
     class Program
     {
+        private static string _text;
+        private static string _title;
+
         /// <summary>
-        /// https://www.telerik.com/blogs/c-8-indices-and-range
-        ///
         /// Index Operator ^
         /// Range Operator ..
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
         {
+            _text = "Range example for C# 8\nPress any key to run.";
+            _title = "Code samples";
+            PanelBorders();
+            Console.ReadLine();
+
             Ranges();
+
             Console.ReadLine();
         }
 
         private static void Ranges()
         {
 
-            var originalForeColor = Console.ForegroundColor;
-
-            static void DisplayText(string text, ConsoleColor originalForeColor)
+            static void DisplayText(string text)
             {
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine(text);
-                Console.ReadLine();
-                Console.Clear();
-                Console.ForegroundColor = originalForeColor;
+                HorizontalRule(text);
             }
 
             var contacts = MockedData.ReadContacts();
             contacts = contacts.OrderBy(contact => contact.LastName).ToList();
-
+            DisplayText("Basic");
             /*
              * Conventional for-next
              */
@@ -49,7 +52,7 @@ namespace Ranges_examples
                 Console.WriteLine(contacts[index]);
             }
 
-            DisplayText("Ready for indexer version", originalForeColor) ;
+            DisplayText("Indexer version") ;
 
 
             /*
@@ -60,7 +63,7 @@ namespace Ranges_examples
                 Console.WriteLine(singleContact);
             }
 
-            DisplayText("Ready for indexer version - skip first contact hard coded", originalForeColor);
+            DisplayText("Indexer version - skip first contact hard coded");
 
             /*
              * Skip first contact hard coding start index
@@ -70,7 +73,7 @@ namespace Ranges_examples
                 Console.WriteLine(singleContact);
             }
 
-            DisplayText("Ready for indexer version - skip first contact dynamic", originalForeColor);
+            DisplayText("Indexer version - skip first contact dynamic");
 
             /*
              * Skip first contact dynamic start index
@@ -82,7 +85,7 @@ namespace Ranges_examples
             }
 
 
-            DisplayText("Ready for indexer version - skip IndexOf 'Helen Bennett' iterate all past her", originalForeColor);
+            DisplayText("Indexer version - skip IndexOf 'Helen Bennett' iterate all past her");
 
             /*
              * Find Helen Bennett, jump ahead one, iterate to end
@@ -99,7 +102,7 @@ namespace Ranges_examples
                 Console.WriteLine(singleContact);
             }
 
-            DisplayText("Ready for indexer version - skip IndexOf 'Helen Bennett' iterate all past her 3", originalForeColor);
+            DisplayText("Indexer version - skip IndexOf 'Helen Bennett' iterate all past her 3");
 
             var endIndexer = new Index(findIndex +4);
 
@@ -112,7 +115,7 @@ namespace Ranges_examples
                 Console.WriteLine(singleContact);
             }
 
-            DisplayText("From Wang to end", originalForeColor);
+            DisplayText("From Wang to end");
 
             findIndex = contacts.FindIndex(con => con.LastName == "Wang");
             var lastFiveContacts = contacts.ToArray()[findIndex..^0];
@@ -122,7 +125,10 @@ namespace Ranges_examples
                 Console.WriteLine(singleContact);
             }
 
-            DisplayText("Done", originalForeColor);
+            _text = "Press any key to leave";
+            _title = "Done";
+            PanelBorders();
+
         }
 
         /// <summary>
@@ -186,6 +192,37 @@ namespace Ranges_examples
             intItem = 1;
             Console.WriteLine($"{nameof(intItem)} : [{intItem}] is positive? {intItem.IsPositive()}");
         }
+        #endregion
+        #region screen formatting
+
+        private static void HorizontalRule(string title)
+        {
+            AnsiConsole.WriteLine();
+            AnsiConsole.Render(new Rule($"[white bold]{title}[/]").RuleStyle("grey").LeftAligned());
+            AnsiConsole.WriteLine();
+        }
+        private static void PanelBorders()
+        {
+            static IRenderable CreatePanel(string name, BoxBorder border)
+            {
+                return new Panel(_text)
+                    .Header($" [yellow]{name}[/] ", Justify.Center)
+                    .Border(border)
+                    .BorderStyle(Style.Parse("grey"));
+            }
+
+            var items = new[]
+            {
+                CreatePanel(_title, BoxBorder.Square)
+
+            };
+
+            AnsiConsole.Render(
+                new Padder(
+                    new Columns(items).PadRight(2),
+                    new Padding(2, 0, 0, 0)));
+        }
+
         #endregion
     }
 }
