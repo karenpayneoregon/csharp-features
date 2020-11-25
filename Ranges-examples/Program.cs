@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Reflection.Emit;
 using ExtensionsLibrary;
+using Ranges_examples.Classes;
 
 namespace Ranges_examples
 {
@@ -17,14 +19,122 @@ namespace Ranges_examples
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-
-            //Basic1();
-
-            //Basic2();
-            //SignCheck();
-
+            Ranges();
             Console.ReadLine();
         }
+
+        private static void Ranges()
+        {
+            var originalForeColor = Console.ForegroundColor;
+            var contacts = MockedData.ReadContacts();
+            contacts = contacts.OrderBy(contact => contact.LastName).ToList();
+
+            /*
+             * Conventional for-next
+             */
+            for (int index = 0; index < contacts.Count; index++)
+            {
+                Console.WriteLine(contacts[index]);
+            }
+
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Ready for indexer version");
+            Console.ReadLine();
+            Console.Clear();
+            Console.ForegroundColor = originalForeColor;
+
+
+            /*
+             * for-each doing entire list
+             */
+            foreach (var singleContact in contacts.ToArray()[..])
+            {
+                Console.WriteLine(singleContact);
+            }
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Ready for indexer version - skip first contact hard coded");
+            Console.ReadLine();
+            Console.Clear();
+            Console.ForegroundColor = originalForeColor;
+
+            /*
+             * Skip first contact hard coding start index
+             */
+            foreach (var singleContact in contacts.ToArray()[1..])
+            {
+                Console.WriteLine(singleContact);
+            }
+
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Ready for indexer version - skip first contact dynamic");
+            Console.ReadLine();
+            Console.Clear();
+            Console.ForegroundColor = originalForeColor;
+            /*
+             * Skip first contact dynamic start index
+             */
+            var startIndexer = new Index(1);
+            foreach (var singleContact in contacts.ToArray()[startIndexer..])
+            {
+                Console.WriteLine(singleContact);
+            }
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Ready for indexer version - skip IndexOf 'Helen Bennett' iterate all past her");
+            Console.ReadLine();
+            Console.Clear();
+            Console.ForegroundColor = originalForeColor;
+            /*
+             * Find Helen Bennett, jump ahead one, iterate to end
+             */
+            var findIndex = contacts.FindIndex( con => con.LastName == "Bennett");
+            if (findIndex > -1)
+            {
+                startIndexer = new Index(findIndex +1);
+            }
+
+            foreach (var singleContact in contacts.ToArray()[startIndexer..])
+            {
+                Console.WriteLine(singleContact);
+            }
+
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Ready for indexer version - skip IndexOf 'Helen Bennett' iterate all past her 3");
+            Console.ReadLine();
+            Console.Clear();
+            Console.ForegroundColor = originalForeColor;
+
+            var endIndexer = new Index(findIndex +4);
+
+            /*
+             * Find Helen Bennett, jump ahead one, iterate three contacts
+             */
+            foreach (var singleContact in contacts.ToArray()[startIndexer..endIndexer])
+            {
+                Console.WriteLine(singleContact);
+            }
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("From Wang to end");
+            Console.ReadLine();
+            Console.Clear();
+            Console.ForegroundColor = originalForeColor;
+
+            findIndex = contacts.FindIndex(con => con.LastName == "Wang");
+
+            foreach (var singleContact in contacts.ToArray()[findIndex..^0])
+            {
+                Console.WriteLine(singleContact);
+            }
+
+            Console.WriteLine();
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Done");
+            Console.ForegroundColor = originalForeColor;
+        }
+
         /// <summary>
         /// Indexer sub string from start of string
         /// </summary>
