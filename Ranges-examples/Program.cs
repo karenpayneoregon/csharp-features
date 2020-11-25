@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -27,11 +28,12 @@ namespace Ranges_examples
             _title = "Code samples";
             PanelBorders();
             Console.ReadLine();
-
             Ranges();
 
             Console.ReadLine();
         }
+
+
 
         private static void Ranges()
         {
