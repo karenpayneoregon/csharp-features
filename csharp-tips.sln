@@ -24,6 +24,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Class projects", "Class pro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionsLibrary", "ExtensionsLibrary\ExtensionsLibrary.csproj", "{4CED555A-96F1-4DC8-9632-4A1CD4985510}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityCoreExtensions", "EntityCoreExtensions\EntityCoreExtensions.csproj", "{72424C64-676D-436D-BA52-C9FA34172E71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,12 +56,17 @@ Global
 		{4CED555A-96F1-4DC8-9632-4A1CD4985510}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CED555A-96F1-4DC8-9632-4A1CD4985510}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CED555A-96F1-4DC8-9632-4A1CD4985510}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72424C64-676D-436D-BA52-C9FA34172E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72424C64-676D-436D-BA52-C9FA34172E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72424C64-676D-436D-BA52-C9FA34172E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72424C64-676D-436D-BA52-C9FA34172E71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4CED555A-96F1-4DC8-9632-4A1CD4985510} = {3C246579-C520-4BC8-8D46-869CE1D9B99E}
+		{72424C64-676D-436D-BA52-C9FA34172E71} = {3C246579-C520-4BC8-8D46-869CE1D9B99E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C03FED31-47C8-4D1D-BCF5-C77EFDBA54AE}
