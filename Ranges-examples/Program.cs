@@ -33,11 +33,11 @@ namespace Ranges_examples
             Console.ReadLine();
         }
 
-
-
         private static void Ranges()
         {
-
+            /*
+             * Static local function which is only callable in Ranges().
+             */
             static void DisplayText(string text)
             {
                 HorizontalRule(text);
