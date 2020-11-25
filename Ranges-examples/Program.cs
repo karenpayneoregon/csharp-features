@@ -18,7 +18,7 @@ namespace Ranges_examples
         static void Main(string[] args)
         {
 
-            Basic1();
+            //Basic1();
 
             //Basic2();
             //SignCheck();
