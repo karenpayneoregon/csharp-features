@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace NewExpressions.Classes
@@ -19,6 +20,7 @@ namespace NewExpressions.Classes
 
         public static void WriteConsoleColorNewLine(params ColoredString[] strings)
         {
+              
             var originalColor = Console.ForegroundColor;
             for (var index = 0; index < strings.Length; index++)
             {

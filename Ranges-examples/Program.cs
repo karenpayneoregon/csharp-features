@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -25,7 +26,18 @@ namespace Ranges_examples
 
         private static void Ranges()
         {
+
             var originalForeColor = Console.ForegroundColor;
+
+            static void DisplayText(string text, ConsoleColor originalForeColor)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine(text);
+                Console.ReadLine();
+                Console.Clear();
+                Console.ForegroundColor = originalForeColor;
+            }
+
             var contacts = MockedData.ReadContacts();
             contacts = contacts.OrderBy(contact => contact.LastName).ToList();
 
@@ -37,11 +49,7 @@ namespace Ranges_examples
                 Console.WriteLine(contacts[index]);
             }
 
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Ready for indexer version");
-            Console.ReadLine();
-            Console.Clear();
-            Console.ForegroundColor = originalForeColor;
+            DisplayText("Ready for indexer version", originalForeColor) ;
 
 
             /*
@@ -52,11 +60,7 @@ namespace Ranges_examples
                 Console.WriteLine(singleContact);
             }
 
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Ready for indexer version - skip first contact hard coded");
-            Console.ReadLine();
-            Console.Clear();
-            Console.ForegroundColor = originalForeColor;
+            DisplayText("Ready for indexer version - skip first contact hard coded", originalForeColor);
 
             /*
              * Skip first contact hard coding start index
@@ -66,11 +70,8 @@ namespace Ranges_examples
                 Console.WriteLine(singleContact);
             }
 
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Ready for indexer version - skip first contact dynamic");
-            Console.ReadLine();
-            Console.Clear();
-            Console.ForegroundColor = originalForeColor;
+            DisplayText("Ready for indexer version - skip first contact dynamic", originalForeColor);
+
             /*
              * Skip first contact dynamic start index
              */
@@ -80,11 +81,9 @@ namespace Ranges_examples
                 Console.WriteLine(singleContact);
             }
 
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Ready for indexer version - skip IndexOf 'Helen Bennett' iterate all past her");
-            Console.ReadLine();
-            Console.Clear();
-            Console.ForegroundColor = originalForeColor;
+
+            DisplayText("Ready for indexer version - skip IndexOf 'Helen Bennett' iterate all past her", originalForeColor);
+
             /*
              * Find Helen Bennett, jump ahead one, iterate to end
              */
@@ -94,45 +93,36 @@ namespace Ranges_examples
                 startIndexer = new Index(findIndex +1);
             }
 
-            foreach (var singleContact in contacts.ToArray()[startIndexer..])
+            var afterHelen1 = contacts.ToArray()[startIndexer..];
+            foreach (var singleContact in afterHelen1)
             {
                 Console.WriteLine(singleContact);
             }
 
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Ready for indexer version - skip IndexOf 'Helen Bennett' iterate all past her 3");
-            Console.ReadLine();
-            Console.Clear();
-            Console.ForegroundColor = originalForeColor;
+            DisplayText("Ready for indexer version - skip IndexOf 'Helen Bennett' iterate all past her 3", originalForeColor);
 
             var endIndexer = new Index(findIndex +4);
 
+            var afterHelen2 = contacts.ToArray()[startIndexer..endIndexer];
             /*
              * Find Helen Bennett, jump ahead one, iterate three contacts
              */
-            foreach (var singleContact in contacts.ToArray()[startIndexer..endIndexer])
+            foreach (var singleContact in afterHelen2)
             {
                 Console.WriteLine(singleContact);
             }
 
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("From Wang to end");
-            Console.ReadLine();
-            Console.Clear();
-            Console.ForegroundColor = originalForeColor;
+            DisplayText("From Wang to end", originalForeColor);
 
             findIndex = contacts.FindIndex(con => con.LastName == "Wang");
+            var lastFiveContacts = contacts.ToArray()[findIndex..^0];
 
-            foreach (var singleContact in contacts.ToArray()[findIndex..^0])
+            foreach (var singleContact in lastFiveContacts)
             {
                 Console.WriteLine(singleContact);
             }
 
-            Console.WriteLine();
-
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Done");
-            Console.ForegroundColor = originalForeColor;
+            DisplayText("Done", originalForeColor);
         }
 
         /// <summary>

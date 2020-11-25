@@ -8,14 +8,6 @@ namespace Ranges_examples.Classes
     public class JSonHelper
     {
         /// <summary>
-        /// Setup to format json
-        /// </summary>
-        public readonly DataContractJsonSerializerSettings Settings = new DataContractJsonSerializerSettings
-        {
-            UseSimpleDictionaryFormat = true,
-        };
-
-        /// <summary>
         /// Convert json string to T
         /// </summary>
         /// <typeparam name="T">Object type</typeparam>
