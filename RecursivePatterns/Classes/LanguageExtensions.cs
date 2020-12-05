@@ -14,10 +14,6 @@ namespace RecursivePatterns.Classes
             Manager { YearsAsManager: 3 } manager => manager.Employees,
             _ => null
         };
-
-
-        
-
     }
 
     public static class Example
