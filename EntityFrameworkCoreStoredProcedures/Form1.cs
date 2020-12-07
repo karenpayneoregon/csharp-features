@@ -16,8 +16,8 @@ namespace StoredProcs1
             listBox1.Items.Clear();
 
             await using var context = new NorthwindContext();
-            var test = new StoredProcedures(context);
-            var results = await test.CustomersByCountryIdentifier(12);
+            var storedProcedures = new StoredProcedures(context);
+            var results = await storedProcedures.CustomersByCountryIdentifier(12);
 
             foreach (var result in results)
             {
