@@ -2,6 +2,8 @@
 
 Simple example for executing a stored procedure where the stored procedure has joins. There are two methods, one to return all properties and a wrapper to return one property into a list.
 
+Reverse engineering done using EF Core Power tools.
+
 - [Class](https://github.com/karenpayneoregon/csharp-features/blob/master/EntityFrameworkCoreStoredProcedures/Context/StoredProcedures.cs) for stored procedures.
 - [Container class](http://example.com) for stored procedure data.
 ### Stored procedure

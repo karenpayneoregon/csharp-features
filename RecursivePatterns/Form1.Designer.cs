@@ -34,6 +34,7 @@ namespace RecursivePatterns
             this.Example3Button = new System.Windows.Forms.Button();
             this.Example4Button = new System.Windows.Forms.Button();
             this.ResultsTextBox = new System.Windows.Forms.TextBox();
+            this.ValidBirthYearButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Example1Button
@@ -86,11 +87,22 @@ namespace RecursivePatterns
             this.ResultsTextBox.Size = new System.Drawing.Size(343, 187);
             this.ResultsTextBox.TabIndex = 4;
             // 
+            // ValidBirthYearButton
+            // 
+            this.ValidBirthYearButton.Location = new System.Drawing.Point(12, 234);
+            this.ValidBirthYearButton.Name = "ValidBirthYearButton";
+            this.ValidBirthYearButton.Size = new System.Drawing.Size(176, 23);
+            this.ValidBirthYearButton.TabIndex = 5;
+            this.ValidBirthYearButton.Text = "Valid birth year";
+            this.ValidBirthYearButton.UseVisualStyleBackColor = true;
+            this.ValidBirthYearButton.Click += new System.EventHandler(this.ValidBirthYearButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(481, 222);
+            this.ClientSize = new System.Drawing.Size(481, 319);
+            this.Controls.Add(this.ValidBirthYearButton);
             this.Controls.Add(this.ResultsTextBox);
             this.Controls.Add(this.Example4Button);
             this.Controls.Add(this.Example3Button);
@@ -112,6 +124,7 @@ namespace RecursivePatterns
         private System.Windows.Forms.Button Example3Button;
         private System.Windows.Forms.Button Example4Button;
         private System.Windows.Forms.TextBox ResultsTextBox;
+        private System.Windows.Forms.Button ValidBirthYearButton;
     }
 }
 

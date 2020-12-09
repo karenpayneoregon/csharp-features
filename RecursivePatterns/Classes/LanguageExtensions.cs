@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace RecursivePatterns.Classes
 {
@@ -24,6 +25,13 @@ namespace RecursivePatterns.Classes
             2 => Operations.DoSomething2(folder),
             _ => Operations.DefaultSwitch()
         };
+    }
+    public class Validates
+    {
+        public static bool ValidateBirthYear(string birthYear) =>
+            birthYear.Length == 4 && birthYear.All(char.IsDigit)
+                                  && int.TryParse(birthYear, out var year)
+                                  && year is >= 1920 and <= 2002;
     }
 
     public class Operations

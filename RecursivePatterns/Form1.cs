@@ -146,5 +146,23 @@ namespace RecursivePatterns
 
             ResultsTextBox.Text = _stringBuilder.ToString();
         }
+
+        private void ValidBirthYearButton_Click(object sender, EventArgs e)
+        {
+            List<string> yearList = new List<string>() {"1900", "1956", "2000", DateAndTime.Now.Year.ToString()};
+            foreach (var currentYear in yearList)
+            {
+                if (Validates.ValidateBirthYear(currentYear))
+                {
+                    Debug.WriteLine($"{currentYear} is valid");
+                }
+                else
+                {
+                    Debug.WriteLine($"{currentYear} is not valid");
+                }
+            }
+
+
+        }
     }
 }
