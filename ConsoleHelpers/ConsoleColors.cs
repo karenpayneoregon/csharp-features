@@ -57,6 +57,7 @@ namespace ConsoleHelpers
         }
 
         public static void EmptyLine() => WriteLine("");
+        
         public static void WriteIndented(int message)
         {
             WriteLine($"\t{message}");
