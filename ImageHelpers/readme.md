@@ -21,6 +21,8 @@ private void OnFormShown(object? sender, EventArgs e)
 }
 ```
 
+### Methods
+
 |Scope|Method/property   |Definition   |
 | :---         |  :---  | :--- |
 |public|FromIconToBitmap :small_orange_diamond:   |Convert from icon to bitmap   |
