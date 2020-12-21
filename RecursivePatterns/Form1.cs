@@ -38,9 +38,9 @@ namespace RecursivePatterns
             _stringBuilder.AppendLine("Managers");
             _stringBuilder.AppendLine("");
 
-            foreach (var person in people)
+            foreach (Person person1 in people)
             {
-                if (person is Manager)
+                if (person1 is Manager person)
                 {
                     _stringBuilder.AppendLine(person.FullName);
                 }
@@ -132,13 +132,12 @@ namespace RecursivePatterns
                 {
                     
                     var employees = manager.GetEmployeesWhereManagerHasYearsAsManager();
-                    if (employees != null)
+                    
+                    if (employees == null) continue;
+                    
+                    foreach (var employee in employees)
                     {
-
-                        foreach (var employee in employees)
-                        {
-                            _stringBuilder.AppendLine($"{employee.Id,3} {employee.FullName}");
-                        }
+                        _stringBuilder.AppendLine($"{employee.Id,3} {employee.FullName}");
                     }
 
                 }
@@ -149,17 +148,13 @@ namespace RecursivePatterns
 
         private void ValidBirthYearButton_Click(object sender, EventArgs e)
         {
-            List<string> yearList = new List<string>() {"1900", "1956", "2000", DateAndTime.Now.Year.ToString()};
+            List<string> yearList = new() {"1900", "1956", "2000", DateAndTime.Now.Year.ToString()};
+            
             foreach (var currentYear in yearList)
             {
-                if (Validates.ValidateBirthYear(currentYear))
-                {
-                    Debug.WriteLine($"{currentYear} is valid");
-                }
-                else
-                {
-                    Debug.WriteLine($"{currentYear} is not valid");
-                }
+                Debug.WriteLine(Validates.ValidateBirthYear(currentYear) ? 
+                    $"{currentYear} is valid" : 
+                    $"{currentYear} is not valid");
             }
 
 

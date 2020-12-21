@@ -6,7 +6,7 @@ namespace NewExpressions
 {
     class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             /*
              * new expression or target typing

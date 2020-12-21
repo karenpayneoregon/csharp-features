@@ -13,17 +13,17 @@ namespace RecursivePatterns.Classes
         {
             var employees = new List<Employee>()
             {
-                new Employee() {Id = 1, FirstName = "Joe", LastName = "Jones", HireDate = new DateTime(2018,12,1), ReportsTo = 5},
-                new Employee() {Id = 2, FirstName = "Mary", LastName = "Smith", HireDate = new DateTime(2018,9,1), ReportsTo = 5},
-                new Employee() {Id = 3, FirstName = "Nancy", LastName = "Davolio", HireDate = new DateTime(2017,4,12), ReportsTo = 6},
-                new Employee() {Id = 4, FirstName = "Andrew", LastName = "Fuller", HireDate = new DateTime(2019,7,2), ReportsTo = 6},
-                new Employee() {Id = 7, FirstName = "Steven", LastName = "Buchanan", HireDate = new DateTime(2015,5,16), ReportsTo = 5},
-                new Employee() {Id = 9, FirstName = "Karen", LastName = "Stone", HireDate = new DateTime(2020,5,16), ReportsTo = 8}
+                new() {Id = 1, FirstName = "Joe", LastName = "Jones", HireDate = new DateTime(2018,12,1), ReportsTo = 5},
+                new() {Id = 2, FirstName = "Mary", LastName = "Smith", HireDate = new DateTime(2018,9,1), ReportsTo = 5},
+                new() {Id = 3, FirstName = "Nancy", LastName = "Ravioli", HireDate = new DateTime(2017,4,12), ReportsTo = 6},
+                new() {Id = 4, FirstName = "Andrew", LastName = "Fuller", HireDate = new DateTime(2019,7,2), ReportsTo = 6},
+                new() {Id = 7, FirstName = "Steven", LastName = "Buchanan", HireDate = new DateTime(2015,5,16), ReportsTo = 5},
+                new() {Id = 9, FirstName = "Karen", LastName = "Stone", HireDate = new DateTime(2020,5,16), ReportsTo = 8}
             };
 
             var people = new List<Person>()
             {
-                new Manager() {Id = 5, FirstName = "Anne", LastName = "Dodsworth", HireDate = new DateTime(2015,7,2), YearsAsManager = 3,Employees = employees.Take(2).ToList()},
+                new Manager() {Id = 5, FirstName = "Anne", LastName = "Wordsworth", HireDate = new DateTime(2015,7,2), YearsAsManager = 3,Employees = employees.Take(2).ToList()},
                 new Manager() {Id = 6, FirstName = "Bob", LastName = "Gallagher", HireDate = new DateTime(2014,7,2), YearsAsManager = 4,Employees = employees.Skip(2).Take(2).ToList()},
                 new Manager() {Id = 8, FirstName = "Michael", LastName = "Suyama", HireDate = new DateTime(2014,7,2), YearsAsManager = 1,Employees = employees.Skip(employees.Count -1).Take(1).ToList()}
             };
