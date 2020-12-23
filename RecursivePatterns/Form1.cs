@@ -8,8 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ExceptionHandling;
 using Microsoft.VisualBasic;
 using RecursivePatterns.Classes;
+using static RecursivePatterns.Classes.Operations;
 
 namespace RecursivePatterns
 {
@@ -158,6 +160,18 @@ namespace RecursivePatterns
             }
 
 
+        }
+        /// <summary>
+        /// conventional switch vs expression switch
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void WriteExceptionMockButton_Click(object sender, EventArgs e)
+        {
+            var dummyException = new Exception("No real exception");
+
+            WriteConventional(dummyException, ExceptionLogType.Post);
+            WriteByExpression(dummyException, ExceptionLogType.Post);
         }
     }
 }

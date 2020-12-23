@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using ExceptionHandling;
 
 namespace RecursivePatterns.Classes
 {
@@ -36,6 +39,46 @@ namespace RecursivePatterns.Classes
 
     public class Operations
     {
+        public static void WriteConventional(Exception exception, ExceptionLogType exceptionLogType = ExceptionLogType.General)
+        {
+            var fileName = "";
+
+            switch (exceptionLogType)
+            {
+                case ExceptionLogType.Post:
+                    fileName = "PostUnhandledException.txt";
+                    break;
+                case ExceptionLogType.General:
+                    fileName = "GeneralUnhandledException.txt";
+                    break;
+                case ExceptionLogType.Data:
+                    fileName = "DataUnhandledException.txt";
+                    break;
+                case ExceptionLogType.Unknown:
+                    fileName = "UnknownUnhandledException.txt";
+                    break;
+                default: throw new NotImplementedException();
+            }
+
+
+            Debug.WriteLine($"Conventional: {fileName}");
+
+        }
+        public static void WriteByExpression(Exception exception, ExceptionLogType exceptionLogType = ExceptionLogType.General)
+        {
+            var fileName = exceptionLogType switch
+            {
+                ExceptionLogType.General => "GeneralUnhandledException.txt",
+                ExceptionLogType.Data => "DataUnhandledException.txt",
+                ExceptionLogType.Unknown => "UnknownUnhandledException.txt",
+                ExceptionLogType.Post => "PostUnhandledException.txt",
+                _ => throw new NotImplementedException()
+            };
+
+            Debug.WriteLine($"C# 8: {fileName}");
+
+        }
+        
         public static bool DoSomething1(string folder)
         {
             if (Directory.Exists(folder))

@@ -35,6 +35,7 @@ namespace RecursivePatterns
             this.Example4Button = new System.Windows.Forms.Button();
             this.ResultsTextBox = new System.Windows.Forms.TextBox();
             this.ValidBirthYearButton = new System.Windows.Forms.Button();
+            this.WriteExceptionMockButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Example1Button
@@ -97,11 +98,22 @@ namespace RecursivePatterns
             this.ValidBirthYearButton.UseVisualStyleBackColor = true;
             this.ValidBirthYearButton.Click += new System.EventHandler(this.ValidBirthYearButton_Click);
             // 
+            // WriteExceptionMockButton
+            // 
+            this.WriteExceptionMockButton.Location = new System.Drawing.Point(12, 263);
+            this.WriteExceptionMockButton.Name = "WriteExceptionMockButton";
+            this.WriteExceptionMockButton.Size = new System.Drawing.Size(176, 23);
+            this.WriteExceptionMockButton.TabIndex = 6;
+            this.WriteExceptionMockButton.Text = "Write exception mock";
+            this.WriteExceptionMockButton.UseVisualStyleBackColor = true;
+            this.WriteExceptionMockButton.Click += new System.EventHandler(this.WriteExceptionMockButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 319);
+            this.Controls.Add(this.WriteExceptionMockButton);
             this.Controls.Add(this.ValidBirthYearButton);
             this.Controls.Add(this.ResultsTextBox);
             this.Controls.Add(this.Example4Button);
@@ -125,6 +137,7 @@ namespace RecursivePatterns
         private System.Windows.Forms.Button Example4Button;
         private System.Windows.Forms.TextBox ResultsTextBox;
         private System.Windows.Forms.Button ValidBirthYearButton;
+        private System.Windows.Forms.Button WriteExceptionMockButton;
     }
 }
 
