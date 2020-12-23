@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Transactions;
 using EntityCoreExtensions.Classes;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace EntityCoreExtensions
@@ -143,7 +145,8 @@ namespace EntityCoreExtensions
         }
 
         /// <summary>
-        /// Generic reset for entities modified, added and deleted
+        /// Generic reset for entities modified, added and deleted. Not meant to work
+        /// correctly with navigation properties
         /// </summary>
         /// <param name="context"></param>
         public static void Reset(this DbContext context)
@@ -153,20 +156,16 @@ namespace EntityCoreExtensions
 
             foreach (var entry in entries)
             {
-                switch (entry.State)
+               
+                entry.State = entry.State switch
                 {
-                    case EntityState.Modified:
-                        entry.State = EntityState.Unchanged;
-                        break;
-                    case EntityState.Added:
-                        entry.State = EntityState.Detached;
-                        break;
-                    case EntityState.Deleted:
-                        entry.Reload();
-                        break;
-                }
+                    EntityState.Modified => EntityState.Unchanged,
+                    EntityState.Added => EntityState.Detached,
+                    EntityState.Deleted => EntityState.Unchanged,
+                    EntityState.Detached => EntityState.Detached,
+                    _ => throw new InvalidEntityStateException()
+                };
             }
         }
     }
-
 }

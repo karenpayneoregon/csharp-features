@@ -21,7 +21,7 @@ namespace WithExpressionsApp
             
             WriteSectionBold("Founded", false);
 
-            WriteIndented(person.ToString());
+            WriteIndented(person?.ToString());
             
             EmptyLine();
             

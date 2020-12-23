@@ -37,6 +37,10 @@ namespace Async_Enumerables.Classes
                     token.ThrowIfCancellationRequested();
                 }
 
+                if (item > 100)
+                {
+                    throw new Exception("Well now");
+                }
                 OnIterateEvent?.Invoke(item);
             }
         }

@@ -65,7 +65,7 @@ namespace ExceptionHandling
             }
             catch
             {
-                // ignored - we are in no position to handle this other than protect the service from crashing.
+                // ignored - we are in no position to handle this other than protect the app from crashing.
             }
         }
 
@@ -93,7 +93,12 @@ namespace ExceptionHandling
         /// </summary>
         /// <param name="stackTrace">Stack trace string.</param>
         /// <returns>Stack trace lines</returns>
-        private static List<string> GetStackTraceLines(string stackTrace) => stackTrace.Split(new[] { Environment.NewLine }, StringSplitOptions.None).ToList();
+        private static List<string> GetStackTraceLines(string stackTrace) => 
+            stackTrace.Split(new[]
+            {
+                Environment.NewLine
+            }, StringSplitOptions.None).ToList();
+        
         /// <summary>
         ///  Gets a list of stack frame lines, as strings, only including those for which line number is known.
         /// </summary>

@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ExceptionHandling;
 
 namespace Async_Enumerables
 {
@@ -49,9 +50,10 @@ namespace Async_Enumerables
             {
                 await Helpers.RunBasicExample(_cancellationTokenSource.Token);
             }
-            catch (OperationCanceledException oce)
+            catch (Exception exception)
             {
-                MessageBox.Show(@"Operation cancelled");
+                MessageBox.Show(exception is OperationCanceledException ? @"Operation cancelled" : $"Operation failed\n{exception.Message}");
+                Exceptions.Write(exception);
             }
             
         }
