@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
+// ReSharper disable once CheckNamespace - do not change!!!
 namespace Switches.Models
 {
     public partial class Person

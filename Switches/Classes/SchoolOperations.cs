@@ -13,9 +13,6 @@ namespace Switches.Classes
     public class SchoolOperations
     {
         public delegate void OnIteratePersonGrades(PersonGrades personData);
-        /// <summary>
-        /// Callback for subscribers to know about a problem
-        /// </summary>
         public static event OnIteratePersonGrades OnIteratePersonGradesEvent;
         
         public static void StudentsForCourse(int courseIdentifier)
@@ -58,8 +55,6 @@ namespace Switches.Classes
                 }
 
             }
-
-
         }
     }
 }
