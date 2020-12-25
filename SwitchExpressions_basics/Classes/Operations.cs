@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
 
 namespace SwitchExpressions_basics.Classes
 {
@@ -10,13 +10,13 @@ namespace SwitchExpressions_basics.Classes
     {
         public static void Case1()
         {
-            Console.WriteLine("Case 1");
+            WriteLine("Case 1");
             
         }
 
         public static void Case2()
         {
-            Console.WriteLine("Case 2");
+            WriteLine("Case 2");
         }
 
         public static void ExpressionBodiedMember()
