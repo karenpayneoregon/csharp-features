@@ -36,7 +36,7 @@ namespace Switches.Classes
                     
                     var letterGrade = studentGrade.Grade.Value switch
                     {
-                        var x when (x >= 1.00m && x <= 2.00m) => "F",
+                        >= 1.00m and <= 2.00m => "F",
                         2.50m => "C",
                         3.00m => "B",
                         3.50m => "A",
@@ -55,6 +55,7 @@ namespace Switches.Classes
                 }
 
             }
+
         }
     }
 }
