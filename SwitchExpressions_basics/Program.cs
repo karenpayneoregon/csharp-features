@@ -8,6 +8,8 @@ namespace SwitchExpressions_basics
     {
         static void Main(string[] args)
         {
+            
+            EnvironmentData.CostCenter = "700";
 
             WriteHeader("Switch examples");
 
@@ -16,7 +18,6 @@ namespace SwitchExpressions_basics
             EmptyLine();
 
             WriteSectionBold("Conventional2");
-            EnvironmentData.CostCenter = "700";
             Console.WriteLine(Conventional2());
             EmptyLine();
 
@@ -31,6 +32,12 @@ namespace SwitchExpressions_basics
 
             WriteSectionBold("ExpressionBodiedMember 3");
             ExpressionBodiedMember3();
+            Console.WriteLine(EnvironmentData.UserAddress);
+            EmptyLine();
+
+            EnvironmentData.CostCenter = "043";
+            WriteSectionBold("ExpressionBodiedMember using Operations class method");
+            Operations.ExpressionBodiedMember();
             Console.WriteLine(EnvironmentData.UserAddress);
             EmptyLine();
 
@@ -117,6 +124,7 @@ namespace SwitchExpressions_basics
             return userAddress;
             
         }
+        
         public static string ExpressionBodiedMember2()
         {
             string userAddress = EnvironmentData.CostCenter switch
@@ -140,7 +148,33 @@ namespace SwitchExpressions_basics
 
             return userAddress;
         }
+        /// <summary>
+        /// Demonstrates checking for multiple conditions with same result
+        /// </summary>
+        /// <returns></returns>
+        public static void ExpressionBodiedMember2Secondary()
+        {
+            EnvironmentData.UserAddress = EnvironmentData.CostCenter switch
+            {
+                var value when value.InCondition("043","044") => 
+                    "875 Union Street NE * SALEM, OR  97311\r\n(503) 947-1669 or Fax (503) 947-1668\r\n",
+                "040" => "P O BOX 14135 * SALEM, OR  97309-5068\r\n(877) 345 - 3484 or Fax(503) 947 - 1335\r\n",
+                "042" => "875 Union Street NE * SALEM, OR  97311\r\n(503) 947-1669 or Fax (503) 947-1668\r\n",
+                "045" => "PO BOX 14518 * Salem, Oregon  97309\r\n(800) 436-6191 or Fax (877) 353-7700\r\n",
+                "200" => "PO Box 14135 * Salem, Oregon  97309 5068\r\n(503) 292-2057 or (877) 345-3484 (in Oregon)\r\n" +
+                         "(877) 345-3484 (outside Oregon) or Fax to (866) 345-1878",
+                "300" => "PO Box 14135 * Salem, Oregon  97309 5068\r\n(877) 345-3484 or Fax to (866) 345-1878",
+                "700" => "PO Box 14135 * Salem, Oregon  97309 5068\r\n(541) 388-6207 or (877) 345-3484 (in Oregon)\r\n" +
+                         "(877) 345-3484 (outside Oregon) or Fax to (866) 345-1878",
+                "990" => "PO Box 14135 * Salem, Oregon  97309 5068\r\n(503) 292-2057 or (877) 345-3484 (in Oregon)\r\n" +
+                         "(877) 345-3484 (outside Oregon) or Fax to (866) 345-1878",
+                _ => "875 Union Street NE\r\nSalem, OR  97311\r\n(800) 237-3710, Fax to (866) 345-1878"
+            };
+
+        }
+
         public static void ExpressionBodiedMember3() {
+            
             EnvironmentData.UserAddress = EnvironmentData.CostCenter switch
             {
                 "040" => "P O BOX 14135 * SALEM, OR  97309-5068\r\n(877) 345 - 3484 or Fax(503) 947 - 1335\r\n",
