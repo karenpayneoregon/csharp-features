@@ -7,6 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecursivePatterns", "Recurs
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EB33D18E-66F6-486B-B066-136F4D070248}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		readme.md = readme.md
 	EndProjectSection
 EndProject
@@ -50,7 +51,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Switch expression", "Switch
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchExpressions_efcore", "Switches_efcore\SwitchExpressions_efcore.csproj", "{1FF8ADD2-3DFB-4202-A47A-CB85797BB15A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchExpressions_basics", "SwitchExpressions_basics\SwitchExpressions_basics.csproj", "{F8A71B59-AA5C-46B7-A650-B7D506634BCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchExpressions_basics", "SwitchExpressions_basics\SwitchExpressions_basics.csproj", "{F8A71B59-AA5C-46B7-A650-B7D506634BCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

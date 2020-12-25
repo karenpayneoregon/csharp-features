@@ -39,7 +39,7 @@ namespace Switches
         private void StudentGradesButton_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
-            SchoolOperations.StudentsForCourse(2021);
+            SchoolOperations.GradesForPeople(2021);
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
     }
