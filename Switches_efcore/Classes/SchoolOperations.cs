@@ -34,6 +34,9 @@ namespace Switches.Classes
                 {
                     if (studentGrade.Grade == null) continue;
                     
+                    /*
+                     * C# 9
+                     */
                     var letterGrade = studentGrade.Grade.Value switch
                     {
                         >= 1.00m and <= 2.00m => "F",

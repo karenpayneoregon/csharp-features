@@ -41,6 +41,9 @@ namespace SwitchExpressions_basics
             Console.WriteLine(EnvironmentData.UserAddress);
             EmptyLine();
 
+            WriteSectionBold("Case When int");
+            Operations.CaseWhen(5);
+            EmptyLine();
 
             Console.ReadLine();
         }

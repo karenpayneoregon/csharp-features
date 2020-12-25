@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,27 @@ namespace SwitchExpressions_basics.Classes
         public static void Case2()
         {
             WriteLine("Case 2");
+        }
+        /// <summary>
+        /// Case when with object pattern matching
+        /// </summary>
+        /// <param name="sender"></param>
+        public static void CaseWhen(int sender)
+        {
+            switch (sender)
+            {
+                case { } value when (value >= 7):
+                    WriteLine($"I am 7 or above: {value}");
+                    break;
+
+                case { } value when (value >= 4 && value <= 6):
+                    WriteLine($"I am between 4 and 6: {value}");
+                    break;
+
+                case { } value when (value <= 3):
+                    WriteLine($"I am 3 or less: {value}");
+                    break;
+            }
         }
 
         public static void ExpressionBodiedMember()
