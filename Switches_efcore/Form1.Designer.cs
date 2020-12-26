@@ -1,5 +1,5 @@
 ﻿
-namespace Switches
+namespace SwitchExpressions_efcore
 {
     partial class Form1
     {
