@@ -23,7 +23,8 @@ namespace Switches
 
         private void SchoolOperationsOnOnIteratePersonGradesEvent(PersonGrades pData)
         {
-            if (pData.Grade == null) return;
+            if (pData.Grade is null) return;
+            
             var item = new ListViewItem(new[]
             {
                 pData.PersonID.ToString(), 
