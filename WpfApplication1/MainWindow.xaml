@@ -2,7 +2,6 @@
     x:Class="WpfApplicationListViewImage.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:wpfApplication1="clr-namespace:WpfApplication1"
     Title="ListView images"
     Width="273"
     Height="136"

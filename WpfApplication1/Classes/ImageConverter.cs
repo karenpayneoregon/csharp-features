@@ -5,7 +5,7 @@ using System.IO;
 using System.Windows.Data;
 using System.Windows.Media.Imaging;
 
-namespace WpfApplication1.Classes
+namespace WpfApplicationListViewImage.Classes
 {
     public class ImageConverter : IValueConverter
     {

@@ -3,7 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WpfApplication1"
-    xmlns:classes="clr-namespace:WpfApplication1.Classes"
+    xmlns:classes="clr-namespace:WpfApplicationListViewImage.Classes"
     StartupUri="MainWindow.xaml">
 
     <Application.Resources>
