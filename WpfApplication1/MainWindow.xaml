@@ -25,9 +25,7 @@
         </DataTemplate>
     </Window.Resources>
 
-    <DockPanel
-        Width="Auto"
-        Height="Auto">
+    <DockPanel Width="Auto" Height="Auto">
 
         <ListView
             Height="100"
