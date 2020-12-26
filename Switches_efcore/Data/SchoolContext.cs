@@ -10,18 +10,20 @@ namespace Switches.Data
 {
     public partial class SchoolContext : DbContext
     {
-        public SchoolContext()
-        {
-        }
+        public SchoolContext() { }
 
-        public SchoolContext(DbContextOptions<SchoolContext> options)
-            : base(options)
+        public SchoolContext(DbContextOptions<SchoolContext> options) : base(options)
         {
         }
 
         public virtual DbSet<Person> Person { get; set; }
         public virtual DbSet<StudentGrade> StudentGrade { get; set; }
-
+        
+        /// <summary>
+        /// For proper connection string see
+        /// https://github.com/karenpayneoregon/configuration-helpers
+        /// </summary>
+        /// <param name="optionsBuilder"></param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

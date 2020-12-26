@@ -118,6 +118,9 @@ namespace SwitchExpressions_basics.Classes
         private static void SalesManagerMethod() => WriteLine("Sales Manager method");
         private static void MarketingAssistantMethod() => WriteLine("Marketing assistant method");
 
+        /// <summary>
+        /// Working with Func
+        /// </summary>
         public static Func<ContactType, string> ContactTypeFunc = contactType =>
         {
             return contactType switch
