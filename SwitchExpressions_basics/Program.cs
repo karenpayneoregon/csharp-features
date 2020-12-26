@@ -1,6 +1,7 @@
 ﻿using System;
 using static ConsoleHelpers.ConsoleColors;
 using SwitchExpressions_basics.Classes;
+using static ConsoleHelpers.ConsoleKeysHelper;
 
 namespace SwitchExpressions_basics
 {
@@ -44,10 +45,14 @@ namespace SwitchExpressions_basics
             EmptyLine();
 
             WriteSectionBold("Delegate no params");
-            DelegatesOne();
+            DelegatesContactType();
             EmptyLine();
 
-            Console.ReadLine();
+            WriteSectionBold("Contact type Func<ContactType, string>");
+            DelegateContactTypeFunc();
+            EmptyLine();
+
+            WaitReadLine();
         }
 
         /// <summary>
@@ -200,7 +205,7 @@ namespace SwitchExpressions_basics
 
         }
 
-        public static void DelegatesOne()
+        public static void DelegatesContactType()
         {
 
             foreach (ContactType contactType in Enum.GetValues<ContactType>())
@@ -209,6 +214,12 @@ namespace SwitchExpressions_basics
                 contactTypeAction.Invoke();
             }
 
+            
+        }
+
+        public static void DelegateContactTypeFunc()
+        {
+            Console.WriteLine(Operations.ContactTypeFunc(ContactType.AccountingManager));
         }
         
     }

@@ -114,5 +114,16 @@ namespace SwitchExpressions_basics.Classes
         private static void VicePresidentMethod() => WriteLine("VP method");
         private static void SalesManagerMethod() => WriteLine("Sales Manager method");
         private static void MarketingAssistantMethod() => WriteLine("Marketing assistant method");
+
+        public static Func<ContactType, string> ContactTypeFunc = contactType =>
+        {
+            return contactType switch
+            {
+                ContactType.AccountingManager => "AM",
+                ContactType.AssistantSalesAgent => "ASG",
+                ContactType.AssistantSalesRepresentative => "ADR",
+                _ => "Unknown"
+            };
+        };
     }
 }
