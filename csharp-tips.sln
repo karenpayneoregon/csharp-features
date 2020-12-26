@@ -53,7 +53,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchExpressions_efcore", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchExpressions_basics", "SwitchExpressions_basics\SwitchExpressions_basics.csproj", "{F8A71B59-AA5C-46B7-A650-B7D506634BCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication1", "WpfApplication1\WpfApplication1.csproj", "{D6E4AD76-88EB-45A5-ADB4-128FD64B74D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplicationListViewImage", "WpfApplication1\WpfApplicationListViewImage.csproj", "{D6E4AD76-88EB-45A5-ADB4-128FD64B74D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
