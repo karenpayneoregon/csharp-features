@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace SwitchExpressions_basics.Classes
 {
     public class Operations
     {
+        
         public static void Case1()
         {
             WriteLine("Case 1");
@@ -61,6 +63,50 @@ namespace SwitchExpressions_basics.Classes
             };
 
         }
+        /// <summary>
+        /// https://github.com/dotnet/csharplang/discussions/2728
+        /// </summary>
+        /// <param name="contactType"></param>
+        /// <returns></returns>
+        public static Action ContactTypeAction(ContactType contactType) => contactType switch
+        {
+            ContactType.AccountingManager => AccountingManagerMethod,
+            ContactType.AssistantSalesAgent => AssistantSalesAgentMethod, 
+            ContactType.AssistantSalesRepresentative => AssistantSalesRepresentativeMethod,
+            ContactType.MarketingAssistant => MarketingAssistantMethod,  
+            ContactType.MarketingManager => MarketingManagerMethod,
+            ContactType.OrderAdministrator => OrderAdmin, 
+            ContactType.OwnerMarketingAssistant => OwnerMarketingAssistantMethod,
+            ContactType.Owner => OwnerMethod, 
+            ContactType.SalesAgent => SalesAgentMethod,
+            ContactType.SalesAssociate => SalesAssociateMethod,
+            ContactType.SalesManager => SalesManagerMethod, 
+            ContactType.SalesRepresentative  => SalesRepresentativeMethod,
+            ContactType.VicePresidentSales => VicePresidentMethod,
+            _ => ContactTypeDefaultMethod
+        };
 
+        private static void AccountingManagerMethod() => WriteLine("Accounting manager method");
+        private static void AssistantSalesRepresentativeMethod() => WriteLine("Assistant Sales Representative method");
+        private static void AssistantSalesAgentMethod() => WriteLine("Assistant sales agent method");
+        private static void ContactTypeDefaultMethod() => WriteLine($"Unknown contact type");
+        private static void SalesAgentMethod() => WriteLine("Sales Agent method");
+        private static void SalesRepresentativeMethod() => WriteLine("Sales Representative method");
+        private static void MarketingManagerMethod() => WriteLine("Marketing Manager method");
+        private static void OwnerMethod()
+        {
+
+            var fileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Owner.txt");
+            File.WriteAllText(fileName, "An owner");
+            
+            WriteLine("Owner method");
+            
+        }
+        private static void OrderAdmin() => WriteLine("Order Administrator method");
+        private static void OwnerMarketingAssistantMethod() => WriteLine("Owner Marketing Assistant method");
+        private static void SalesAssociateMethod() => WriteLine("Sales Associate method");
+        private static void VicePresidentMethod() => WriteLine("VP method");
+        private static void SalesManagerMethod() => WriteLine("Sales Manager method");
+        private static void MarketingAssistantMethod() => WriteLine("Marketing assistant method");
     }
 }

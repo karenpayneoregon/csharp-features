@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Switches.Data;
 using Switches.Models;
 
+// ReSharper disable once CheckNamespace - DO NOT change
 namespace Switches.Classes
 {
 #nullable enable
