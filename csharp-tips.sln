@@ -55,6 +55,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchExpressions_basics", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplicationListViewImage", "WpfApplication1\WpfApplicationListViewImage.csproj", "{D6E4AD76-88EB-45A5-ADB4-128FD64B74D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeconstructPerson", "ConsoleAppTemp\DeconstructPerson.csproj", "{265D17DC-B34F-4EFB-B7B7-ED9FB4D181B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -137,6 +139,10 @@ Global
 		{D6E4AD76-88EB-45A5-ADB4-128FD64B74D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6E4AD76-88EB-45A5-ADB4-128FD64B74D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6E4AD76-88EB-45A5-ADB4-128FD64B74D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{265D17DC-B34F-4EFB-B7B7-ED9FB4D181B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{265D17DC-B34F-4EFB-B7B7-ED9FB4D181B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{265D17DC-B34F-4EFB-B7B7-ED9FB4D181B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{265D17DC-B34F-4EFB-B7B7-ED9FB4D181B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -152,6 +158,7 @@ Global
 		{4DCF3D00-88EB-45A6-8FD0-6E7854211D81} = {183DC8DF-6F21-4999-86D0-9A1913310F55}
 		{1FF8ADD2-3DFB-4202-A47A-CB85797BB15A} = {71D633FC-91E8-4C0B-9F1E-E03E127BDA25}
 		{F8A71B59-AA5C-46B7-A650-B7D506634BCA} = {71D633FC-91E8-4C0B-9F1E-E03E127BDA25}
+		{265D17DC-B34F-4EFB-B7B7-ED9FB4D181B2} = {FAE01675-7EEE-445D-81FC-DC6364D160AD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C03FED31-47C8-4D1D-BCF5-C77EFDBA54AE}
