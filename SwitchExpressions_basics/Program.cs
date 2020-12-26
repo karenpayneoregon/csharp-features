@@ -71,7 +71,7 @@ namespace SwitchExpressions_basics
                     Operations.Case2();
                     break;
                 default:
-                    throw new ArgumentOutOfRangeException();
+                    throw new ArgumentOutOfRangeException("Dude, unknown int for case");
             }
             
         }
@@ -86,7 +86,7 @@ namespace SwitchExpressions_basics
                 {
                     1 => (Action)Operations.Case1,
                     2 => Operations.Case2,
-                    _ => throw new ArgumentOutOfRangeException()
+                    _ => throw new ArgumentOutOfRangeException("Dude, unknown int for case")
                 })
             ();
 
@@ -205,6 +205,9 @@ namespace SwitchExpressions_basics
 
         }
 
+        /// <summary>
+        /// Code sample for Action
+        /// </summary>
         public static void DelegatesContactType()
         {
 
@@ -216,7 +219,9 @@ namespace SwitchExpressions_basics
 
             
         }
-
+        /// <summary>
+        /// Code sample for using Func
+        /// </summary>
         public static void DelegateContactTypeFunc()
         {
             Console.WriteLine(Operations.ContactTypeFunc(ContactType.AccountingManager));

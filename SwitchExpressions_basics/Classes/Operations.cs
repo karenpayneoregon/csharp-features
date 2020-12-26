@@ -99,6 +99,9 @@ namespace SwitchExpressions_basics.Classes
         private static void SalesAgentMethod() => WriteLine("Sales Agent method");
         private static void SalesRepresentativeMethod() => WriteLine("Sales Representative method");
         private static void MarketingManagerMethod() => WriteLine("Marketing Manager method");
+        /// <summary>
+        /// Let's do some more work than the others
+        /// </summary>
         private static void OwnerMethod()
         {
 
