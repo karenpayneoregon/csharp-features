@@ -1,16 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
+using static ConsoleHelpers.ConsoleColors;
 
 namespace SwitchExpressions_basics.Classes
 {
     public class Operations
     {
-        
+
+        [ModuleInitializer]
+        public static void InitOne() => WriteHeader("Switch examples");
+
         public static void Case1()
         {
             WriteLine("Case 1");

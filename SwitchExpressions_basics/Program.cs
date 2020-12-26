@@ -8,42 +8,40 @@ namespace SwitchExpressions_basics
     {
         static void Main(string[] args)
         {
-            
-            //EnvironmentData.CostCenter = "700";
 
-            //WriteHeader("Switch examples");
+            EnvironmentData.CostCenter = "700";
 
-            //WriteSectionBold("Conventional Switch");
-            //Conventional1(2);
-            //EmptyLine();
+            WriteSectionBold("Conventional Switch");
+            Conventional1(2);
+            EmptyLine();
 
-            //WriteSectionBold("Conventional2");
-            //Console.WriteLine(Conventional2());
-            //EmptyLine();
+            WriteSectionBold("Conventional2");
+            Console.WriteLine(Conventional2());
+            EmptyLine();
 
-            //WriteSectionBold("ExpressionBodiedMember 1");
-            //ExpressionBodiedMember1(1);
-            //EmptyLine();
+            WriteSectionBold("ExpressionBodiedMember 1");
+            ExpressionBodiedMember1(1);
+            EmptyLine();
 
 
-            //WriteSectionBold("ExpressionBodiedMember 2");
-            //Console.WriteLine(ExpressionBodiedMember2());
-            //EmptyLine();
+            WriteSectionBold("ExpressionBodiedMember 2");
+            Console.WriteLine(ExpressionBodiedMember2());
+            EmptyLine();
 
-            //WriteSectionBold("ExpressionBodiedMember 3");
-            //ExpressionBodiedMember3();
-            //Console.WriteLine(EnvironmentData.UserAddress);
-            //EmptyLine();
+            WriteSectionBold("ExpressionBodiedMember 3");
+            ExpressionBodiedMember3();
+            Console.WriteLine(EnvironmentData.UserAddress);
+            EmptyLine();
 
-            //EnvironmentData.CostCenter = "043";
-            //WriteSectionBold("ExpressionBodiedMember using Operations class method");
-            //Operations.ExpressionBodiedMember();
-            //Console.WriteLine(EnvironmentData.UserAddress);
-            //EmptyLine();
+            EnvironmentData.CostCenter = "043";
+            WriteSectionBold("ExpressionBodiedMember using Operations class method");
+            Operations.ExpressionBodiedMember();
+            Console.WriteLine(EnvironmentData.UserAddress);
+            EmptyLine();
 
-            //WriteSectionBold("Case When int");
-            //Operations.CaseWhen(5);
-            //EmptyLine();
+            WriteSectionBold("Case When int");
+            Operations.CaseWhen(5);
+            EmptyLine();
 
             WriteSectionBold("Delegate no params");
             DelegatesOne();
@@ -205,13 +203,11 @@ namespace SwitchExpressions_basics
         public static void DelegatesOne()
         {
 
-
-            foreach (ContactType ct in Enum.GetValues<ContactType>())
+            foreach (ContactType contactType in Enum.GetValues<ContactType>())
             {
-                Action contactTypeAction = Operations.ContactTypeAction(ct);
+                Action contactTypeAction = Operations.ContactTypeAction(contactType);
                 contactTypeAction.Invoke();
             }
-
 
         }
         
