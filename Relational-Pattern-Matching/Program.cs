@@ -7,10 +7,11 @@ namespace Relational_Pattern_Matching
         static void Main(string[] args)
         {
             Console.WriteLine("Need to select one of the examples");
-            Console.ReadLine();
+
 
             //Example1();
             //Example2();
+            Example3();
         }
 
         /// <summary>
@@ -55,6 +56,14 @@ namespace Relational_Pattern_Matching
             }
 
             Console.ReadLine();
+        }
+
+        static void Example3()
+        {
+
+            Console.WriteLine(2.Determination3());
+            Console.ReadLine();
+
         }
     }
 }

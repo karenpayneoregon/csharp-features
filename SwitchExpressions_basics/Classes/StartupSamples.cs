@@ -27,9 +27,15 @@ namespace SwitchExpressions_basics.Classes
         {
             TrafficLightState originalLightState = TrafficLightState.Yellow;
             TrafficLightState currentTrafficLightState = GetNextLight(originalLightState);
+            
             Console.WriteLine(currentTrafficLightState.ToString());
+            
         }
 
+        /// <summary>
+        /// Pattern matching
+        /// </summary>
+        /// <param name="person"></param>
         public static void Example1(Person person)
         {
             switch (person.LastName)
@@ -50,6 +56,10 @@ namespace SwitchExpressions_basics.Classes
                     break;
             }
         }
+        /// <summary>
+        /// Pattern matching
+        /// </summary>
+        /// <param name="person"></param>
         public static void Example2(Person person)
         {
             if (person.LastName is { } lastName)

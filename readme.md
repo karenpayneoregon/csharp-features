@@ -18,5 +18,10 @@ From the command-line
 
 https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version
 
+# TechNet articles
+
+- [Switch statement C#](https://social.technet.microsoft.com/wiki/contents/articles/54200.switch-statement-c.aspx)
+
+
 
 
