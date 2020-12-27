@@ -4,6 +4,9 @@ using System.IO;
 
 namespace SwitchExpressions_basics.Classes
 {
+    /// <summary>
+    /// Common task with three variations
+    /// </summary>
     public class ProcessCodeSample
     {
         private static readonly string BasePath = 
@@ -56,6 +59,32 @@ namespace SwitchExpressions_basics.Classes
                 default:
                     throw new NotImplementedException("Unknown file type");
             }
+
+            if (!File.Exists(Path.Combine(BasePath, filename))) return;
+
+            process.StartInfo.Arguments = Path.Combine(BasePath, filename);
+            process.Start();
+
+        }
+        public static void IfConventional(string filename, string extension)
+        {
+
+            var process = new Process();
+
+            if (extension == "docx" || extension == "doc")
+            {
+                process.StartInfo.FileName = "WINWORD.EXE";
+            }
+            else if (extension == "xlsx" || extension == "xls")
+            {
+                process.StartInfo.FileName = "EXCEL.EXE";
+            }
+            else if (extension == "pdf")
+            {
+                process.StartInfo.FileName = "AcroRd32.exe";
+            }
+            else
+                throw new NotImplementedException("Unknown file type");
 
             if (!File.Exists(Path.Combine(BasePath, filename))) return;
 
