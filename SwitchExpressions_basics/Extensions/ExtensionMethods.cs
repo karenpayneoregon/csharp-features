@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
-namespace SwitchExpressions_basics.Classes
+namespace SwitchExpressions_basics.Extensions
 {
     public static class ExtensionMethods
     {
