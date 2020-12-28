@@ -24,12 +24,12 @@ Module Program
 
 
         Dim logger As ILogger(Of MyDemo) = serviceProvider.GetService(Of ILogger(Of MyDemo))()
-        Dim fooService As IMyService = serviceProvider.GetService(Of IMyService)()
+        Dim service As IMyService = serviceProvider.GetService(Of IMyService)()
 
         logger.LogInformation("1 logger information")
         logger.LogWarning("2 logger warning")
 
-        fooService.DoWork()
+        service.DoWork()
 
         ReadLine()
 
