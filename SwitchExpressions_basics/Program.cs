@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Mime;
 using static ConsoleHelpers.ConsoleColors;
 using SwitchExpressions_basics.Classes;
 using SwitchExpressions_basics.Extensions;
@@ -10,7 +11,7 @@ namespace SwitchExpressions_basics
     {
         static void Main(string[] args)
         {
-
+            
             EnvironmentData.CostCenter = "700";
 
             WriteSectionBold("Conventional Switch");
@@ -53,7 +54,7 @@ namespace SwitchExpressions_basics
             DelegateContactTypeFunc();
             EmptyLine();
 
-            WaitReadLine();
+            ReadLineWithTimeout(TimeSpan.FromSeconds(20), "Press any key to terminate.");
         }
 
         /// <summary>
