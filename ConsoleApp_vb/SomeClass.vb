@@ -2,7 +2,7 @@
 Public Class SomeClass
     Private ReadOnly _logger As ILogger(Of SomeClass)
 
-    Private Sub New(ByVal logger As ILogger(Of SomeClass))
+    Private Sub New(logger As ILogger(Of SomeClass))
         _logger = logger
     End Sub
 
