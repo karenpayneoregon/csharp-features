@@ -2,7 +2,7 @@
 
 Starter code sample for logging with .NET Core VB.NET.
 
-
+![screen](assets/log1.png)
 
 # NuGet packages
 
