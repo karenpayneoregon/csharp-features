@@ -1,8 +1,8 @@
 ﻿Imports Microsoft.Extensions.Logging
-Public Class SomeClass
-    Private ReadOnly _logger As ILogger(Of SomeClass)
+Public Class MyDemo
+    Private ReadOnly _logger As ILogger(Of MyDemo)
 
-    Private Sub New(logger As ILogger(Of SomeClass))
+    Private Sub New(logger As ILogger(Of MyDemo))
         _logger = logger
     End Sub
 

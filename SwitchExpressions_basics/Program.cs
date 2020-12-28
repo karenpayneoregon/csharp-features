@@ -3,6 +3,7 @@ using System.Net.Mime;
 using static ConsoleHelpers.ConsoleColors;
 using SwitchExpressions_basics.Classes;
 using SwitchExpressions_basics.Extensions;
+using static System.Console;
 using static ConsoleHelpers.ConsoleKeysHelper;
 
 namespace SwitchExpressions_basics
@@ -11,7 +12,7 @@ namespace SwitchExpressions_basics
     {
         static void Main(string[] args)
         {
-            
+            WriteLine();
             EnvironmentData.CostCenter = "700";
 
             WriteSectionBold("Conventional Switch");
@@ -19,7 +20,7 @@ namespace SwitchExpressions_basics
             EmptyLine();
 
             WriteSectionBold("Conventional2");
-            Console.WriteLine(Conventional2());
+            WriteLine(Conventional2());
             EmptyLine();
 
             WriteSectionBold("ExpressionBodiedMember 1");
@@ -28,18 +29,18 @@ namespace SwitchExpressions_basics
 
 
             WriteSectionBold("ExpressionBodiedMember 2");
-            Console.WriteLine(ExpressionBodiedMember2());
+            WriteLine(ExpressionBodiedMember2());
             EmptyLine();
 
             WriteSectionBold("ExpressionBodiedMember 3");
             ExpressionBodiedMember3();
-            Console.WriteLine(EnvironmentData.UserAddress);
+            WriteLine(EnvironmentData.UserAddress);
             EmptyLine();
 
             EnvironmentData.CostCenter = "043";
             WriteSectionBold("ExpressionBodiedMember using Operations class method");
             Operations.ExpressionBodiedMember();
-            Console.WriteLine(EnvironmentData.UserAddress);
+            WriteLine(EnvironmentData.UserAddress);
             EmptyLine();
 
             WriteSectionBold("Case When int");
@@ -289,7 +290,7 @@ namespace SwitchExpressions_basics
         /// </summary>
         public static void DelegateContactTypeFunc()
         {
-            Console.WriteLine(Operations.ContactTypeFunc(ContactType.AccountingManager));
+            WriteLine(Operations.ContactTypeFunc(ContactType.AccountingManager));
         }
         
     }
