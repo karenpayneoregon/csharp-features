@@ -8,7 +8,6 @@ Public Class SomeClass
 
     Public Sub LogCritical(message As String)
         _logger.Log(LogLevel.Critical, message)
-        _logger.LogInformation("")
     End Sub
     Public Sub LogInfo(message As String)
         _logger.LogInformation(message)
