@@ -1,6 +1,6 @@
 ﻿# About 
 
-Starter code sample for logging with .NET Core VB.NET
+Starter code sample for logging with .NET Core VB.NET, **not** a complete code sample.
 
 # NuGet packages
 
