@@ -6,7 +6,7 @@ Public Class SomeClass
         _logger = logger
     End Sub
 
-    Private Sub LogCritical(message As String)
+    Public Sub LogCritical(message As String)
         _logger.Log(LogLevel.Critical, message)
         _logger.LogInformation("")
     End Sub

@@ -12,7 +12,7 @@ Module Program
         Dim someClass = serviceProvider.GetService(Of SomeClass)()
 
         someClass.LogInfo("Hello")
-
+        someClass.LogCritical("World")
     End Sub
     Private Sub ConfigureServices(ByVal services As IServiceCollection)
 
