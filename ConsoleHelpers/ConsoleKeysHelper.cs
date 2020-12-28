@@ -14,21 +14,19 @@ namespace ConsoleHelpers
             WriteSectionBold(message,false);
             Console.ReadLine();
         }
+
         /// <summary>
         /// Provides an enhanced Console.ReadLine with a time out.
         /// </summary>
         /// <param name="timeout">Timeout</param>
+        /// <param name="message">Optional text to display</param>
         /// <returns>Input from a Task or if no input an empty string</returns>
         /// <remarks>
-        /// Example, wait for two seconds
+        /// Example, wait for two seconds and a half
         /// ConsoleReadLineWithTimeout(TimeSpan.FromSeconds(2.5))
         /// 
         /// Example, use default, wait for one second
         /// ConsoleReadLineWithTimeout(TimeSpan.FromSeconds())
-        /// 
-        /// For more on working with TimeSpan
-        /// https://docs.microsoft.com/en-us/dotnet/api/system.timespan?view=netframework-4.8
-        /// 
         /// </remarks>
         public static string ReadLineWithTimeout(TimeSpan? timeout = null, string message = "")
         {
