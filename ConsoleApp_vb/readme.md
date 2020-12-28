@@ -1,6 +1,6 @@
 ﻿# About 
 
-Starter code sample for logging with .NET Core VB.NET, **not** a complete code sample.
+Starter code sample for logging with .NET Core VB.NET.
 
 ![screen](assets/log1.png)
 
