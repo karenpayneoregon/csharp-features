@@ -2,7 +2,7 @@
 
 Starter code sample for logging with .NET Core VB.NET using Debug logging while the project ConsoleApp_vb uses Console logging.
 
-![screen](assets/log2.png)
+
 
 # NuGet packages
 
