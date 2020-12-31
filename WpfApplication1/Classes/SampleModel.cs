@@ -9,10 +9,10 @@ namespace WpfApplicationListViewImage.Classes
         {
             get
             {
-                yield return new ViewData(Properties.Resources.critical, "item 1");
-                yield return new ViewData(Properties.Resources.Database, "item 2");
-                yield return new ViewData(Properties.Resources.Excel, "item 3");
-                yield return new ViewData(Properties.Resources.csv, "item 4");
+                yield return new ViewData(Properties.Resources.critical, "Critical");
+                yield return new ViewData(Properties.Resources.Database, "Database");
+                yield return new ViewData(Properties.Resources.Excel, "Excel");
+                yield return new ViewData(Properties.Resources.csv, "CSV");
             }
         }
     }

@@ -9,7 +9,6 @@ namespace WpfApplicationListViewImage
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new SampleModel();
         }
     }
 }

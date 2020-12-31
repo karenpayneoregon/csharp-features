@@ -11,7 +11,7 @@ namespace WpfApplicationListViewImage.Classes
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            if (!(value is Bitmap bitmap1)) return value;
+            if (value is not Bitmap bitmap1) return value;
             
             var stream = new MemoryStream();
             bitmap1.Save(stream, ImageFormat.Png);
