@@ -37,14 +37,16 @@ namespace RadioButtonBinding
             get => _selected;
             set
             {
-                int val = 0;
+                int current = 0;
                 var radioButton = this.Controls.OfType<RadioButton>()
-                    .FirstOrDefault(radio => radio.Tag != null && int.TryParse(radio.Tag.ToString(), out val) && val == value);
+                    .FirstOrDefault(radio => 
+                        radio.Tag != null && 
+                        int.TryParse(radio.Tag.ToString(), out current) && current == value);
 
                 if (radioButton != null)
                 {
                     radioButton.Checked = true;
-                    _selected = val;
+                    _selected = current;
                 }
             }
         }

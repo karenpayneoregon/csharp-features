@@ -49,21 +49,29 @@ namespace RadioButtonBinding
             /*
              * Setup data source from mocked data
              */
-            _peopleBindingList = new BindingList<Person>(DataOperations.ReadPeopleFromCommaDelimitedFile());
+            _peopleBindingList = new BindingList<Person>(
+                DataOperations.ReadPeopleFromCommaDelimitedFile());
+            
             _peopleBindingSource.DataSource = _peopleBindingList;
 
             /*
              * Setup data bindings to Suffix and Gender properties which are both enumerations, for
              * real applications these are int type.
              */
-            SuffixRadioGroupBox.DataBindings.Add("Selected", _peopleBindingSource, "Suffix");
-            GenderRadioGroupBox.DataBindings.Add("Selected", _peopleBindingSource, "Gender");
+            SuffixRadioGroupBox.DataBindings.Add("Selected", _peopleBindingSource, 
+                "Suffix");
+            
+            GenderRadioGroupBox.DataBindings.Add("Selected", _peopleBindingSource, 
+                "Gender");
 
             /*
              * Setup data bindings for string properties
              */
-            FirstNameTextBox.DataBindings.Add("Text", _peopleBindingSource, "FirstName");
-            LastNameTextBox.DataBindings.Add("Text", _peopleBindingSource, "LastName");
+            FirstNameTextBox.DataBindings.Add("Text", _peopleBindingSource, 
+                "FirstName");
+            
+            LastNameTextBox.DataBindings.Add("Text", _peopleBindingSource, 
+                "LastName");
 
             /*
              * Provides navigation of people
@@ -118,15 +126,6 @@ namespace RadioButtonBinding
 
             DataOperations.SaveAll(_peopleBindingList.ToList());
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            _peopleBindingSource.MoveNext();
-
-            //System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            //var t1 =new  Bitmap((Image) (resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            //t1.Save("MoveLastItem.bmp");
         }
 
     }

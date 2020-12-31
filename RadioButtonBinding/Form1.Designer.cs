@@ -1,6 +1,7 @@
-﻿namespace RadioButtonBinding
+﻿
+namespace RadioButtonBinding
 {
-    partial class MainForm
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -29,20 +30,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.PeopleNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.LastNameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.FirstNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.PeopleNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.SaveAllButton = new System.Windows.Forms.Button();
+            this.InspectButton = new System.Windows.Forms.Button();
             this.GenderRadioGroupBox = new RadioButtonBinding.RadioGroupBox();
             this.OtherRadioButton = new System.Windows.Forms.RadioButton();
             this.MaleRadioButton = new System.Windows.Forms.RadioButton();
@@ -51,45 +55,11 @@
             this.MissRadioButton = new System.Windows.Forms.RadioButton();
             this.MrsRadioButton = new System.Windows.Forms.RadioButton();
             this.MrRadioButton = new System.Windows.Forms.RadioButton();
-            this.SaveAllButton = new System.Windows.Forms.Button();
-            this.InspectButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PeopleNavigator)).BeginInit();
             this.PeopleNavigator.SuspendLayout();
             this.GenderRadioGroupBox.SuspendLayout();
             this.SuffixRadioGroupBox.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // LastNameTextBox
-            // 
-            this.LastNameTextBox.Location = new System.Drawing.Point(221, 107);
-            this.LastNameTextBox.Name = "LastNameTextBox";
-            this.LastNameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.LastNameTextBox.TabIndex = 10;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(217, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Last";
-            // 
-            // FirstNameTextBox
-            // 
-            this.FirstNameTextBox.Location = new System.Drawing.Point(221, 58);
-            this.FirstNameTextBox.Name = "FirstNameTextBox";
-            this.FirstNameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.FirstNameTextBox.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(218, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "First";
             // 
             // PeopleNavigator
             // 
@@ -113,33 +83,9 @@
             this.PeopleNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.PeopleNavigator.Name = "PeopleNavigator";
             this.PeopleNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.PeopleNavigator.Size = new System.Drawing.Size(344, 25);
-            this.PeopleNavigator.TabIndex = 11;
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = global::RadioButtonBinding.Properties.Resources.MoveFirstItem;
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = global::RadioButtonBinding.Properties.Resources.MovePreviousItem;
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            this.PeopleNavigator.Size = new System.Drawing.Size(351, 25);
+            this.PeopleNavigator.TabIndex = 14;
+            this.PeopleNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorSeparator
             // 
@@ -156,15 +102,45 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorMoveNextItem
             // 
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = global::RadioButtonBinding.Properties.Resources.MoveNextItem;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
@@ -173,27 +149,78 @@
             // bindingNavigatorMoveLastItem
             // 
             this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = global::RadioButtonBinding.Properties.Resources.MoveLastItem;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
-            // bindingNavigatorSeparator2
+            // LastNameTextBox
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.LastNameTextBox.Location = new System.Drawing.Point(237, 133);
+            this.LastNameTextBox.Name = "LastNameTextBox";
+            this.LastNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.LastNameTextBox.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(233, 117);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(27, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Last";
+            // 
+            // FirstNameTextBox
+            // 
+            this.FirstNameTextBox.Location = new System.Drawing.Point(237, 84);
+            this.FirstNameTextBox.Name = "FirstNameTextBox";
+            this.FirstNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.FirstNameTextBox.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(234, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "First";
+            // 
+            // SaveAllButton
+            // 
+            this.SaveAllButton.Image = global::RadioButtonBinding.Properties.Resources.Save_16x;
+            this.SaveAllButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SaveAllButton.Location = new System.Drawing.Point(28, 230);
+            this.SaveAllButton.Name = "SaveAllButton";
+            this.SaveAllButton.Size = new System.Drawing.Size(184, 35);
+            this.SaveAllButton.TabIndex = 21;
+            this.SaveAllButton.Text = "Save all";
+            this.SaveAllButton.UseVisualStyleBackColor = true;
+            this.SaveAllButton.Click += new System.EventHandler(this.SaveAllButton_Click);
+            // 
+            // InspectButton
+            // 
+            this.InspectButton.Image = global::RadioButtonBinding.Properties.Resources.View_16x;
+            this.InspectButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.InspectButton.Location = new System.Drawing.Point(28, 281);
+            this.InspectButton.Name = "InspectButton";
+            this.InspectButton.Size = new System.Drawing.Size(184, 35);
+            this.InspectButton.TabIndex = 20;
+            this.InspectButton.Text = "Inspect list";
+            this.InspectButton.UseVisualStyleBackColor = true;
+            this.InspectButton.Click += new System.EventHandler(this.InspectButton_Click);
             // 
             // GenderRadioGroupBox
             // 
             this.GenderRadioGroupBox.Controls.Add(this.OtherRadioButton);
             this.GenderRadioGroupBox.Controls.Add(this.MaleRadioButton);
             this.GenderRadioGroupBox.Controls.Add(this.FemaleRadioButton);
-            this.GenderRadioGroupBox.Location = new System.Drawing.Point(12, 109);
+            this.GenderRadioGroupBox.Location = new System.Drawing.Point(28, 151);
             this.GenderRadioGroupBox.Name = "GenderRadioGroupBox";
             this.GenderRadioGroupBox.Selected = 0;
             this.GenderRadioGroupBox.Size = new System.Drawing.Size(184, 61);
-            this.GenderRadioGroupBox.TabIndex = 13;
+            this.GenderRadioGroupBox.TabIndex = 19;
             this.GenderRadioGroupBox.TabStop = false;
             this.GenderRadioGroupBox.Text = "Gender";
             // 
@@ -238,11 +265,11 @@
             this.SuffixRadioGroupBox.Controls.Add(this.MissRadioButton);
             this.SuffixRadioGroupBox.Controls.Add(this.MrsRadioButton);
             this.SuffixRadioGroupBox.Controls.Add(this.MrRadioButton);
-            this.SuffixRadioGroupBox.Location = new System.Drawing.Point(12, 42);
+            this.SuffixRadioGroupBox.Location = new System.Drawing.Point(28, 68);
             this.SuffixRadioGroupBox.Name = "SuffixRadioGroupBox";
             this.SuffixRadioGroupBox.Selected = 0;
             this.SuffixRadioGroupBox.Size = new System.Drawing.Size(184, 61);
-            this.SuffixRadioGroupBox.TabIndex = 12;
+            this.SuffixRadioGroupBox.TabIndex = 13;
             this.SuffixRadioGroupBox.TabStop = false;
             this.SuffixRadioGroupBox.Text = "Suffix";
             // 
@@ -282,48 +309,24 @@
             this.MrRadioButton.Text = "Mr";
             this.MrRadioButton.UseVisualStyleBackColor = true;
             // 
-            // SaveAllButton
-            // 
-            this.SaveAllButton.Image = global::RadioButtonBinding.Properties.Resources.Save_16x;
-            this.SaveAllButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SaveAllButton.Location = new System.Drawing.Point(12, 176);
-            this.SaveAllButton.Name = "SaveAllButton";
-            this.SaveAllButton.Size = new System.Drawing.Size(184, 35);
-            this.SaveAllButton.TabIndex = 14;
-            this.SaveAllButton.Text = "Save all";
-            this.SaveAllButton.UseVisualStyleBackColor = true;
-            this.SaveAllButton.Click += new System.EventHandler(this.SaveAllButton_Click);
-            // 
-            // InspectButton
-            // 
-            this.InspectButton.Image = global::RadioButtonBinding.Properties.Resources.View_16x;
-            this.InspectButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.InspectButton.Location = new System.Drawing.Point(12, 227);
-            this.InspectButton.Name = "InspectButton";
-            this.InspectButton.Size = new System.Drawing.Size(184, 35);
-            this.InspectButton.TabIndex = 13;
-            this.InspectButton.Text = "Inspect list";
-            this.InspectButton.UseVisualStyleBackColor = true;
-            this.InspectButton.Click += new System.EventHandler(this.InspectButton_Click);
-            // 
-            // MainForm
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 276);
+            this.ClientSize = new System.Drawing.Size(351, 338);
             this.Controls.Add(this.SaveAllButton);
-            this.Controls.Add(this.GenderRadioGroupBox);
             this.Controls.Add(this.InspectButton);
-            this.Controls.Add(this.SuffixRadioGroupBox);
-            this.Controls.Add(this.PeopleNavigator);
+            this.Controls.Add(this.GenderRadioGroupBox);
             this.Controls.Add(this.LastNameTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.FirstNameTextBox);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.PeopleNavigator);
+            this.Controls.Add(this.SuffixRadioGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "MainForm";
+            this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Data bind three radio buttons version 1";
+            this.Text = "Data bind three radio buttons version 2";
             ((System.ComponentModel.ISupportInitialize)(this.PeopleNavigator)).EndInit();
             this.PeopleNavigator.ResumeLayout(false);
             this.PeopleNavigator.PerformLayout();
@@ -337,10 +340,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox LastNameTextBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox FirstNameTextBox;
-        private System.Windows.Forms.Label label1;
+
+        private RadioGroupBox SuffixRadioGroupBox;
+        private System.Windows.Forms.RadioButton MissRadioButton;
+        private System.Windows.Forms.RadioButton MrsRadioButton;
+        private System.Windows.Forms.RadioButton MrRadioButton;
         private System.Windows.Forms.BindingNavigator PeopleNavigator;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
@@ -351,15 +355,15 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private RadioGroupBox SuffixRadioGroupBox;
-        private System.Windows.Forms.RadioButton MissRadioButton;
-        private System.Windows.Forms.RadioButton MrsRadioButton;
-        private System.Windows.Forms.RadioButton MrRadioButton;
-        private System.Windows.Forms.Button InspectButton;
+        private System.Windows.Forms.TextBox LastNameTextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox FirstNameTextBox;
+        private System.Windows.Forms.Label label1;
         private RadioGroupBox GenderRadioGroupBox;
         private System.Windows.Forms.RadioButton OtherRadioButton;
         private System.Windows.Forms.RadioButton MaleRadioButton;
         private System.Windows.Forms.RadioButton FemaleRadioButton;
         private System.Windows.Forms.Button SaveAllButton;
+        private System.Windows.Forms.Button InspectButton;
     }
 }
