@@ -12,12 +12,12 @@ using static RadioButtonBinding.Classes.ControlHelpers;
 
 namespace RadioButtonBinding
 {
-    public partial class Form1 : Form
+    public partial class Version2Form : Form
     {
         private readonly BindingSource _peopleBindingSource = new BindingSource();
         private BindingList<Person> _peopleBindingList;
 
-        public Form1()
+        public Version2Form()
         {
             InitializeComponent();
             Shown += OnShown;

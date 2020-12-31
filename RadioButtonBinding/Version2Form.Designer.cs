@@ -1,7 +1,7 @@
 ﻿
 namespace RadioButtonBinding
 {
-    partial class Form1
+    partial class Version2Form
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace RadioButtonBinding
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Version2Form));
             this.PeopleNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
@@ -232,7 +232,7 @@ namespace RadioButtonBinding
             this.OtherRadioButton.Size = new System.Drawing.Size(51, 17);
             this.OtherRadioButton.TabIndex = 2;
             this.OtherRadioButton.TabStop = true;
-            this.OtherRadioButton.Tag = "3";
+            this.OtherRadioButton.Tag = "";
             this.OtherRadioButton.Text = "Other";
             this.OtherRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -244,7 +244,7 @@ namespace RadioButtonBinding
             this.MaleRadioButton.Size = new System.Drawing.Size(48, 17);
             this.MaleRadioButton.TabIndex = 1;
             this.MaleRadioButton.TabStop = true;
-            this.MaleRadioButton.Tag = "2";
+            this.MaleRadioButton.Tag = "";
             this.MaleRadioButton.Text = "Male";
             this.MaleRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -256,7 +256,7 @@ namespace RadioButtonBinding
             this.FemaleRadioButton.Size = new System.Drawing.Size(59, 17);
             this.FemaleRadioButton.TabIndex = 0;
             this.FemaleRadioButton.TabStop = true;
-            this.FemaleRadioButton.Tag = "1";
+            this.FemaleRadioButton.Tag = "";
             this.FemaleRadioButton.Text = "Female";
             this.FemaleRadioButton.UseVisualStyleBackColor = true;
             // 

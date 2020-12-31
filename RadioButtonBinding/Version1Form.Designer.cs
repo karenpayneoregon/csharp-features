@@ -1,6 +1,6 @@
 ﻿namespace RadioButtonBinding
 {
-    partial class MainForm
+    partial class Version1Form
     {
         /// <summary>
         /// Required designer variable.

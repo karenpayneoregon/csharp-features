@@ -6,9 +6,9 @@
     Title="ListView images"
     Width="273"
     Height="136"
-    ResizeMode="NoResize" 
+    ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen">
-    
+
     <Window.DataContext>
         <classes:SampleModel />
     </Window.DataContext>

@@ -11,12 +11,12 @@ using RadioButtonBinding.Classes;
 
 namespace RadioButtonBinding
 {
-    public partial class MainForm : Form
+    public partial class Version1Form : Form
     {
         private readonly BindingSource _peopleBindingSource = new BindingSource();
         private BindingList<Person> _peopleBindingList;
 
-        public MainForm()
+        public Version1Form()
         {
             InitializeComponent();
 
