@@ -31,7 +31,7 @@ namespace ThreadExceptionWindowsFormsApp
         {
             this.label1 = new System.Windows.Forms.Label();
             this.BadCastButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ViewLogButton = new System.Windows.Forms.Button();
             this.ThrowOnCloseCheckBox = new System.Windows.Forms.CheckBox();
             this.MissingFileButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -55,15 +55,15 @@ namespace ThreadExceptionWindowsFormsApp
             this.BadCastButton.UseVisualStyleBackColor = true;
             this.BadCastButton.Click += new System.EventHandler(this.BadCastButton_Click);
             // 
-            // button2
+            // ViewLogButton
             // 
-            this.button2.Location = new System.Drawing.Point(12, 91);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.ViewLogButton.Location = new System.Drawing.Point(12, 91);
+            this.ViewLogButton.Name = "ViewLogButton";
+            this.ViewLogButton.Size = new System.Drawing.Size(105, 23);
+            this.ViewLogButton.TabIndex = 2;
+            this.ViewLogButton.Text = "View log";
+            this.ViewLogButton.UseVisualStyleBackColor = true;
+            this.ViewLogButton.Click += new System.EventHandler(this.ViewLogButton_Click);
             // 
             // ThrowOnCloseCheckBox
             // 
@@ -92,7 +92,7 @@ namespace ThreadExceptionWindowsFormsApp
             this.ClientSize = new System.Drawing.Size(422, 144);
             this.Controls.Add(this.MissingFileButton);
             this.Controls.Add(this.ThrowOnCloseCheckBox);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.ViewLogButton);
             this.Controls.Add(this.BadCastButton);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -108,7 +108,7 @@ namespace ThreadExceptionWindowsFormsApp
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BadCastButton;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ViewLogButton;
         private System.Windows.Forms.CheckBox ThrowOnCloseCheckBox;
         private System.Windows.Forms.Button MissingFileButton;
     }

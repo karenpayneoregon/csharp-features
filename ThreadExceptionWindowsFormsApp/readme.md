@@ -9,6 +9,15 @@ To run this project *as is* in this repository.
 - VS2019
 - .NET Core 5
 
+# Log viewer
+
+![logviewer](../assets/LogViewer.png)
+
+# Closing window
+
+Feel free to remove or change the image.
+
+![screen](../assets/ErrorForm.png)
 
 # Get source without all projects 
 
@@ -30,3 +39,4 @@ del .editorconfig
 del *.md
 del *.sln
 ```
+

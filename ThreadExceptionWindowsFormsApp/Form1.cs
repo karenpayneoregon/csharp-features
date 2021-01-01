@@ -22,12 +22,17 @@ namespace ThreadExceptionWindowsFormsApp
             
             Shown += OnShown;
         }
-
+        
+        /// <summary>
+        /// Setup for causing an exception on closing this form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnShown(object? sender, EventArgs e)
         {
             if (Debugger.IsAttached)
             {
-                MessageBox.Show("This does not work while in debug mode");
+                MessageBox.Show(@"This does not work while in debug mode");
             }
             else
             {
@@ -35,7 +40,12 @@ namespace ThreadExceptionWindowsFormsApp
             }
             
         }
-
+        
+        /// <summary>
+        /// Throw exception if CheckBox is checked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnClosing(object sender, CancelEventArgs e)
         {
             if (Debugger.IsAttached && ThrowOnCloseCheckBox.Checked)
@@ -43,16 +53,15 @@ namespace ThreadExceptionWindowsFormsApp
                 throw new NotImplementedException();
             }
         }
-
-        private void BadCastButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// View log file if exists
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ViewLogButton_Click(object sender, EventArgs e)
         {
-            var badCast = (Label) sender;
-            MessageBox.Show(badCast.Text);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            var viewForm = new LogViewerForm();
+            LogViewerForm viewForm = new();
+            
             try
             {
                 viewForm.ShowDialog();
@@ -62,10 +71,26 @@ namespace ThreadExceptionWindowsFormsApp
                 viewForm.Dispose();
             }
         }
-
+        /// <summary>
+        /// Cause an unhandled exception for file not found
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MissingFileButton_Click(object sender, EventArgs e)
         {
             var lines = File.ReadAllLines("DoesNotExists");
         }
+        
+        /// <summary>
+        /// Cause an unhandled exception with invalid cast
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BadCastButton_Click(object sender, EventArgs e)
+        {
+            var badCast = (Label)sender;
+            MessageBox.Show(badCast.Text);
+        }
+
     }
 }
