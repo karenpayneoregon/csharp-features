@@ -34,16 +34,19 @@ namespace ExceptionHandling
                 if (File.Exists(FileName))
                 {
                     var contents = File.ReadAllLines(FileName).ToList();
-                    contents.Add($"{DateTime.Now},{level},{message}");
+                    contents.Add($"{DateTime.Now},{level}\n{message}");
                     File.WriteAllLines(FileName, contents.ToArray());
                 }
                 else
                 {
-                    File.WriteAllText(FileName, $"{DateTime.Now},{level},{message}");
+                    File.WriteAllText(FileName, $"{DateTime.Now},{level}\n{message}");
                 }
             }
             catch (Exception e)
             {
+                /*
+                 * Secondary attempt to log exception
+                 */
                 Exceptions.Write(e);
             }
         }

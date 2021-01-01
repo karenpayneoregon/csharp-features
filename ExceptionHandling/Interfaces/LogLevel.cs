@@ -4,6 +4,7 @@
     {
         Warning,
         Error,
+        Critical,
         General
     }
 }

@@ -18,7 +18,10 @@ namespace ExceptionHandling
         /// Write Exception information to UnhandledException.txt in the executable folder.
         /// </summary>
         /// <param name="exception">Strong typed <seealso cref="Exception"/></param>
-        /// <param name="exceptionLogType">Type of exception which determines which file to log to. Not passing this parameter will default to the general log file</param>
+        /// <param name="exceptionLogType">
+        /// Type of exception which determines which file to log to. Not passing this parameter
+        /// will default to the general log file
+        /// </param>
         public static void Write(Exception exception, ExceptionLogType exceptionLogType = ExceptionLogType.General)
         {
             var fileName = "";

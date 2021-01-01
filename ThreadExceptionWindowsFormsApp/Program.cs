@@ -7,6 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ExceptionHandling;
+using ExceptionHandling.Interfaces;
 
 namespace ThreadExceptionWindowsFormsApp
 {
@@ -14,7 +15,9 @@ namespace ThreadExceptionWindowsFormsApp
     {
         private static readonly string ExceptionFileName = Path
             .Combine(AppDomain.CurrentDomain.BaseDirectory, "UnhandledException.txt");
-        
+
+        private static LogManager _logManager = new();
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -32,44 +35,34 @@ namespace ThreadExceptionWindowsFormsApp
         {
             try
             {
-                var builder = new StringBuilder();
-                if (File.Exists(ExceptionFileName))
-                {
-                    builder.AppendLine(File.ReadAllText(ExceptionFileName));
-                }
-
-                builder.AppendLine(e.Exception.ToLogString(Environment.StackTrace));
-                File.WriteAllText(ExceptionFileName, builder.ToString());
+                _logManager.Log(LogLevel.Critical, e.Exception.ToLogString(Environment.StackTrace));
             }
             catch (Exception)
             {
-                // ignored
+                // ignored - do not take chances of causing another exception
             }
 
-
+            var f = new AppErrorForm();
+            f.ShowDialog();
             Application.Exit();
+            
         }
         static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
 
             try
             {
-                var builder = new StringBuilder();
-                if (File.Exists(ExceptionFileName))
-                {
-                    builder.AppendLine(File.ReadAllText(ExceptionFileName));
-                }
-
-                builder.AppendLine((e.ExceptionObject as Exception).ToLogString(Environment.StackTrace));
-                File.WriteAllText(ExceptionFileName, builder.ToString());
+                _logManager.Log(LogLevel.Critical, (e.ExceptionObject as Exception).ToLogString(Environment.StackTrace));
             }
             catch (Exception)
             {
-                // ignored
+                // ignored - do not take chances of causing another exception
             }
 
-
+            var f = new AppErrorForm();
+            f.ShowDialog();
             Application.Exit();
+            
         }
     }
 }
