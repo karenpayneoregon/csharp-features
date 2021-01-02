@@ -110,3 +110,16 @@ This is invoked by me on purpose
    at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
    at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, WM msg, IntPtr wparam, IntPtr lparam)
    at ThreadExceptionWindowsFormsApp.Program.Main() in C:\OED\Dotnetland\VS2019\csharp-tips\ThreadExceptionWindowsFormsApp\Program.cs:line 41
+1/2/2021 12:44:41 PM,Critical
+Here we go again
+   at ThreadExceptionWindowsFormsApp.Form1.MyExceptionButton_Click(Object sender, EventArgs e) in C:\OED\Dotnetland\VS2019\csharp-tips\ThreadExceptionWindowsFormsApp\Form1.cs:line 117
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, WM msg, IntPtr wparam, IntPtr lparam)
+   at ThreadExceptionWindowsFormsApp.Program.Main() in C:\OED\Dotnetland\VS2019\csharp-tips\ThreadExceptionWindowsFormsApp\Program.cs:line 42
