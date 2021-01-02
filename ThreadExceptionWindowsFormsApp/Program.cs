@@ -11,12 +11,15 @@ using ExceptionHandling.Interfaces;
 
 namespace ThreadExceptionWindowsFormsApp
 {
+    /// <summary>
+    /// Rig for unhandled exceptions.
+    /// Note Text property set on error form is for demo purposes only
+    /// </summary>
     static class Program
     {
-        private static readonly string ExceptionFileName = Path
-            .Combine(AppDomain.CurrentDomain.BaseDirectory, "UnhandledException.txt");
+        //private static readonly string ExceptionFileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "UnhandledException.txt");
 
-        private static LogManager _logManager = new();
+        private static readonly LogManager LogManager = new();
 
         /// <summary>
         ///  The main entry point for the application.
@@ -24,25 +27,31 @@ namespace ThreadExceptionWindowsFormsApp
         [STAThread]
         static void Main()
         {
+            
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            // Handling UI thread exceptions to the event.
             Application.ThreadException += Application_ThreadException;
+
+            // For handling non-UI thread exceptions to the event. 
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
+            
             Application.Run(new Form1());
         }
         static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
         {
             try
             {
-                _logManager.Log(LogLevel.Critical, e.Exception.ToLogString(Environment.StackTrace));
+                LogManager.Log(LogLevel.Critical, e.Exception.ToLogString(Environment.StackTrace));
             }
             catch (Exception)
             {
                 // ignored - do not take chances of causing another exception
             }
 
-            var f = new AppErrorForm();
+            var f = new AppErrorForm {Text = @"Thread Exception"};
             f.ShowDialog();
             Application.Exit();
             
@@ -52,14 +61,14 @@ namespace ThreadExceptionWindowsFormsApp
 
             try
             {
-                _logManager.Log(LogLevel.Critical, (e.ExceptionObject as Exception).ToLogString(Environment.StackTrace));
+                LogManager.Log(LogLevel.Critical, (e.ExceptionObject as Exception).ToLogString(Environment.StackTrace));
             }
             catch (Exception)
             {
                 // ignored - do not take chances of causing another exception
             }
 
-            var f = new AppErrorForm();
+            var f = new AppErrorForm {Text = @"Unhandled Exception"};
             f.ShowDialog();
             Application.Exit();
             

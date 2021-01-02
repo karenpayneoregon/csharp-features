@@ -34,13 +34,16 @@ namespace ThreadExceptionWindowsFormsApp.Forms
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.CopyToClipboardButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LogListView
             // 
+            this.LogListView.BackColor = System.Drawing.Color.Black;
             this.LogListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.LevelColumn,
             this.columnHeader1});
+            this.LogListView.ForeColor = System.Drawing.Color.White;
             this.LogListView.FullRowSelect = true;
             this.LogListView.HideSelection = false;
             this.LogListView.Location = new System.Drawing.Point(12, 17);
@@ -63,6 +66,9 @@ namespace ThreadExceptionWindowsFormsApp.Forms
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.Black;
+            this.textBox1.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(12, 312);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -81,11 +87,22 @@ namespace ThreadExceptionWindowsFormsApp.Forms
             this.label1.TabIndex = 2;
             this.label1.Text = "Details";
             // 
+            // CopyToClipboardButton
+            // 
+            this.CopyToClipboardButton.Location = new System.Drawing.Point(12, 482);
+            this.CopyToClipboardButton.Name = "CopyToClipboardButton";
+            this.CopyToClipboardButton.Size = new System.Drawing.Size(150, 23);
+            this.CopyToClipboardButton.TabIndex = 3;
+            this.CopyToClipboardButton.Text = "Copy current";
+            this.CopyToClipboardButton.UseVisualStyleBackColor = true;
+            this.CopyToClipboardButton.Click += new System.EventHandler(this.CopyToClipboardButton_Click);
+            // 
             // LogViewerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 472);
+            this.ClientSize = new System.Drawing.Size(800, 526);
+            this.Controls.Add(this.CopyToClipboardButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.LogListView);
@@ -106,5 +123,6 @@ namespace ThreadExceptionWindowsFormsApp.Forms
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button CopyToClipboardButton;
     }
 }

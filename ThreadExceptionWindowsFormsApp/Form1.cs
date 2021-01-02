@@ -10,7 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ExceptionHandling;
+using ThreadExceptionWindowsFormsApp.Classes;
 using ThreadExceptionWindowsFormsApp.Forms;
+using static ThreadExceptionWindowsFormsApp.Helpers.CueBannerTextCode;
 
 namespace ThreadExceptionWindowsFormsApp
 {
@@ -30,14 +32,22 @@ namespace ThreadExceptionWindowsFormsApp
         /// <param name="e"></param>
         private void OnShown(object? sender, EventArgs e)
         {
+
             if (Debugger.IsAttached)
             {
-                MessageBox.Show(@"This does not work while in debug mode");
+
+                if (Environment.UserName != "PayneK")
+                {
+                    MessageBox.Show(@"This does not work while in debug mode");
+                }
+                
             }
             else
             {
                 Closing += OnClosing;
             }
+            
+            SetCueText(CustomExceptionTextTextBox,"Enter text to throw exception");
             
         }
         
@@ -92,5 +102,19 @@ namespace ThreadExceptionWindowsFormsApp
             MessageBox.Show(badCast.Text);
         }
 
+        private void BadThreadButton_Click(object sender, EventArgs e)
+        {
+            Thready.Start();
+        }
+
+        private void MyExceptionButton_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(CustomExceptionTextTextBox.Text))
+            {
+                CustomExceptionTextTextBox.Text = "Well here we go";
+            }
+
+            throw new ApplicationException(CustomExceptionTextTextBox.Text);
+        }
     }
 }

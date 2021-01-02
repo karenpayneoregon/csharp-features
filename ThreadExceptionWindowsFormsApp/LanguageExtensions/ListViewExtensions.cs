@@ -10,14 +10,12 @@ namespace ThreadExceptionWindowsFormsApp.LanguageExtensions
     public static class ListViewExtensions
     {
         /// <summary>
-        /// Get primary and foreign keys for a product
-        /// within a ListView
+        /// Get exception lines
         /// </summary>
         /// <param name="sender"></param>
         /// <returns></returns>
-        public static string[] LineTag(this ListViewItem sender)
-        {
-            return ((List<string>)sender.Tag).ToArray();
-        }
+        public static string[] LineTag(this ListViewItem sender) => ((List<string>)sender.Tag).ToArray();
+
+        public static string ExceptionDetails(this ListViewItem sender) => $"{sender.Text}, {sender.SubItems[1].Text}";
     }
 }

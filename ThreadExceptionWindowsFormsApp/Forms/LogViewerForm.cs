@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using ExceptionHandling;
 using ExceptionHandling.Interfaces;
 using ThreadExceptionWindowsFormsApp.LanguageExtensions;
+using static ThreadExceptionWindowsFormsApp.Helpers.Dialogs;
 
 namespace ThreadExceptionWindowsFormsApp.Forms
 {
@@ -85,6 +87,24 @@ namespace ThreadExceptionWindowsFormsApp.Forms
             ActiveControl = LogListView;
             
         }
+        /// <summary>
+        /// Copy current selected row to windows clipboard
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CopyToClipboardButton_Click(object sender, EventArgs e)
+        {
+            if (LogListView.SelectedItems.Count != 1) return;
 
+            if (!Question("Copy to clipboard?")) return;
+            
+            var current = string.Concat(
+                LogListView.SelectedItems[0].ExceptionDetails(), 
+                "\n", 
+                LogListView.SelectedItems[0].LineTag().AsString());
+            
+            Clipboard.SetText(current);
+
+        }
     }
 }

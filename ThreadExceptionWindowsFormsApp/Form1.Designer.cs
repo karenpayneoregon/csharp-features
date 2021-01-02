@@ -34,6 +34,9 @@ namespace ThreadExceptionWindowsFormsApp
             this.ViewLogButton = new System.Windows.Forms.Button();
             this.ThrowOnCloseCheckBox = new System.Windows.Forms.CheckBox();
             this.MissingFileButton = new System.Windows.Forms.Button();
+            this.BadThreadButton = new System.Windows.Forms.Button();
+            this.MyExceptionButton = new System.Windows.Forms.Button();
+            this.CustomExceptionTextTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -57,7 +60,7 @@ namespace ThreadExceptionWindowsFormsApp
             // 
             // ViewLogButton
             // 
-            this.ViewLogButton.Location = new System.Drawing.Point(12, 91);
+            this.ViewLogButton.Location = new System.Drawing.Point(12, 162);
             this.ViewLogButton.Name = "ViewLogButton";
             this.ViewLogButton.Size = new System.Drawing.Size(105, 23);
             this.ViewLogButton.TabIndex = 2;
@@ -85,11 +88,41 @@ namespace ThreadExceptionWindowsFormsApp
             this.MissingFileButton.UseVisualStyleBackColor = true;
             this.MissingFileButton.Click += new System.EventHandler(this.MissingFileButton_Click);
             // 
+            // BadThreadButton
+            // 
+            this.BadThreadButton.Location = new System.Drawing.Point(12, 70);
+            this.BadThreadButton.Name = "BadThreadButton";
+            this.BadThreadButton.Size = new System.Drawing.Size(105, 23);
+            this.BadThreadButton.TabIndex = 5;
+            this.BadThreadButton.Text = "Bad thread";
+            this.BadThreadButton.UseVisualStyleBackColor = true;
+            this.BadThreadButton.Click += new System.EventHandler(this.BadThreadButton_Click);
+            // 
+            // MyExceptionButton
+            // 
+            this.MyExceptionButton.Location = new System.Drawing.Point(12, 99);
+            this.MyExceptionButton.Name = "MyExceptionButton";
+            this.MyExceptionButton.Size = new System.Drawing.Size(105, 23);
+            this.MyExceptionButton.TabIndex = 6;
+            this.MyExceptionButton.Text = "My exception";
+            this.MyExceptionButton.UseVisualStyleBackColor = true;
+            this.MyExceptionButton.Click += new System.EventHandler(this.MyExceptionButton_Click);
+            // 
+            // CustomExceptionTextTextBox
+            // 
+            this.CustomExceptionTextTextBox.Location = new System.Drawing.Point(123, 100);
+            this.CustomExceptionTextTextBox.Name = "CustomExceptionTextTextBox";
+            this.CustomExceptionTextTextBox.Size = new System.Drawing.Size(287, 23);
+            this.CustomExceptionTextTextBox.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(422, 144);
+            this.ClientSize = new System.Drawing.Size(422, 197);
+            this.Controls.Add(this.CustomExceptionTextTextBox);
+            this.Controls.Add(this.MyExceptionButton);
+            this.Controls.Add(this.BadThreadButton);
             this.Controls.Add(this.MissingFileButton);
             this.Controls.Add(this.ThrowOnCloseCheckBox);
             this.Controls.Add(this.ViewLogButton);
@@ -111,6 +144,9 @@ namespace ThreadExceptionWindowsFormsApp
         private System.Windows.Forms.Button ViewLogButton;
         private System.Windows.Forms.CheckBox ThrowOnCloseCheckBox;
         private System.Windows.Forms.Button MissingFileButton;
+        private System.Windows.Forms.Button BadThreadButton;
+        private System.Windows.Forms.Button MyExceptionButton;
+        private System.Windows.Forms.TextBox CustomExceptionTextTextBox;
     }
 }
 
