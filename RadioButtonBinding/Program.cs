@@ -17,7 +17,7 @@ namespace RadioButtonBinding
             //Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ExamplesForm());
+            Application.Run(new CategoryForm());
         }
     }
 }

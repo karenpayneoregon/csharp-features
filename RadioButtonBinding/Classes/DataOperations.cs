@@ -10,7 +10,8 @@ namespace RadioButtonBinding.Classes
 {
     public class DataOperations
     {
-        private static string _fileName = "People.csv";
+        private static string _personFileName = "People.csv";
+        private static string _categoriesFileName = "Categories.csv";
 
         /// <summary>
         /// Save all people back to the .csv file
@@ -24,15 +25,15 @@ namespace RadioButtonBinding.Classes
                 sb.AppendLine(person.LineArray());
             }
             
-            File.WriteAllText(_fileName, sb.ToString());
+            File.WriteAllText(_personFileName, sb.ToString());
             
         }
         /// <summary>
         /// Read people from .csv file
         /// </summary>
-        /// <returns>People list</returns>
+        /// <returns>List&lt;Person&gt;</returns>
         public static List<Person> ReadPeopleFromCommaDelimitedFile() =>
-            File.ReadAllLines(_fileName).Select(content => content.Split(','))
+            File.ReadAllLines(_personFileName).Select(content => content.Split(','))
                 .Select(parts => new Person()
                 {
                     Id = Convert.ToInt32(parts[0]),
@@ -42,7 +43,18 @@ namespace RadioButtonBinding.Classes
                     Suffix = EnumConverter<SuffixType>.Convert(Convert.ToInt32(parts[4]))
                 })
                 .ToList();
+        /// <summary>
+        /// Read categories from .csv file
+        /// </summary>
+        /// <returns>List&lt;Category&gt;</returns>
+        public static List<Category> ReadCategoriesFromCommaDelimitedFile() =>
+            File.ReadAllLines(_categoriesFileName).Select(content => content.Split(','))
+                .Select(parts => new Category()
+                {
+                    CategoryId = Convert.ToInt32(parts[0]),
+                    Name = parts[1]
+                })
+                .ToList();
 
-        
     }
 }

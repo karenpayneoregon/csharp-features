@@ -14,7 +14,7 @@ namespace RadioButtonBinding
 {
     public partial class Version2Form : Form
     {
-        private readonly BindingSource _peopleBindingSource = new BindingSource();
+        private readonly BindingSource _peopleBindingSource = new();
         private BindingList<Person> _peopleBindingList;
 
         public Version2Form()

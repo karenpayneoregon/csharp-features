@@ -13,9 +13,9 @@ using RadioButtonBinding.LanguageExtensions;
 namespace RadioButtonBinding
 {
 #nullable disable
-    public partial class ExamplesForm : Form
+    public partial class ExamplesForm2 : Form
     {
-        public ExamplesForm()
+        public ExamplesForm2()
         {
             InitializeComponent();
             
