@@ -191,3 +191,17 @@ Object reference not set to an instance of an object.
    at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
    at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, WM msg, IntPtr wparam, IntPtr lparam)
    at ThreadExceptionWindowsFormsApp.Program.Main() in C:\OED\Dotnetland\VS2019\csharp-tips\ThreadExceptionWindowsFormsApp\Program.cs:line 36
+1/3/2021 4:33:02 AM,Critical
+Object reference not set to an instance of an object.
+   at ThreadExceptionWindowsFormsApp.Form1.NoNullExample(String value) in C:\OED\Dotnetland\VS2019\csharp-tips\ThreadExceptionWindowsFormsApp\Form1.cs:line 144
+   at ThreadExceptionWindowsFormsApp.Form1.ArgumentNullExceptionButton_Click(Object sender, EventArgs e) in C:\OED\Dotnetland\VS2019\csharp-tips\ThreadExceptionWindowsFormsApp\Form1.cs:line 134
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, WM msg, IntPtr wparam, IntPtr lparam)
+   at ThreadExceptionWindowsFormsApp.Program.Main() in C:\OED\Dotnetland\VS2019\csharp-tips\ThreadExceptionWindowsFormsApp\Program.cs:line 36

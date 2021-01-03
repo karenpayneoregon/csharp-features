@@ -10,7 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ExceptionHandling;
 using ThreadExceptionWindowsFormsApp.Classes;
 using ThreadExceptionWindowsFormsApp.Forms;
 using static ThreadExceptionWindowsFormsApp.Helpers.CueBannerTextCode;
