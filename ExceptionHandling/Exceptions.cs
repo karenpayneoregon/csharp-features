@@ -25,23 +25,26 @@ namespace ExceptionHandling
         public static void Write(Exception exception, ExceptionLogType exceptionLogType = ExceptionLogType.General)
         {
             var fileName = "";
-
-            switch (exceptionLogType)
-            {
-                case ExceptionLogType.Post:
-                    fileName = "PostUnhandledException.txt";
-                    break;
-                case ExceptionLogType.General:
-                    fileName = "GeneralUnhandledException.txt";
-                    break;
-                case ExceptionLogType.Data:
-                    fileName = "DataUnhandledException.txt";
-                    break;
-                case ExceptionLogType.Unknown:
-                    fileName = "UnknownUnhandledException.txt";
-                    break;
-                default: throw new NotImplementedException();
-            }
+            
+            /*
+             * Prior to C# 9
+             */
+            //switch (exceptionLogType)
+            //{
+            //    case ExceptionLogType.Post:
+            //        fileName = "PostUnhandledException.txt";
+            //        break;
+            //    case ExceptionLogType.General:
+            //        fileName = "GeneralUnhandledException.txt";
+            //        break;
+            //    case ExceptionLogType.Data:
+            //        fileName = "DataUnhandledException.txt";
+            //        break;
+            //    case ExceptionLogType.Unknown:
+            //        fileName = "UnknownUnhandledException.txt";
+            //        break;
+            //    default: throw new NotImplementedException();
+            //}
 
             fileName = exceptionLogType switch
             {
