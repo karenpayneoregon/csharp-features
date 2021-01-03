@@ -9,6 +9,10 @@ To run this project *as is* in this repository.
 - VS2019
 - .NET Core 5
 
+# TechNet Wiki article
+
+[Unhandled runtime exceptions window forms (C#)](https://social.technet.microsoft.com/wiki/contents/articles/54209.unhandled-runtime-exceptions-window-forms-c.aspx)
+
 # Log viewer
 
 ![logviewer](../assets/LogViewer.png)
@@ -40,3 +44,52 @@ del *.md
 del *.sln
 ```
 
+# Implement
+
+```csharp
+using System;
+using System.Windows.Forms;
+using ExceptionHandling;
+
+namespace ThreadExceptionWindowsFormsApp
+{
+    /// <summary>
+    /// Rig for unhandled exceptions.
+    /// Note Text property set on error form is for demo purposes only
+    /// </summary>
+    static class Program
+    {
+
+        [STAThread]
+        static void Main()
+        {
+            
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            // Handling UI thread exceptions to the event.
+            Application.ThreadException += UnhandledExceptions.Application_ThreadException;
+
+            // For handling non-UI thread exceptions to the event. 
+            AppDomain.CurrentDomain.UnhandledException += UnhandledExceptions.CurrentDomain_UnhandledException;
+
+            // Indicates capturing exception has completed
+            UnhandledExceptions.OnProcessingCompletedEvent += OnProcessingCompletedEvent;
+
+
+            Application.Run(new Form1());
+
+        }
+        /// <summary>
+        /// Display window informing application most close
+        /// </summary>
+        private static void OnProcessingCompletedEvent()
+        {
+            var f = new AppErrorForm { Text = @"Your title goes here" };
+            f.ShowDialog();
+            Application.Exit();
+        }
+    }
+}
+```

@@ -29,12 +29,14 @@ namespace ThreadExceptionWindowsFormsApp.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogViewerForm));
             this.LogListView = new System.Windows.Forms.ListView();
             this.LevelColumn = new System.Windows.Forms.ColumnHeader();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.CopyToClipboardButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LogListView
@@ -45,6 +47,7 @@ namespace ThreadExceptionWindowsFormsApp.Forms
             this.columnHeader1});
             this.LogListView.ForeColor = System.Drawing.Color.White;
             this.LogListView.FullRowSelect = true;
+            this.LogListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.LogListView.HideSelection = false;
             this.LogListView.Location = new System.Drawing.Point(12, 17);
             this.LogListView.MultiSelect = false;
@@ -89,6 +92,8 @@ namespace ThreadExceptionWindowsFormsApp.Forms
             // 
             // CopyToClipboardButton
             // 
+            this.CopyToClipboardButton.Image = ((System.Drawing.Image)(resources.GetObject("CopyToClipboardButton.Image")));
+            this.CopyToClipboardButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CopyToClipboardButton.Location = new System.Drawing.Point(12, 482);
             this.CopyToClipboardButton.Name = "CopyToClipboardButton";
             this.CopyToClipboardButton.Size = new System.Drawing.Size(150, 23);
@@ -97,11 +102,22 @@ namespace ThreadExceptionWindowsFormsApp.Forms
             this.CopyToClipboardButton.UseVisualStyleBackColor = true;
             this.CopyToClipboardButton.Click += new System.EventHandler(this.CopyToClipboardButton_Click);
             // 
+            // button1
+            // 
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(638, 482);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // LogViewerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 526);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.CopyToClipboardButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -124,5 +140,6 @@ namespace ThreadExceptionWindowsFormsApp.Forms
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button CopyToClipboardButton;
+        private System.Windows.Forms.Button button1;
     }
 }

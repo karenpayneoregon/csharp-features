@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using ExceptionHandling;
-using ExceptionHandling.Interfaces;
+using ExceptionHandling.Interfaces; //using System.Windows.Forms;
 
-namespace ThreadExceptionWindowsFormsApp.Helpers
+namespace ExceptionHandling
 {
     /// <summary>
     /// Provides events to deal with unhandled runtime exceptions
     /// </summary>
     public static class UnhandledExceptions
     {
+        public delegate void OnProcessingCompleted();
+        public static event OnProcessingCompleted OnProcessingCompletedEvent;
         
         private static readonly LogManager LogManager = new();
         
@@ -29,10 +25,8 @@ namespace ThreadExceptionWindowsFormsApp.Helpers
                 // ignored - do not take chances of causing another exception
             }
 
-            var f = new AppErrorForm { Text = @"Thread Exception" };
-            f.ShowDialog();
-            Application.Exit();
-
+            OnProcessingCompletedEvent?.Invoke();
+            
         }
         public static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
@@ -46,10 +40,8 @@ namespace ThreadExceptionWindowsFormsApp.Helpers
                 // ignored - do not take chances of causing another exception
             }
 
-            var f = new AppErrorForm { Text = @"Unhandled Exception" };
-            f.ShowDialog();
-            Application.Exit();
-
+            OnProcessingCompletedEvent?.Invoke();
+            
         }
     }
 }

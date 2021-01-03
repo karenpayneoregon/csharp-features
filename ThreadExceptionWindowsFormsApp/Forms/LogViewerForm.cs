@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using ExceptionHandling;
 using ExceptionHandling.Interfaces;
+using Microsoft.VisualBasic.Logging;
 using ThreadExceptionWindowsFormsApp.LanguageExtensions;
 using static ThreadExceptionWindowsFormsApp.Helpers.Dialogs;
 
@@ -50,6 +51,7 @@ namespace ThreadExceptionWindowsFormsApp.Forms
 
             var itemsContainers = LogReader.Read();
 
+            LogListView.BeginUpdate();
             foreach (var container in itemsContainers)
             {
                 var current = new ListViewItem(container.ItemArray) {Tag = container.Lines, UseItemStyleForSubItems = false};
@@ -64,7 +66,7 @@ namespace ThreadExceptionWindowsFormsApp.Forms
                         SetItemFount(current);
                         break;
                     case LogLevel.Error:
-                        current.SubItems[0].ForeColor = Color.Crimson;
+                        current.SubItems[0].ForeColor = Color.Yellow;
                         SetItemFount(current);
                         break;
                     case LogLevel.Warning:
@@ -83,6 +85,7 @@ namespace ThreadExceptionWindowsFormsApp.Forms
             }
 
             LogListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            LogListView.EndUpdate();
             
             ActiveControl = LogListView;
             
