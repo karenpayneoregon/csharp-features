@@ -36,7 +36,7 @@ namespace ThreadExceptionWindowsFormsApp
             Application.Run(new Form1());
         }
         /// <summary>
-        /// Display window informing application most close
+        /// Display window informing application must close
         /// </summary>
         private static void OnProcessingCompletedEvent()
         {
