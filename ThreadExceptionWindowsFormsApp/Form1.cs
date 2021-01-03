@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -116,5 +117,28 @@ namespace ThreadExceptionWindowsFormsApp
 
             throw new ApplicationException(CustomExceptionTextTextBox.Text);
         }
+
+        private void ArgumentNullExceptionButton_Click(object sender, EventArgs e)
+        {
+            /*
+             * This will work as expected
+             */
+            var firstName = "KAREN";
+            MessageBox.Show(NoNullExample(firstName));
+            
+            /*
+             * This will throw a runtime exception
+             */
+            firstName = null;
+            MessageBox.Show(NoNullExample(firstName));
+        }
+        /// <summary>
+        /// Passing a null string will throw a runtime exception. Note that if
+        /// this method could handle a null value via assertion than that is
+        /// an option while currently we would assert before calling this method.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        private string NoNullExample([NotNull] string value) => value.ToLower();
     }
 }

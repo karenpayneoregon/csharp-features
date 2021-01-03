@@ -37,6 +37,7 @@ namespace ThreadExceptionWindowsFormsApp
             this.BadThreadButton = new System.Windows.Forms.Button();
             this.MyExceptionButton = new System.Windows.Forms.Button();
             this.CustomExceptionTextTextBox = new System.Windows.Forms.TextBox();
+            this.ArgumentNullExceptionButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -115,11 +116,22 @@ namespace ThreadExceptionWindowsFormsApp
             this.CustomExceptionTextTextBox.Size = new System.Drawing.Size(287, 23);
             this.CustomExceptionTextTextBox.TabIndex = 7;
             // 
+            // ArgumentNullExceptionButton
+            // 
+            this.ArgumentNullExceptionButton.Location = new System.Drawing.Point(12, 128);
+            this.ArgumentNullExceptionButton.Name = "ArgumentNullExceptionButton";
+            this.ArgumentNullExceptionButton.Size = new System.Drawing.Size(105, 23);
+            this.ArgumentNullExceptionButton.TabIndex = 8;
+            this.ArgumentNullExceptionButton.Text = "Null";
+            this.ArgumentNullExceptionButton.UseVisualStyleBackColor = true;
+            this.ArgumentNullExceptionButton.Click += new System.EventHandler(this.ArgumentNullExceptionButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(422, 197);
+            this.Controls.Add(this.ArgumentNullExceptionButton);
             this.Controls.Add(this.CustomExceptionTextTextBox);
             this.Controls.Add(this.MyExceptionButton);
             this.Controls.Add(this.BadThreadButton);
@@ -147,6 +159,7 @@ namespace ThreadExceptionWindowsFormsApp
         private System.Windows.Forms.Button BadThreadButton;
         private System.Windows.Forms.Button MyExceptionButton;
         private System.Windows.Forms.TextBox CustomExceptionTextTextBox;
+        private System.Windows.Forms.Button ArgumentNullExceptionButton;
     }
 }
 
