@@ -63,4 +63,22 @@ namespace WithExpressionsApp
         }
 
     }
+    class Mocked1
+    {
+        public static List<Person> People() =>
+            new()
+            {
+                new() {FirstName = "Bob", LastName = "Jones"}, 
+                new() {FirstName = "Karen", LastName = "Smith"}
+            };
+    }
+    class Mocked3
+    {
+        public static List<Person> People() =>
+            new List<Person>()
+            {
+                new Person() { FirstName = "Bob", LastName = "Jones" },
+                new Person() { FirstName = "Karen", LastName = "Smith" }
+            };
+    }
 }

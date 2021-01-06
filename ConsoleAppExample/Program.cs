@@ -7,6 +7,11 @@ namespace ConsoleAppExample
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            string value = "1";
+            if (int.TryParse(value, out var result))
+            {
+                
+            }
         }
     }
 }

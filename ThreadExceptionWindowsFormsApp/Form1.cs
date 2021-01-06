@@ -139,5 +139,9 @@ namespace ThreadExceptionWindowsFormsApp
         /// <param name="value"></param>
         /// <returns></returns>
         private string NoNullExample([NotNull] string value) => value.ToLower();
+
+        
     }
+   
+
 }

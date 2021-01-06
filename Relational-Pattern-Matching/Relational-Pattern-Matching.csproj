@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<LangVersion>9.0</LangVersion>
+		<LangVersion>latest</LangVersion>
 		<TargetFramework>netcoreapp3.1</TargetFramework>
 		<RootNamespace>Relational_Pattern_Matching</RootNamespace>
 	</PropertyGroup>

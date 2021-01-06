@@ -65,7 +65,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadExceptionWindowsForms
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadioButtonBinding", "RadioButtonBinding\RadioButtonBinding.csproj", "{93C68F24-62FA-4A50-8B31-F9A286FB7208}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppExample", "ConsoleAppExample\ConsoleAppExample.csproj", "{DDBA11FB-3656-4A55-9595-E8E5AC8FC145}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppExample", "ConsoleAppExample\ConsoleAppExample.csproj", "{DDBA11FB-3656-4A55-9595-E8E5AC8FC145}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Null attribute", "Null attribute", "{1421FA76-1536-4829-B9D3-C94E926FE8B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithNull", "WorkingWithNull\WorkingWithNull.csproj", "{2F527D0F-3725-4A49-B23B-FD00A69ABA6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -173,6 +177,10 @@ Global
 		{DDBA11FB-3656-4A55-9595-E8E5AC8FC145}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDBA11FB-3656-4A55-9595-E8E5AC8FC145}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDBA11FB-3656-4A55-9595-E8E5AC8FC145}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F527D0F-3725-4A49-B23B-FD00A69ABA6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F527D0F-3725-4A49-B23B-FD00A69ABA6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F527D0F-3725-4A49-B23B-FD00A69ABA6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F527D0F-3725-4A49-B23B-FD00A69ABA6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -193,6 +201,7 @@ Global
 		{703DBFF8-00B0-4DB0-ABC2-02C9DC4C0630} = {FAE01675-7EEE-445D-81FC-DC6364D160AD}
 		{C56BE45D-C959-4C69-869F-C80F2BCBEB9D} = {FAE01675-7EEE-445D-81FC-DC6364D160AD}
 		{DDBA11FB-3656-4A55-9595-E8E5AC8FC145} = {FAE01675-7EEE-445D-81FC-DC6364D160AD}
+		{2F527D0F-3725-4A49-B23B-FD00A69ABA6C} = {1421FA76-1536-4829-B9D3-C94E926FE8B3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C03FED31-47C8-4D1D-BCF5-C77EFDBA54AE}

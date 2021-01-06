@@ -8,6 +8,10 @@ Demonstrates data binding properties of a class to grouped RadioButton controls.
 - Core 3.1
 - C# 9
 
+## See also
+
+Microsoft TechNet article  [Windows forms (C#): Data Binding ListBox/ComboBox](https://social.technet.microsoft.com/wiki/contents/articles/53599.windows-forms-c-data-binding-listboxcombobox.aspx)
+
 ## Notes
 
 - Will work with .NET Framework 4.7 and higher and need not be Core project as this code was originally done in VS2017 while the sample code has been ported to Core. 
