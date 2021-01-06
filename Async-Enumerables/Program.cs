@@ -26,7 +26,6 @@ namespace Async_Enumerables
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Debug.WriteLine(ThisNamespace());
                 Application.Run(new Form1());
             }
             else
