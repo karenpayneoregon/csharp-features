@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -10,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using static System.Media.SystemSounds;
 
 namespace WpfCommandBinding
 {
@@ -59,12 +59,12 @@ namespace WpfCommandBinding
 
         private void Element_OnMouseEnter(object sender, MouseEventArgs e)
         {
-            SystemSounds.Beep.Play();
+            Beep.Play();
         }
 
         private void Button_OnClick(object sender, RoutedEventArgs e)
         {
-            SystemSounds.Exclamation.Play();
+            Exclamation.Play();
         }
     }
 }
