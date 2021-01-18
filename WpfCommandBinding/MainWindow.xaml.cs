@@ -64,7 +64,8 @@ namespace WpfCommandBinding
 
         private void Button_OnClick(object sender, RoutedEventArgs e)
         {
-            Exclamation.Play();
+            System.Media.SoundPlayer mediaPlayer = new System.Media.SoundPlayer(@"c:\SomeSound.wav");
+            mediaPlayer.Play();
         }
     }
 }
