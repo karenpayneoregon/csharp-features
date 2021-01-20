@@ -85,6 +85,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDynamicTextBoxes", ".
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDynamicControls", "CreateDynamicControls\CreateDynamicControls.csproj", "{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{FF209615-EDCA-462F-8F61-D3B1E31EC38D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -215,6 +217,10 @@ Global
 		{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF209615-EDCA-462F-8F61-D3B1E31EC38D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF209615-EDCA-462F-8F61-D3B1E31EC38D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF209615-EDCA-462F-8F61-D3B1E31EC38D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF209615-EDCA-462F-8F61-D3B1E31EC38D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -241,6 +247,7 @@ Global
 		{0DD5D438-67B5-47D1-97CC-7F90E4427D72} = {FAE01675-7EEE-445D-81FC-DC6364D160AD}
 		{F314C0EE-99BE-4AC8-B475-E57651695B75} = {FAE01675-7EEE-445D-81FC-DC6364D160AD}
 		{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A} = {FAE01675-7EEE-445D-81FC-DC6364D160AD}
+		{FF209615-EDCA-462F-8F61-D3B1E31EC38D} = {FAE01675-7EEE-445D-81FC-DC6364D160AD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C03FED31-47C8-4D1D-BCF5-C77EFDBA54AE}

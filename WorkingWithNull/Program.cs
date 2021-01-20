@@ -7,7 +7,7 @@ namespace WorkingWithNull
     {
         static void Main(string[] args)
         {
-            
+
 
             Console.ReadLine();
         }
