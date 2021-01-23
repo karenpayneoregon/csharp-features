@@ -85,7 +85,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDynamicTextBoxes", ".
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDynamicControls", "CreateDynamicControls\CreateDynamicControls.csproj", "{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{FF209615-EDCA-462F-8F61-D3B1E31EC38D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{FF209615-EDCA-462F-8F61-D3B1E31EC38D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParsingArray", "ParsingArray\ParsingArray.csproj", "{CAFC94DC-FF71-4DE3-97FF-8DBC0D001C2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -221,6 +223,10 @@ Global
 		{FF209615-EDCA-462F-8F61-D3B1E31EC38D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF209615-EDCA-462F-8F61-D3B1E31EC38D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF209615-EDCA-462F-8F61-D3B1E31EC38D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAFC94DC-FF71-4DE3-97FF-8DBC0D001C2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAFC94DC-FF71-4DE3-97FF-8DBC0D001C2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAFC94DC-FF71-4DE3-97FF-8DBC0D001C2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAFC94DC-FF71-4DE3-97FF-8DBC0D001C2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -248,6 +254,7 @@ Global
 		{F314C0EE-99BE-4AC8-B475-E57651695B75} = {FAE01675-7EEE-445D-81FC-DC6364D160AD}
 		{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A} = {FAE01675-7EEE-445D-81FC-DC6364D160AD}
 		{FF209615-EDCA-462F-8F61-D3B1E31EC38D} = {FAE01675-7EEE-445D-81FC-DC6364D160AD}
+		{CAFC94DC-FF71-4DE3-97FF-8DBC0D001C2B} = {FAE01675-7EEE-445D-81FC-DC6364D160AD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C03FED31-47C8-4D1D-BCF5-C77EFDBA54AE}
