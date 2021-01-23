@@ -26,7 +26,8 @@ namespace ParsingArray
             
             var stringValues = textBox1.ToStringArray();
 
-            if (!stringValues.AllDecimals()) return;
+            // optional
+            //if (!stringValues.AllDecimals()) return;
             var result = stringValues.ToDecimalArray().ItemsFromArray().MaxItem();
             if (result != null) stringValues[result.Index] = "H";
 
