@@ -19,7 +19,7 @@ namespace Ranges_examples.Classes
 
             Debug.WriteLine($"{numberIntegers[index1]}, {numberIntegers[index2]}"); // "3, 6"
 
-            `
+            
             foreach (var index in numberIntegers[2..5]) // start index is inclusive, end index is exclusive (non-inclusive)!
             {
                 Debug.Write(index); // 234

@@ -24,11 +24,12 @@ namespace Ranges_examples
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            _text = "Range example for C# 8\nPress any key to run.";
-            _title = "Code samples";
-            PanelBorders();
-            Console.ReadLine();
-            Ranges();
+            GenericDemo1();
+            //_text = "Range example for C# 8\nPress any key to run.";
+            //_title = "Code samples";
+            //PanelBorders();
+            //Console.ReadLine();
+            //Ranges();
 
             Console.ReadLine();
         }
@@ -132,6 +133,105 @@ namespace Ranges_examples
             PanelBorders();
 
         }
+
+        private static void GenericDemo1()
+        {
+            object[] sampleArray = { "Hello", "C#", true, 11, DateTime.Now };
+
+            foreach (var o in sampleArray)
+            {
+                switch (o)
+                {
+                    case string:
+                        Debug.WriteLine($"string: {o.ToString()}");
+                        break;
+                    case int i:
+                        Debug.WriteLine($"o as in {i}");
+                        break;
+                    case bool b:
+                        Debug.WriteLine($"o is bool {b}");
+                        break;
+                    default:
+                        Debug.WriteLine($"o is {o.GetType()}");
+                        break;
+                }
+            }
+        }
+
+        private static void GenericDemo2()
+        {
+            object[] sampleArray = { "Hello", "C#", true, 11, DateTime.Now };
+
+            foreach (var o in sampleArray)
+            {
+                switch (o)
+                {
+                    case string:
+                        Debug.WriteLine($"string: {o.ToString()}");
+                        break;
+                    case int i:
+                        Debug.WriteLine($"o as in {i}");
+                        break;
+                    case bool b:
+                        Debug.WriteLine($"o is bool {b}");
+                        break;
+                    default:
+                        Debug.WriteLine($"o is {o.GetType()}");
+                        break;
+                }
+            }
+        }
+        private static void GenericDemo3()
+        {
+            object[] sampleArray = { "Hello", "C#", true, 11, DateTime.Now };
+
+            foreach (var o in sampleArray)
+            {
+                switch (o)
+                {
+                    case string s:
+                        Debug.WriteLine($"o is a string with value of {s}");
+                        break;
+                    case int i:
+                        Debug.WriteLine($"o is a int with value of {i}");
+                        break;
+                    case bool b:
+                        Debug.WriteLine($"Bool {b}");
+                        break;
+                    case DateTime d:
+                        Debug.WriteLine($"DateTime: {d}");
+                        break;
+                }
+            }
+        }
+
+        private static void GenericDemo4()
+        {
+            object[] sampleArray = { "Hello", "C#", true, 11, DateTime.Now };
+
+            foreach (var currentElement in sampleArray)
+            {
+                switch (currentElement)
+                {
+                    case string stringValue:
+                        Debug.WriteLine($"currentElement is a string with value of {stringValue}");
+                        break;
+                    case int intValue:
+                        Debug.WriteLine($"currentElement is a int with value of {intValue}");
+                        break;
+                    case bool boolValue:
+                        Debug.WriteLine($"currentElement is a bool with value of {boolValue}");
+                        break;
+                    case DateTime dateTimeValue:
+                        Debug.WriteLine($"currentElement is a DateTime with value of: {dateTimeValue}");
+                        break;
+                }
+            }
+        }
+       
+
+
+
 
         /// <summary>
         /// Indexer sub string from start of string
