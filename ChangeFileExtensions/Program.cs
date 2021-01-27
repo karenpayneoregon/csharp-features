@@ -7,7 +7,10 @@ namespace ChangeFileExtensions
     {
         static void Main(string[] args)
         {
-            RenameExtensions(AppDomain.CurrentDomain.BaseDirectory,"text","txt");
+            RenameExtensions(
+                AppDomain.CurrentDomain.BaseDirectory,
+                "text",
+                "txt");
         }
     }
 }
