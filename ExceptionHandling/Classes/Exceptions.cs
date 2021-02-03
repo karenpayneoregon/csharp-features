@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using static System.IO.File;
 
-namespace ExceptionHandling
+namespace ExceptionHandling.Classes
 {
     /// <summary>
     /// Provides writing run time exceptions to a text file

@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace WinControls
+namespace WinControlsCore
 {
-    public class TextBoxCustom : TextBox
+    public class CheckBoxCustom : CheckBox
     {
         [Category("Behavior"), Description("Identifier")]
         public int? Id { get; set; }

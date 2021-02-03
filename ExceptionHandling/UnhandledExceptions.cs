@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading;
-using ExceptionHandling.Interfaces; //using System.Windows.Forms;
+using ExceptionHandling.Classes;
+using ExceptionHandling.Interfaces;
+using ExceptionHandling.LogClasses; //using System.Windows.Forms;
 
 namespace ExceptionHandling
 {

@@ -205,3 +205,16 @@ Object reference not set to an instance of an object.
    at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
    at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, WM msg, IntPtr wparam, IntPtr lparam)
    at ThreadExceptionWindowsFormsApp.Program.Main() in C:\OED\Dotnetland\VS2019\csharp-tips\ThreadExceptionWindowsFormsApp\Program.cs:line 36
+2/3/2021 9:47:44 AM,Critical
+Unable to cast object of type 'System.Windows.Forms.Button' to type 'System.Windows.Forms.Label'.
+   at ThreadExceptionWindowsFormsApp.Form1.BadCastButton_Click(Object sender, EventArgs e) in C:\OED\Dotnetland\VS2019\csharp-tips\ThreadExceptionWindowsFormsApp\Form1.cs:line 101
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, WM msg, IntPtr wparam, IntPtr lparam)
+   at ThreadExceptionWindowsFormsApp.Program.Main() in C:\OED\Dotnetland\VS2019\csharp-tips\ThreadExceptionWindowsFormsApp\Program.cs:line 36

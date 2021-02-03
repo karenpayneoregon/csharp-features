@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using ExceptionHandling;
 using ExceptionHandling.Interfaces;
+using ExceptionHandling.LogClasses;
 using Microsoft.VisualBasic.Logging;
 using ThreadExceptionWindowsFormsApp.LanguageExtensions;
 using static ThreadExceptionWindowsFormsApp.Helpers.Dialogs;

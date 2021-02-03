@@ -37,7 +37,7 @@ namespace CreateDynamicControls
         /// <param name="e"></param>
         private void ProductsListBoxOnDoubleClick(object sender, EventArgs e)
         {
-            if (_productBindingSource.Current == null)
+            if (_productBindingSource.Current is null)
             {
                 return;
             }
@@ -66,6 +66,7 @@ namespace CreateDynamicControls
 
             var button = (DataButton)sender;
             button.Image = Resources.CheckDot_6x_16x;
+            
             _productsBindingList = new BindingList<Product>(DataOperations.ReadProducts(button.Identifier));
             _productBindingSource.DataSource = _productsBindingList;
             ProductsListBox.DataSource = _productBindingSource;
@@ -77,12 +78,14 @@ namespace CreateDynamicControls
             ButtonsListBox.DataSource = Operations.ButtonsList.Select(button => button.Name).ToList();
         }
 
-        private void CreateCategoryButtons_Click(object sender, EventArgs e)
+        private void CreateCategoriesButton_Click(object sender, EventArgs e)
         {
+
             foreach (var category in DataOperations.ReadCategories())
             {
                 Operations.CreateCategoryButton(category.Name, category.Id);
             }
+            
         }
     }
 

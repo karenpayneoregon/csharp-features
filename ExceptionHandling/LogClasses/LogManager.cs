@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ExceptionHandling.Classes;
 using ExceptionHandling.Interfaces;
 
-namespace ExceptionHandling
+namespace ExceptionHandling.LogClasses
 {
     /// <summary>
     /// Simple no frills logger to avoid a 3rd party package

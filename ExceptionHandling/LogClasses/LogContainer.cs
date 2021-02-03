@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Globalization;
 
-namespace ExceptionHandling
+namespace ExceptionHandling.LogClasses
 {
     public class LogContainer
     {
