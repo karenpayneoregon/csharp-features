@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ExceptionHandling\ExceptionHandling.csproj" />
+    <PackageReference Include="KP.ExceptionHandling" Version="1.0.1" />
   </ItemGroup>
 
   <ItemGroup>

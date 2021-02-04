@@ -39,6 +39,7 @@ namespace ConsoleReadLineTimeOut1
         public static string ReadLineWaitTenSeconds() => ReadLineAsStringTimeout(TimeSpan.FromSeconds(10));
         public static string ReadLineWaitThirtySeconds() => ReadLineAsStringTimeout(TimeSpan.FromSeconds(30));
         public static string ReadLineWaitOneMinutes() => ReadLineAsStringTimeout(TimeSpan.FromMinutes(1));
+        
         public static DateTime? ReadLineDateTimeWaitTenSeconds() => ReadLineAsDateTimeout(TimeSpan.FromSeconds(10));
         public static int? ReadLineIntTimeWaitTenSeconds() => ReadLineAsIntTimeout(TimeSpan.FromSeconds(10));
         public static int? ReadLineIntTimeWait() => ReadLineAsIntTimeout();

@@ -13,6 +13,11 @@ To run this project *as is* in this repository.
 
 [Unhandled runtime exceptions window forms (C#)](https://social.technet.microsoft.com/wiki/contents/articles/54209.unhandled-runtime-exceptions-window-forms-c.aspx)
 
+# NuGet package
+https://www.nuget.org/packages/KP.ExceptionHandling/
+
+![screen](../assets/nugetpackage1.png)
+
 # Log viewer
 
 ![logviewer](../assets/LogViewer.png)
