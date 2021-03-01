@@ -30,7 +30,7 @@ namespace Async_Enumerables.Classes
         /// <returns></returns>
         public static async Task RunBasicExample(CancellationToken token)
         {
-            await foreach (var item in RangeAsync(1, 3000, 100, token))
+            await foreach (var item in RangeAsync(1, 90, 99, token))
             {
                 if (token.IsCancellationRequested)
                 {

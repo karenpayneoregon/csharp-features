@@ -44,7 +44,8 @@ namespace Async_Enumerables
             if (_cancellationTokenSource.IsCancellationRequested)
             {
                 _cancellationTokenSource.Dispose();
-                _cancellationTokenSource = new CancellationTokenSource();
+                _cancellationTokenSource = new CancellationTokenSource(TimeSpan.FromSeconds(1));
+                _cancellationTokenSource.CancelAfter(200);
             }
 
             try

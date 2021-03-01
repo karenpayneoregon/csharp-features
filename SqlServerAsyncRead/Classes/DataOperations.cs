@@ -1,5 +1,8 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SqlServerAsyncRead.Classes
@@ -10,13 +13,12 @@ namespace SqlServerAsyncRead.Classes
             "Data Source=.\\sqlexpress;Initial Catalog=NorthWind2020;Integrated Security=True";
 
 
-        public static async Task<DataTable> ReadProductsTask()
+        public static async Task<DataTableResults> ReadProductsTask(CancellationToken ct)
         {
+            var result = new DataTableResults() {DataTable = new DataTable()};
 
             return await Task.Run(async () =>
             {
-                var productTable = new DataTable();
-
                 using (var cn = new SqlConnection(_connectionString))
                 {
 
@@ -24,14 +26,31 @@ namespace SqlServerAsyncRead.Classes
                     {
 
                         cmd.CommandText = SelectStatement();
-                        await cn.OpenAsync();
+                        
+                        try
+                        {
+                            await cn.OpenAsync(ct);
+                        }
+                        catch (TaskCanceledException tce)
+                        {
+                            Exceptions.Write(tce, ExceptionLogType.ConnectionFailure, $"Connection string '{_connectionString}'" );
+                            result.ConnectionFailed = true;
+                            result.ExceptionMessage = "Connection Failed";
+                            return result;
+                        }
+                        catch (Exception ex)
+                        {
+                            Exceptions.Write(ex, ExceptionLogType.General);
+                            result.GeneralException = ex;
+                            return result;
+                        }
 
-                        productTable.Load(await cmd.ExecuteReaderAsync());
+                        result.DataTable.Load(await cmd.ExecuteReaderAsync());
                     }
 
                 }
 
-                return productTable;
+                return result;
                 
             });
 
