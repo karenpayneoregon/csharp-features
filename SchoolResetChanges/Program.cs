@@ -1,5 +1,5 @@
-﻿using System;
-using SchoolDatabase;
+﻿using SchoolDatabase;
+using System;
 
 namespace SchoolResetChanges
 {
@@ -9,10 +9,10 @@ namespace SchoolResetChanges
         {
 
             Operations.TestReset();
-            
             Console.ReadLine();
+
         }
-       
+
     }
 
 

@@ -5,7 +5,7 @@ namespace NewExpressions.Classes
     public class ColoredString
     {
         public ConsoleColor Color;
-        public String Text;
+        public string Text;
 
         public ColoredString(ConsoleColor color, string text)
         {

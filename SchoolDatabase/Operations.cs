@@ -13,6 +13,11 @@ namespace SchoolDatabase
             using var context = new SchoolContext();
             
             var firstPerson = context.Person.FirstOrDefault();
+            if (firstPerson is null)
+            {
+                return;
+            }
+            
             Console.WriteLine();
 
 
