@@ -4,6 +4,9 @@ Contains help methods to configure a DbContext connection, environment and loggi
 
 Although C# 9 is used (configured in each project file) the majority of code will work with lower versions of C# while the recommendation is to use C# 9.
 
+![img](../assets/Versions.png)
+
+![img](../assets/kpTraining.png)
 
 |Scope|Method/property   |Definition   |
 | :---         |  :---  | :--- |

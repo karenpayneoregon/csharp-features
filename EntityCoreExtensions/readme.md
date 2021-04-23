@@ -11,3 +11,7 @@ Contains several extension methods for DbContext.
 # Note
 
 This project was written prior to EF-5 and updated to .NET 5.
+
+![img](../assets/Versions.png)
+
+![img](../assets/kpTraining.png)

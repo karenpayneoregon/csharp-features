@@ -10,10 +10,6 @@ namespace SwitchExpressionStackOverflow
             projet.IdSecteur = Operations.SetIdSecteur(projet);
             
             Debug.WriteLine($"projet.IdPlateformeSecteur = {projet.IdPlateformeSecteur}");
-
-            
-            
-
         }
 
         static void Demo(string value)

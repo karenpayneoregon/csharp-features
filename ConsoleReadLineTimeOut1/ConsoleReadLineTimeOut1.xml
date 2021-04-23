@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConsoleReadLineTimeOut1</name>
+    </assembly>
+    <members>
+        <member name="M:ConsoleReadLineTimeOut1.ConsoleHelpers.ReadLineAsStringTimeout(System.Nullable{System.TimeSpan})">
+            <summary>
+            Wait a specific amount of time for Console.ReadLine. Must press ENTER to collect input or no key to timeout
+            </summary>
+            <param name="timeout">Valid time span or if not passed default to <see cref="P:ConsoleReadLineTimeOut1.ConsoleHelpers.DefaultTimeOut"/> in seconds</param>
+            <returns>Input from ReadLine or an empty string</returns>
+        </member>
+        <member name="M:ConsoleReadLineTimeOut1.ConsoleHelpers.ReadLineAsString">
+            <summary>
+            Verbose method name for reading a string
+            </summary>
+            <returns><see cref="T:System.DateTime"/></returns>
+        </member>
+        <member name="M:ConsoleReadLineTimeOut1.ConsoleHelpers.ReadLineAsDate">
+            <summary>
+            Read line, convert to DateTime
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ConsoleReadLineTimeOut1.ConsoleHelpers.ReadLineAsInt">
+            <summary>
+            Read line and convert to int
+            </summary>
+            <returns><see cref="T:System.Int32"/></returns>
+        </member>
+        <member name="M:ConsoleReadLineTimeOut1.ConsoleHelpers.ReadLineAsDateTimeout(System.Nullable{System.TimeSpan})">
+            <summary>
+            Read line and convert to <see cref="T:System.DateTime"/> with timeout
+            </summary>
+            <returns><see cref="T:System.DateTime"/></returns>
+        </member>
+        <member name="M:ConsoleReadLineTimeOut1.ConsoleHelpers.ReadLineAsIntTimeout(System.Nullable{System.TimeSpan})">
+            <summary>
+            Read line and convert to <see cref="T:System.Int32"/> with timeout
+            </summary>
+            <returns><see cref="T:System.Int32"/></returns>
+        </member>
+        <member name="M:ConsoleReadLineTimeOut1.ConsoleHelpers.ReadLineAsDoubleTimeout(System.Nullable{System.TimeSpan})">
+            <summary>
+            Read line and convert to <see cref="T:System.TimeSpan"/> with timeout
+            </summary>
+            <returns><see cref="T:System.TimeSpan"/></returns>
+        </member>
+        <member name="M:ConsoleReadLineTimeOut1.ConsoleHelpers.ReadLineWaitFiveSeconds">
+            <summary>
+            Read line and convert to <see cref="T:System.String"/> with five seconds timeout
+            </summary>
+            <returns><see cref="T:System.String"/></returns>
+        </member>
+        <member name="M:ConsoleReadLineTimeOut1.ConsoleHelpers.ReadLineWaitTenSeconds">
+            <summary>
+            Read line and convert to <see cref="T:System.String"/> with ten seconds timeout
+            </summary>
+            <returns><see cref="T:System.String"/></returns>
+        </member>
+        <member name="M:ConsoleReadLineTimeOut1.ConsoleHelpers.ReadLineWaitThirtySeconds">
+            <summary>
+            Read line and convert to <see cref="T:System.String"/> with thirty seconds timeout
+            </summary>
+            <returns><see cref="T:System.String"/></returns>
+        </member>
+        <member name="M:ConsoleReadLineTimeOut1.ConsoleHelpers.ReadLineWaitOneMinutes">
+            <summary>
+            Read line and convert to <see cref="T:System.String"/> with thirty seconds timeout
+            </summary>
+            <returns><see cref="T:System.String"/></returns>
+        </member>
+        <member name="M:ConsoleReadLineTimeOut1.ConsoleHelpers.ReadLineDateTimeWaitTenSeconds">
+            <summary>
+            Read line and convert to <see cref="T:System.DateTime"/> with one minute timeout
+            </summary>
+            <returns><see cref="T:System.DateTime"/></returns>
+        </member>
+        <member name="M:ConsoleReadLineTimeOut1.ConsoleHelpers.ReadLineIntTimeWait">
+            <summary>
+            Read line and convert to <see cref="T:System.Int32"/> with one minute timeout
+            </summary>
+            <returns><see cref="T:System.Int32"/></returns>
+        </member>
+        <member name="M:ConsoleReadLineTimeOut1.ConsoleHelpers.ToYesNoString(System.Boolean)">
+            <summary>
+            Convert bool to Yes, No
+            </summary>
+            <param name="value"><see cref="T:System.Boolean"/></param>
+            <returns>Yes or No</returns>
+        </member>
+    </members>
+</doc>

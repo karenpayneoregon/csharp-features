@@ -8,3 +8,9 @@ Provides methods for logging
 # See
 
 The [following project](https://github.com/karenpayneoregon/csharp-features/tree/master/ThreadExceptionWindowsFormsApp) for usage
+
+![ig](../assets/exceptionHandling.png) 
+
+![img](../assets/Versions.png)
+
+![img](../assets/kpTraining.png)
