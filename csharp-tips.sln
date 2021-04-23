@@ -107,6 +107,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileHelpersFrontEnd", "File
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlServerAsyncReadCore", "SqlServerAsyncReadCore\SqlServerAsyncReadCore.csproj", "{FFA23BBC-435C-4A6B-9DF0-66469A4E4E57}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchExpressionStackOverflow", "SwitchExpression\SwitchExpressionStackOverflow.csproj", "{1CD173D0-BE16-488F-881A-2DF5D6D69205}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -277,6 +279,10 @@ Global
 		{FFA23BBC-435C-4A6B-9DF0-66469A4E4E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFA23BBC-435C-4A6B-9DF0-66469A4E4E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFA23BBC-435C-4A6B-9DF0-66469A4E4E57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CD173D0-BE16-488F-881A-2DF5D6D69205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CD173D0-BE16-488F-881A-2DF5D6D69205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CD173D0-BE16-488F-881A-2DF5D6D69205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CD173D0-BE16-488F-881A-2DF5D6D69205}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -313,6 +319,7 @@ Global
 		{7ACB9F4F-E040-4A8B-A999-5C9A0F56F98A} = {3C246579-C520-4BC8-8D46-869CE1D9B99E}
 		{66FE12A5-7C03-44EA-8737-4F3E68DAFEDE} = {3C246579-C520-4BC8-8D46-869CE1D9B99E}
 		{805E5C27-F5A0-4515-A6CE-16F24C528216} = {FAE01675-7EEE-445D-81FC-DC6364D160AD}
+		{1CD173D0-BE16-488F-881A-2DF5D6D69205} = {71D633FC-91E8-4C0B-9F1E-E03E127BDA25}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C03FED31-47C8-4D1D-BCF5-C77EFDBA54AE}
