@@ -156,5 +156,8 @@ namespace SwitchExpression
     }
 }
 ```
+</br>
 
+![img](assets/Versions.png)
 
+![imge](assets/kpTraining.png)

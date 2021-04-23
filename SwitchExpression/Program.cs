@@ -11,8 +11,17 @@ namespace SwitchExpressionStackOverflow
             
             Debug.WriteLine($"projet.IdPlateformeSecteur = {projet.IdPlateformeSecteur}");
 
+            
+            
 
+        }
 
+        static void Demo(string value)
+        {
+            if (value is { Length: >0})
+            {
+                
+            }
         }
     }
 }
