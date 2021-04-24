@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace YieldIAsyncEnumerable.Classes
 {
-    public class Helper
+    public class Helpers
     {
         /// <summary>
         /// Extension method based off Microsoft's code sample from a blog which I don't remember the address

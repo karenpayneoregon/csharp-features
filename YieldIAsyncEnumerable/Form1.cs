@@ -22,7 +22,14 @@ namespace YieldIAsyncEnumerable
         public Form1()
         {
             InitializeComponent();
+            
+            DataOperations.NewPage += DataOperationsOnNewPage;
+
+            
+
         }
+
+
 
         private async void Start1Button_Click(object sender, EventArgs e)
         {
@@ -66,7 +73,7 @@ namespace YieldIAsyncEnumerable
         {
             listBox1.Items.Clear();
             
-            await foreach (var item in Helper.RangeAsync(3, GlobalStuff.MaxNumber))
+            await foreach (var item in Helpers.RangeAsync(3, GlobalStuff.MaxNumber))
             {
                 listBox1.Items.Add(item); 
             }
@@ -76,14 +83,19 @@ namespace YieldIAsyncEnumerable
 
         private async void IterateContactNamesButton_Click(object sender, EventArgs e)
         {
+            listBox2.Items.Clear();
             await IterateContactNames();
         }
         public async Task IterateContactNames()
         {
-            await foreach (var name in DataOperations.GetAllNames(true))
+            await foreach (var name in DataOperations.GetAllNamesPaged(true))
             {
                 listBox2.InvokeIfRequired(lb => { listBox2.Items.Add(name);});
             }
+        }
+        private void DataOperationsOnNewPage(int page)
+        {
+            PageLabel.Text = $"Page: {page}";
         }
     }
 }

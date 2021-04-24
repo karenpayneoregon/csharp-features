@@ -16,4 +16,14 @@
     <Folder Include="scripts\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ConfigurationHelper\ConfigurationHelper.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
