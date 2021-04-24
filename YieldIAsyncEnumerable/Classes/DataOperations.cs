@@ -14,6 +14,11 @@ namespace YieldIAsyncEnumerable.Classes
         private static string _selectStatement = 
             "SELECT FirstName + ' ' + LastName As FullName FROM dbo.Contacts ORDER BY LastName;";
         
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="delay">For demonstration purposes else this will happen in a blink of an eye </param>
+        /// <returns></returns>
         public static async IAsyncEnumerable<string> GetAllNames(bool delay)
         {
             
