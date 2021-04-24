@@ -109,6 +109,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchExpressionStackOverfl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryOperations", "DirectoryOperations\DirectoryOperations.csproj", "{7ACB9F4F-E040-4A8B-A999-5C9A0F56F98A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IAsyncEnumerable", "IAsyncEnumerable", "{AA8FF841-EE8A-4B3D-8CC4-10E89A27DC32}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YieldIAsyncEnumerable", "YieldIAsyncEnumerable\YieldIAsyncEnumerable.csproj", "{C68FC6E7-DF01-49A5-B057-DB67DDFC3DA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -283,6 +287,10 @@ Global
 		{7ACB9F4F-E040-4A8B-A999-5C9A0F56F98A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7ACB9F4F-E040-4A8B-A999-5C9A0F56F98A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7ACB9F4F-E040-4A8B-A999-5C9A0F56F98A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C68FC6E7-DF01-49A5-B057-DB67DDFC3DA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C68FC6E7-DF01-49A5-B057-DB67DDFC3DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C68FC6E7-DF01-49A5-B057-DB67DDFC3DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C68FC6E7-DF01-49A5-B057-DB67DDFC3DA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -320,6 +328,8 @@ Global
 		{805E5C27-F5A0-4515-A6CE-16F24C528216} = {FAE01675-7EEE-445D-81FC-DC6364D160AD}
 		{1CD173D0-BE16-488F-881A-2DF5D6D69205} = {71D633FC-91E8-4C0B-9F1E-E03E127BDA25}
 		{7ACB9F4F-E040-4A8B-A999-5C9A0F56F98A} = {3C246579-C520-4BC8-8D46-869CE1D9B99E}
+		{AA8FF841-EE8A-4B3D-8CC4-10E89A27DC32} = {518C84FE-5F56-4232-BC7D-3CDDD558E784}
+		{C68FC6E7-DF01-49A5-B057-DB67DDFC3DA0} = {AA8FF841-EE8A-4B3D-8CC4-10E89A27DC32}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C03FED31-47C8-4D1D-BCF5-C77EFDBA54AE}
