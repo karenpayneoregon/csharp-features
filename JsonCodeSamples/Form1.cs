@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using JsonCodeSamples.Classes;
 using JsonCodeSamples.Models;
@@ -22,6 +16,7 @@ namespace JsonCodeSamples
         private void SerializeShipInfoButton_Click(object sender, EventArgs e)
         {
             var fileName = "Ship1.json";
+            
             var (success, createException) = Mockups.singleShipInfo().ModelToJson(fileName);
             if (success)
             {
@@ -37,6 +32,7 @@ namespace JsonCodeSamples
         private void SerializeShipInfoListButton_Click(object sender, EventArgs e)
         {
             var fileName = "ShipList.json";
+            
             var (success, createException) = Mockups.ShippingInfoList().ModelToJson(fileName);
             if (success)
             {
@@ -46,6 +42,10 @@ namespace JsonCodeSamples
                     var sb = new StringBuilder();
                     shippingInfos.ForEach(item => sb.AppendLine(item.ToString()));
                     MessageBox.Show(sb.ToString());
+                }
+                else
+                {
+                    MessageBox.Show(readException.Message);
                 }
                 
             }
