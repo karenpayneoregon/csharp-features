@@ -68,7 +68,7 @@ namespace JsonCodeSamples
                 {
                     foreach (var shippingInfo in shippingInfos)
                     {
-                        Console.WriteLine($"{shippingInfo.ToString()}");
+                        Console.WriteLine($"{shippingInfo}");
                         foreach (var somethingNested in shippingInfo.SomethingNested)
                         {
                             Console.WriteLine($@"	{somethingNested.Id}, {somethingNested.Value}");
