@@ -76,7 +76,9 @@ namespace JsonCodeSamples
 
                         Console.WriteLine();
                     }
-                    
+
+                    MessageBox.Show("See Visual Studio output window for results");
+
                 }
                 else
                 {
