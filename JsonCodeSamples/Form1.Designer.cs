@@ -31,13 +31,14 @@ namespace JsonCodeSamples
         {
             this.SerializeShipInfoButton = new System.Windows.Forms.Button();
             this.SerializeShipInfoListButton = new System.Windows.Forms.Button();
+            this.SerializeShipInfoListNestedButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SerializeShipInfoButton
             // 
             this.SerializeShipInfoButton.Location = new System.Drawing.Point(12, 12);
             this.SerializeShipInfoButton.Name = "SerializeShipInfoButton";
-            this.SerializeShipInfoButton.Size = new System.Drawing.Size(152, 23);
+            this.SerializeShipInfoButton.Size = new System.Drawing.Size(220, 23);
             this.SerializeShipInfoButton.TabIndex = 0;
             this.SerializeShipInfoButton.Text = "Serialize ShipInfo";
             this.SerializeShipInfoButton.UseVisualStyleBackColor = true;
@@ -47,17 +48,28 @@ namespace JsonCodeSamples
             // 
             this.SerializeShipInfoListButton.Location = new System.Drawing.Point(12, 41);
             this.SerializeShipInfoListButton.Name = "SerializeShipInfoListButton";
-            this.SerializeShipInfoListButton.Size = new System.Drawing.Size(152, 23);
+            this.SerializeShipInfoListButton.Size = new System.Drawing.Size(220, 23);
             this.SerializeShipInfoListButton.TabIndex = 1;
             this.SerializeShipInfoListButton.Text = "Serialize List of ShipInfo";
             this.SerializeShipInfoListButton.UseVisualStyleBackColor = true;
             this.SerializeShipInfoListButton.Click += new System.EventHandler(this.SerializeShipInfoListButton_Click);
             // 
+            // SerializeShipInfoListNestedButton
+            // 
+            this.SerializeShipInfoListNestedButton.Location = new System.Drawing.Point(12, 70);
+            this.SerializeShipInfoListNestedButton.Name = "SerializeShipInfoListNestedButton";
+            this.SerializeShipInfoListNestedButton.Size = new System.Drawing.Size(220, 23);
+            this.SerializeShipInfoListNestedButton.TabIndex = 2;
+            this.SerializeShipInfoListNestedButton.Text = "Serialize List of ShipInfo (nested)";
+            this.SerializeShipInfoListNestedButton.UseVisualStyleBackColor = true;
+            this.SerializeShipInfoListNestedButton.Click += new System.EventHandler(this.SerializeShipInfoListNestedButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(189, 84);
+            this.ClientSize = new System.Drawing.Size(259, 139);
+            this.Controls.Add(this.SerializeShipInfoListNestedButton);
             this.Controls.Add(this.SerializeShipInfoListButton);
             this.Controls.Add(this.SerializeShipInfoButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -72,6 +84,7 @@ namespace JsonCodeSamples
 
         private System.Windows.Forms.Button SerializeShipInfoButton;
         private System.Windows.Forms.Button SerializeShipInfoListButton;
+        private System.Windows.Forms.Button SerializeShipInfoListNestedButton;
     }
 }
 

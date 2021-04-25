@@ -55,5 +55,39 @@ namespace JsonCodeSamples
             }
 
         }
+
+        private void SerializeShipInfoListNestedButton_Click(object sender, EventArgs e)
+        {
+            var fileName = "ShipListNested.json";
+
+            var (success, createException) = Mockups.ShippingInfoNestedList().ModelToJson(fileName);
+            if (success)
+            {
+                var (shippingInfos, readException) = Helpers.JsonToListModel<ShippingInfo>(fileName);
+                if (readException == null)
+                {
+                    foreach (var shippingInfo in shippingInfos)
+                    {
+                        Console.WriteLine($"{shippingInfo.ToString()}");
+                        foreach (var somethingNested in shippingInfo.SomethingNested)
+                        {
+                            Console.WriteLine($@"	{somethingNested.Id}, {somethingNested.Value}");
+                        }
+
+                        Console.WriteLine();
+                    }
+                    
+                }
+                else
+                {
+                    MessageBox.Show(readException.Message);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show(createException.Message);
+            }
+        }
     }
 }
