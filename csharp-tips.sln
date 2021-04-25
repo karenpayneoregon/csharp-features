@@ -113,6 +113,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IAsyncEnumerable", "IAsyncE
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YieldIAsyncEnumerable", "YieldIAsyncEnumerable\YieldIAsyncEnumerable.csproj", "{C68FC6E7-DF01-49A5-B057-DB67DDFC3DA0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Newtonsoft examples", "Newtonsoft examples", "{285AE42E-98D7-4591-93F8-7C371C9DA163}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonCodeSamples", "JsonCodeSamples\JsonCodeSamples.csproj", "{E59F7E9E-FE21-490C-8E51-FC7B4E1D9C77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -291,6 +295,10 @@ Global
 		{C68FC6E7-DF01-49A5-B057-DB67DDFC3DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C68FC6E7-DF01-49A5-B057-DB67DDFC3DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C68FC6E7-DF01-49A5-B057-DB67DDFC3DA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E59F7E9E-FE21-490C-8E51-FC7B4E1D9C77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E59F7E9E-FE21-490C-8E51-FC7B4E1D9C77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E59F7E9E-FE21-490C-8E51-FC7B4E1D9C77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E59F7E9E-FE21-490C-8E51-FC7B4E1D9C77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -330,6 +338,8 @@ Global
 		{7ACB9F4F-E040-4A8B-A999-5C9A0F56F98A} = {3C246579-C520-4BC8-8D46-869CE1D9B99E}
 		{AA8FF841-EE8A-4B3D-8CC4-10E89A27DC32} = {518C84FE-5F56-4232-BC7D-3CDDD558E784}
 		{C68FC6E7-DF01-49A5-B057-DB67DDFC3DA0} = {AA8FF841-EE8A-4B3D-8CC4-10E89A27DC32}
+		{285AE42E-98D7-4591-93F8-7C371C9DA163} = {518C84FE-5F56-4232-BC7D-3CDDD558E784}
+		{E59F7E9E-FE21-490C-8E51-FC7B4E1D9C77} = {285AE42E-98D7-4591-93F8-7C371C9DA163}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C03FED31-47C8-4D1D-BCF5-C77EFDBA54AE}
