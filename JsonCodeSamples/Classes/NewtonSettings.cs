@@ -2,6 +2,9 @@
 
 namespace JsonCodeSamples.Classes
 {
+    /// <summary>
+    /// Setting for serializing with Json.net
+    /// </summary>
     public static class NewtonSettings
     {
         /// <summary>

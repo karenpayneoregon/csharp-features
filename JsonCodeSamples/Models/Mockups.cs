@@ -7,6 +7,10 @@ namespace JsonCodeSamples.Models
     /// </summary>
     public class Mockups
     {
+        /// <summary>
+        /// Single <see cref="ShippingInfo"/> mockup
+        /// </summary>
+        /// <returns><see cref="ShippingInfo"/></returns>
         public static ShippingInfo singleShipInfo() => new()
         {
             firstname = "Jim", 
@@ -20,7 +24,10 @@ namespace JsonCodeSamples.Models
                 PostalCode = "97666"
             }
         };
-
+        /// <summary>
+        /// Mocked list of <see cref="ShippingInfo"/>
+        /// </summary>
+        /// <returns><see cref="List&lt;ShippingInfo&gt;"/></returns>
         public static List<ShippingInfo> ShippingInfoList()
         {
             var list = new List<ShippingInfo>
@@ -55,6 +62,10 @@ namespace JsonCodeSamples.Models
 
             return list;
         }
+        /// <summary>
+        /// Mocked list of <see cref="ShippingInfo"/> with nested properties
+        /// </summary>
+        /// <returns>Mocked list of &lt;see cref="ShippingInfo"/&gt;</returns>
         public static List<ShippingInfo> ShippingInfoNestedList() 
         {
             var list = new List<ShippingInfo>

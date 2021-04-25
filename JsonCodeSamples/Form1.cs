@@ -6,8 +6,10 @@ using JsonCodeSamples.Models;
 
 namespace JsonCodeSamples
 {
+    /// <inheritdoc />
     public partial class Form1 : Form
     {
+        /// <inheritdoc />
         public Form1()
         {
             InitializeComponent();
