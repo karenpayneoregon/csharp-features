@@ -11,6 +11,9 @@ Demonstrates using Newtonshoft Json.net how to
 - Mockups.cs contains mock-ups to test.
 - NewtonSettings.cs contains predone settings for serializing
 - Helpers.cs contain generic methods to serialize and deserialize items or list
+- [Documentation](https://github.com/karenpayneoregon/csharp-features/blob/master/JsonCodeSamples/Docs/JsonCodeSamples.md)
+
+
 
 <table>
     <tr>
