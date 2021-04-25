@@ -12,6 +12,12 @@ Demonstrates using Newtonshoft Json.net how to
 - NewtonSettings.cs contains predone settings for serializing
 - Helpers.cs contain generic methods to serialize and deserialize items or list
 
+<table>
+    <tr>
+        <td>The code samples may be a bit much if new to working with json. Best to study the code along with using Visual Studio's debugger to understand working with generics and inheriting classes.</td>
+    </tr>
+</table>
+
 </br>
 
 ![img](assets/figure1.png)
