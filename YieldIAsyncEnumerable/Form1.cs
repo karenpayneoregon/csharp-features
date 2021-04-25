@@ -25,11 +25,7 @@ namespace YieldIAsyncEnumerable
             
             DataOperations.NewPage += DataOperationsOnNewPage;
 
-            
-
         }
-
-
 
         private async void Start1Button_Click(object sender, EventArgs e)
         {
