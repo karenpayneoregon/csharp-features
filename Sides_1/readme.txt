@@ -1,0 +1,1 @@
+﻿All documentation is in readme.md, use Visual Studio code to read properly.

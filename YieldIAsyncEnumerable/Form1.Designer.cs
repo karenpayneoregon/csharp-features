@@ -37,6 +37,7 @@ namespace YieldIAsyncEnumerable
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.PageLabel = new System.Windows.Forms.Label();
+            this.AsyncLazyButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -115,11 +116,22 @@ namespace YieldIAsyncEnumerable
             this.PageLabel.TabIndex = 7;
             this.PageLabel.Text = "0";
             // 
+            // AsyncLazyButton
+            // 
+            this.AsyncLazyButton.Location = new System.Drawing.Point(316, 133);
+            this.AsyncLazyButton.Name = "AsyncLazyButton";
+            this.AsyncLazyButton.Size = new System.Drawing.Size(163, 23);
+            this.AsyncLazyButton.TabIndex = 8;
+            this.AsyncLazyButton.Text = "AsyncLazy download page";
+            this.AsyncLazyButton.UseVisualStyleBackColor = true;
+            this.AsyncLazyButton.Click += new System.EventHandler(this.AsyncLazyButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 188);
+            this.Controls.Add(this.AsyncLazyButton);
             this.Controls.Add(this.PageLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox2);
@@ -147,6 +159,7 @@ namespace YieldIAsyncEnumerable
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label PageLabel;
+        private System.Windows.Forms.Button AsyncLazyButton;
     }
 }
 

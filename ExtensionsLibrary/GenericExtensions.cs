@@ -45,5 +45,15 @@ namespace ExtensionsLibrary
         public static bool Between<T>(this T value, T lowerValue, T upperValue) where T : struct, IComparable<T> => 
             Comparer<T>.Default.Compare(value, lowerValue) >= 0 && Comparer<T>.Default.Compare(value, upperValue) <= 0;
 
+        /// <summary>
+        /// Determine if T is less than maximumValue 
+        /// </summary>
+        /// <typeparam name="T">Data type</typeparam>
+        /// <param name="sender">Value to test</param>
+        /// <param name="maximumValue">Max value</param>
+        /// <returns></returns>
+        public static bool LessThan<T>(this IComparable<T> sender, T maximumValue) =>
+            sender.CompareTo(maximumValue) <= 0;
+
     }
 }

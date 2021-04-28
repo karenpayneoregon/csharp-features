@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
-using System.Text;
 
 namespace Sides_1
 {
@@ -16,7 +13,10 @@ namespace Sides_1
             Console.ReadKey();
         }
 
-
+        /// <summary>
+        /// Get differences between two list read from two text files
+        /// in search of one or more items that is different between the two list.
+        /// </summary>
         private static void DifferencesBetweenTextFiles()
         {
             const string folderName = "C:\\OED\\Documents\\Pulls";

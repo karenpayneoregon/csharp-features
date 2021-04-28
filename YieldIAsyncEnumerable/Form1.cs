@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -92,6 +93,23 @@ namespace YieldIAsyncEnumerable
         private void DataOperationsOnNewPage(int page)
         {
             PageLabel.Text = $"Page: {page}";
+        }
+
+        /// <summary>
+        /// Simple example for <seealso cref="Classes.AsyncLazy"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void AsyncLazyButton_Click(object sender, EventArgs e)
+        {
+            
+            var httpClient = new HttpClient();
+            var siteAddress = "https://stackoverflow.com";
+            
+            var deferredTask = new AsyncLazy<string>(async () => await httpClient.GetStringAsync(siteAddress));
+            var websiteSource = await deferredTask;
+            
+            Console.WriteLine();
         }
     }
 }
