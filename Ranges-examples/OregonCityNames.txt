@@ -1,0 +1,373 @@
+﻿Adair Village
+Adams
+Adrian
+Albany
+Aloha
+Alpine
+Alsea
+Altamont
+Amity
+Annex
+Antelope
+Arlington
+Ashland
+Astoria
+Athena
+Aumsville
+Aurora
+Baker City
+Bandon
+Banks
+Barlow
+Barview
+Bay City
+Bayside Gardens
+Beaver
+Beavercreek
+Beaverton
+Bellfountain
+Bend
+Bethany
+Black Butte Ranch
+Blodgett
+Boardman
+Bonanza
+Brogan
+Brookings
+Brooks
+Brownsville
+Bull Mountain
+Bunker Hill
+Burns
+Butte Falls
+Butteville
+Camp Sherman
+Canby
+Cannon Beach
+Canyon City
+Canyonville
+Cape Meares
+Carlton
+Cascade Locks
+Cascadia
+Cave Junction
+Cayuse
+Cedar Hills
+Cedar Mill
+Central Point
+Chenoweth
+Chiloquin
+Clatskanie
+Cloverdale
+Coburg
+Columbia City
+Condon
+Coos Bay
+Coquille
+Cornelius
+Corvallis
+Cottage Grove
+Cove
+Crabtree
+Crane
+Crawfordsville
+Creswell
+Crooked River Ranch
+Culver
+Dallas
+Damascus
+Days Creek
+Dayton
+Dayville
+Deer Island
+Depoe Bay
+Deschutes River Woods
+Detroit
+Dillard
+Donald
+Drain
+Dufur
+Dundee
+Dunes City
+Durham
+Eagle Crest
+Eagle Point
+Echo
+Elgin
+Elkton
+Enterprise
+Estacada
+Eugene
+Fair Oaks
+Fairview
+Falls City
+Florence
+Foots Creek
+Forest Grove
+Fort Hill
+Fossil
+Four Corners
+Garden Home-Whitford
+Gardiner
+Garibaldi
+Gaston
+Gates
+Gearhart
+Gervais
+Gladstone
+Glasgow
+Glendale
+Glide
+Gold Beach
+Gold Hill
+Gopher Flats
+Government Camp
+Grand Ronde
+Granite
+Grants Pass
+Grass Valley
+Green
+Gresham
+Haines
+Halfway
+Halsey
+Happy Valley
+Harbor
+Harper
+Harrisburg
+Hayesville
+Hebo
+Helix
+Heppner
+Hermiston
+Hillsboro
+Hines
+Holley
+Hood River
+Hubbard
+Huntington
+Idanha
+Idaville
+Imbler
+Independence
+Ione
+Irrigon
+Island City
+Jacksonville
+Jeffers Gardens
+Jefferson
+Jennings Lodge
+John Day
+Johnson City
+Jordan Valley
+Joseph
+Junction City
+Juntura
+Keizer
+Kerby
+King City
+Kings Valley
+Kirkpatrick
+Klamath Falls
+La Grande
+La Pine
+Labish Village
+Lacomb
+Lafayette
+Lake Oswego
+Lakeside
+Lakeview
+Langlois
+Lebanon
+Lexington
+Lincoln Beach
+Lincoln City
+Lonerock
+Long Creek
+Lookingglass
+Lostine
+Lowell
+Lyons
+Madras
+Malin
+Manzanita
+Marion
+Maupin
+Maywood Park
+McMinnville
+Medford
+Mehama
+Melrose
+Merlin
+Merrill
+Metolius
+Metzger
+Mill City
+Millersburg
+Milton-Freewater
+Milwaukie
+Mission
+Mitchell
+Molalla
+Monmouth
+Monroe
+Monument
+Moro
+Mosier
+Mount Angel
+Mount Hood
+Mount Hood Village
+Mount Vernon
+Mulino
+Myrtle Creek
+Myrtle Point
+Neahkahnie
+Nehalem
+Nesika Beach
+Neskowin
+Netarts
+New Hope
+New Pine Creek
+Newberg
+Newport
+North Bend
+North Plains
+North Powder
+Nyssa
+Oak Grove
+Oak Hills
+Oakland
+Oakridge
+Oatfield
+O'Brien
+Oceanside
+Odell
+Ontario
+Oregon City
+Pacific City
+Paisley
+Parkdale
+Pendleton
+Peoria
+Philomath
+Phoenix
+Pilot Rock
+Pine Grove
+Pine Hollow
+Pistol River
+Plush
+Port Orford
+Portland
+Powers
+Prairie City
+Prescott
+Prineville
+Pronghorn
+Prospect
+Rainier
+Raleigh Hills
+Redmond
+Redwood
+Reedsport
+Richland
+Riddle
+Rivergrove
+Riverside
+Rockaway Beach
+Rockcreek
+Rogue River
+Rose Lodge
+Roseburg
+Roseburg North
+Rowena
+Ruch
+Rufus
+Salem
+Sandy
+Scappoose
+Scio
+Scotts Mills
+Seaside
+Selma
+Seneca
+Seventh Mountain
+Shady Cove
+Shaniko
+Shedd
+Sheridan
+Sherwood
+Siletz
+Silver Lake
+Silverton
+Sisters
+Sodaville
+South Lebanon
+Spray
+Springfield
+St. Helens
+St. Paul
+Stafford
+Stanfield
+Stayton
+Sublimity
+Summerville
+Summit
+Sumpter
+Sunriver
+Sutherlin
+Sweet Home
+Takilma
+Talent
+Tangent
+Terrebonne
+Tetherow
+The Dalles
+Three Rivers
+Tigard
+Tillamook
+Toledo
+Trail
+Tri-City
+Troutdale
+Tualatin
+Tumalo
+Turner
+Tutuilla
+Tygh Valley
+Ukiah
+Umapine
+Umatilla
+Union
+Unity
+Vale
+Veneta
+Vernonia
+Waldport
+Wallowa
+Wallowa Lake
+Wamic
+Warm Springs
+Warren
+Warrenton
+Wasco
+Waterloo
+West Haven-Sylvan
+West Linn
+West Scio
+West Slope
+Westfir
+Weston
+Westport
+Wheeler
+White City
+Willamina
+Williams
+Wilsonville
+Wimer
+Winchester Bay
+Winston
+Wood Village
+Woodburn
+Yachats
+Yamhill
+Yoncalla

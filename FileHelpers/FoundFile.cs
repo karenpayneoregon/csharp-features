@@ -14,7 +14,7 @@ namespace FileHelpers
 		public int LineNumber {get; set;}
 		public string Text {get; set;}
 
-		new public bool Equals(FoundFile other)
+		public bool Equals(FoundFile other)
 		{
 
 			if (ReferenceEquals(null, other))
@@ -32,7 +32,7 @@ namespace FileHelpers
 		public override bool Equals(object obj)
 		{
 
-			if (ReferenceEquals(null, obj))
+			if (obj is null)
 			{
 				return false;
 			}
@@ -40,7 +40,7 @@ namespace FileHelpers
 			{
 				return true;
 			}
-			if (obj.GetType() != this.GetType())
+			if (obj.GetType() != GetType())
 			{
 				return false;
 			}

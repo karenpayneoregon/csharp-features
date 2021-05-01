@@ -9,7 +9,7 @@ namespace SqlServerAsyncReadCore.Classes
     public class DataOperations
     {
         private static string _connectionString =
-            "Data Source=.\\sqlexpres;Initial Catalog=NorthWind2020;Integrated Security=True";
+            "Data Source=.\\sqlexpress;Initial Catalog=NorthWind2020;Integrated Security=True";
 
 
         public static async Task<DataTable> ReadProductsTask(CancellationToken ct)

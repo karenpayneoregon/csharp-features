@@ -17,13 +17,10 @@ namespace FileHelpers
 		{
 			get
 			{
-				return new string[] {Location, Name, Modified.ToShortDateString()};
+				return new[] {Location, Name, Modified.ToShortDateString()};
 			}
 		}
-		public override string ToString()
-		{
-			return Name;
-		}
-	}
+		public override string ToString() => Name;
+    }
 
 }

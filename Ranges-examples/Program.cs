@@ -24,15 +24,70 @@ namespace Ranges_examples
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            GenericDemo1();
+            //GenericDemo1();
             //_text = "Range example for C# 8\nPress any key to run.";
             //_title = "Code samples";
             //PanelBorders();
             //Console.ReadLine();
             //Ranges();
 
+            Creating();
             Console.ReadLine();
         }
+
+        /// <summary>
+        /// public static int GetCityIndex(string cityName) => SomeOregonCities.ToList().IndexOf(cityName);
+        /// </summary>
+        private static void Creating()
+        {
+            var oregonCities = FileOperations.OregonCities();
+            
+            var rangeReverse = Enumerable.Range(0, oregonCities.Length)
+                .Reverse()
+                .ToList();
+
+            var cities = oregonCities.Select(
+                (cityName, index) => new City()
+                {
+                    Name = cityName, 
+                    StartIndex = new Index(index), 
+                    EndIndex = new Index(rangeReverse[index], true)
+                }).ToList();
+
+            //foreach (var city in cities)
+            //{
+            //    Console.WriteLine(city.ToString());
+            //}
+            
+            Console.WriteLine();
+
+            var (startIndex1, endIndex1) = cities.Between("Aloha", "Ashland");
+            
+            var citiesBetweenTwoCities = oregonCities[startIndex1..endIndex1];
+
+            foreach (var item in citiesBetweenTwoCities)
+            {
+                Console.WriteLine(item);
+            }
+            
+            Console.WriteLine();
+        }
+        private static string[] SomeOregonCities =>
+            new[]
+            {
+                //              index from start    index from end                
+                "Adams",        // 0                ^10
+                "Albany",       // 1                ^9
+                "Aloha",        // 2                ^8
+                "Arlington",    // 3                ^7
+                "Ashland",      // 4                ^6
+                "Astoria",      // 5                ^5
+                "Burns",        // 6                ^4
+                "Jacksonville", // 7                ^3
+                "Salem",        // 8                ^2
+                "Portland",     // 9                ^1
+                "Bend"          // 10               ^0 (or array length)
+            };
 
         private static void Ranges()
         {
