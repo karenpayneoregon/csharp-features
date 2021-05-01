@@ -54,12 +54,6 @@ namespace Ranges_examples
                     EndIndex = new Index(rangeReverse[index], true)
                 }).ToList();
 
-            //foreach (var city in cities)
-            //{
-            //    Console.WriteLine(city.ToString());
-            //}
-            
-            Console.WriteLine();
 
             var (startIndex1, endIndex1) = cities.Between("Aloha", "Ashland");
             
