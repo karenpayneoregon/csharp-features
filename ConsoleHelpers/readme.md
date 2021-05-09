@@ -27,3 +27,24 @@ Dim value = ReadLineFiveSeconds("Please enter your name within the next 5 second
 ## Header
 
 ![img](assets/figure1.png)
+
+## Clone class project
+
+Using a current version of [Git](https://www.atlassian.com/git/tutorials/install-git).
+
+```
+mkdir code
+cd code
+git init
+git remote add -f origin https://github.com/karenpayneoregon/csharp-features
+git sparse-checkout init --cone
+git sparse-checkout add ConsoleHelpers
+git pull origin master
+:clean-up
+del .gitattributes
+del .gitignore
+del .yml
+del .editorconfig
+del *.md
+del *.sln
+```
