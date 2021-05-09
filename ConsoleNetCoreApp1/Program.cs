@@ -2,6 +2,7 @@
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using ConsoleHelpers;
 using static ConsoleHelpers.ConsoleKeysHelper;
 
 
@@ -11,6 +12,7 @@ namespace ConsoleNetCoreApp1
     {
         static void Main(string[] args)
         {
+            ConsoleColors.WriteHeader("Greetings");
             var value = ReadLineWithTimeout(5, "Please enter your name within the next 5 seconds.");
             Console.WriteLine(value);
         }

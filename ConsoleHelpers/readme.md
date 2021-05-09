@@ -24,3 +24,6 @@ VB
 Dim value = ReadLineFiveSeconds("Please enter your name within the next 5 seconds.")
 ```
 
+## Header
+
+![img](assets/figure1.png)

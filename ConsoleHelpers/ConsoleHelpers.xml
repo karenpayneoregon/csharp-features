@@ -121,45 +121,5 @@
             <param name="message">Message to display (optional)</param>
             <returns>user input or empty string</returns>
         </member>
-        <member name="T:ConsoleHelpers.ConsoleRectangle">
-            <summary>
-            Helper to create colored boxes
-            </summary>
-        </member>
-        <member name="M:ConsoleHelpers.ConsoleRectangle.#ctor(System.Int32,System.Int32,System.Drawing.Point,System.ConsoleColor,System.String)">
-            <summary>
-            Create Rectangle with border color color
-            </summary>
-            <param name="width">width of Rectangle</param>
-            <param name="height">height of Rectangle</param>
-            <param name="location">location of Rectangle</param>
-            <param name="borderColor">Rectangle border color</param>
-            <param name="text">Text to display</param>
-        </member>
-        <member name="P:ConsoleHelpers.ConsoleRectangle.Location">
-            <summary>
-            Location
-            </summary>
-        </member>
-        <member name="P:ConsoleHelpers.ConsoleRectangle.Width">
-            <summary>
-            Width
-            </summary>
-        </member>
-        <member name="P:ConsoleHelpers.ConsoleRectangle.Height">
-            <summary>
-            Height
-            </summary>
-        </member>
-        <member name="P:ConsoleHelpers.ConsoleRectangle.BorderColor">
-            <summary>
-            Border color
-            </summary>
-        </member>
-        <member name="M:ConsoleHelpers.ConsoleRectangle.Draw">
-            <summary>
-            Draw box
-            </summary>
-        </member>
     </members>
 </doc>

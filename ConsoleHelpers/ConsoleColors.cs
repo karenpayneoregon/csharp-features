@@ -15,7 +15,7 @@ namespace ConsoleHelpers
         /// <param name="message">Message to display</param>
         public static void WriteHeader(string message)
         {
-            var item = new ConsoleRectangle(30, 1,new Point(0,0), ConsoleColor.Magenta, message);
+            var item = new ConsoleRectangle(message, 100, 1, new Point(0, 0));
             item.Draw();
         }
         
