@@ -17,7 +17,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Update="Texas.txt">
+	  <None Update="TexasCityNames.txt">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
 	  <None Update="contacts.json">
@@ -26,7 +26,7 @@
 	  <None Update="OregonCityNames.txt">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
-	  <None Update="WashingtonState.txt">
+	  <None Update="WashingtonStateCityNames.txt">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
 	</ItemGroup>

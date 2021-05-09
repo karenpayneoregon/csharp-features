@@ -18,9 +18,58 @@ namespace Ranges_examples.Classes
         /// <remarks>
         /// To keep code short null checks are excluded
         /// </remarks>
-        public static (Index startIndex, Index endIndex) Between(this List<City> sender, string firstCity, string lastCity)
+        public static (Index startIndex, Index endIndex) BetweenTwo(this List<City> sender, string firstCity, string lastCity)
         {
-            return (sender.FirstOrDefault(name => name.Name == firstCity).StartIndex, sender.FirstOrDefault(x => x.Name == lastCity).EndIndex);
+            return
+                (
+                    sender.FirstOrDefault(name => name.Name == firstCity).StartIndex,
+                    sender.FirstOrDefault(x => x.Name == lastCity).EndIndex
+                );
         }
+
+        public static string SubstringByIndexes(this string value, int startIndex, int endIndex) => value[startIndex..(endIndex + 1)];
+
+        public static bool EqualsIgnoreCase(this string first, string second) => string.Equals(first, second, StringComparison.OrdinalIgnoreCase);
+
+        /// <summary>
+        /// Produces an array where the first element is startValue, last element is endValue with all values between both case insensitive.
+        /// </summary>
+        /// <param name="sender">List of <see cref="string"/></param>
+        /// <param name="startValue">first element to start the range</param>
+        /// <param name="endValue">last element to end the range</param>
+        /// <returns>range between startValue and endValue or null if neither start or end values do not exist in sender array</returns>
+        public static List<string> BetweenItems(this List<string> sender, string startValue, string endValue)
+        {
+
+            var startIndex = sender.FindIndex(element => 
+                element.Equals(startValue, StringComparison.OrdinalIgnoreCase));
+            
+            var endIndex = sender.FindIndex(element => 
+                element.Equals(endValue, StringComparison.OrdinalIgnoreCase)) - startIndex + 1;
+
+            return startIndex == -1 || endIndex == -1 ? null : sender.GetRange(startIndex, endIndex);
+            
+        }
+        /// <summary>
+        /// Produces an array where the first element is startValue, last element is endValue with all values between both.
+        /// </summary>
+        /// <param name="sender">List of <see cref="int"/></param>
+        /// <param name="startValue">first element to start the range</param>
+        /// <param name="endValue">last element to end the range</param>
+        /// <returns>range between startValue and endValue or null if neither start or end values do not exist in sender array</returns>
+        public static List<int> BetweenItems(this List<int> sender, int startValue, int endValue)
+        {
+
+            var startIndex = sender.FindIndex(element => 
+                element.Equals(startValue));
+            
+            var endIndex = sender.FindIndex(element => 
+                element.Equals(endValue)) - startIndex + 1;
+
+            return startIndex == -1 || endIndex == -1 ? 
+                null : 
+                sender.GetRange(startIndex, endIndex);
+        }
+
     }
 }

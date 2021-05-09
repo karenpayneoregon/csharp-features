@@ -42,6 +42,32 @@ namespace ConsoleHelpers
             return result;
 
         }
+        /// <summary>
+        /// Read line with timeout and optional message
+        /// </summary>
+        /// <param name="seconds"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+        public static string ReadLineWithTimeout(int seconds, string message = "")
+        {
+            if (!string.IsNullOrWhiteSpace(message))
+            {
+                WriteSectionBold(message, false);
+            }
 
-	}
+            TimeSpan timeSpan = TimeSpan.FromSeconds(seconds);
+            var task = Task.Factory.StartNew(Console.ReadLine);
+            
+            var result = (Task.WaitAny(new Task[] { task }, timeSpan) == 0) ? task.Result : string.Empty;
+
+            return result;
+
+        }
+
+        public static string ReadLineFiveSeconds(string message = "") => ReadLineWithTimeout(5, message);
+        public static string PauseFiveSeconds(string message = "") => ReadLineWithTimeout(5, message);
+        
+        public static string ReadLineTenSeconds(string message = "") => ReadLineWithTimeout(10, message);
+        public static string PauseTenSeconds(string message = "") => ReadLineWithTimeout(10, message);
+    }
 }

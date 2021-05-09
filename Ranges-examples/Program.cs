@@ -31,8 +31,72 @@ namespace Ranges_examples
             //Console.ReadLine();
             //Ranges();
 
-            Creating();
+            //int[] numberIntegers = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            //foreach (var index in numberIntegers[..]) // all
+            //{
+            //    Debug.Write(index); // 0123456789
+            //}
+
+            //Debug.WriteLine("");
+            //foreach (var integer in numberIntegers)
+            //{
+            //    Debug.Write(integer);
+            //}
+
+            //BasicRangeIndices.Examples();
+            //WithString();
+            //BetweenItems();
+
+
+
+            //Creating1();
+
+            //BetweenInts();
+
+            BetweenStringItems();
+
+
             Console.ReadLine();
+            
+        }
+
+        private static void BetweenInts()
+        {
+            List<int> list = new List<int>() { 1, 2, 3, 4, 5 };
+
+            var items = list.BetweenItems(2, 4);
+            foreach (var item in items)
+            {
+                Debug.WriteLine(item);
+            }
+
+        }
+        private static void WithString()
+        {
+            var someText = "ABCDEFG";
+
+            var substring = someText.SubstringByIndexes(1, 3);
+            Console.WriteLine(substring);
+
+            List<int> list = new List<int>() { 1, 2, 3, 4, 5 };
+            //var shortRange = list.GetRange(1, 3);
+            //Console.WriteLine(string.Join(",", list.ToArray()));
+
+            var startIndex = list.Find(x => x == 2);
+            var endIndex = startIndex + 3;
+            //var range = (new Index(find),new Index(2 - find,true));
+
+
+            if (endIndex <= list.Count)
+            {
+                var array1 = list.ToArray()[startIndex..endIndex];
+                Console.WriteLine(string.Join(",", array1));
+            }
+            else
+            {
+                Console.WriteLine("out of range");
+            }
+
         }
 
         /// <summary>
@@ -40,32 +104,86 @@ namespace Ranges_examples
         /// </summary>
         private static void Creating()
         {
-            var oregonCities = FileOperations.OregonCities();
-            
-            var rangeReverse = Enumerable.Range(0, oregonCities.Length)
-                .Reverse()
-                .ToList();
+            string startCity = "Aloha";
+            string endCity = "Ashland";
+            string[] oregonCities = FileOperations.OregonCities();
 
-            var cities = oregonCities.Select(
+            List<int> rangeReverse = Enumerable.Range(0, oregonCities.Length).Reverse().ToList();
+
+            List<City> cities = oregonCities.Select(
                 (cityName, index) => new City()
                 {
-                    Name = cityName, 
-                    StartIndex = new Index(index), 
+                    Name = cityName,
+                    StartIndex = new Index(index),
                     EndIndex = new Index(rangeReverse[index], true)
                 }).ToList();
 
 
-            var (startIndex1, endIndex1) = cities.Between("Aloha", "Ashland");
-            
+            var (startIndex1, endIndex1) = cities.BetweenTwo("Aloha", "Ashland");
+
             var citiesBetweenTwoCities = oregonCities[startIndex1..endIndex1];
 
             foreach (var item in citiesBetweenTwoCities)
             {
                 Console.WriteLine(item);
             }
-            
+
             Console.WriteLine();
         }
+
+        private static void Creating1()
+        {
+            string startCity = "Aloha";
+            string endCity = "Ashland";
+
+            var cities = Helpers.GetBetweenInclusive(FileOperations.OregonCities(), startCity, endCity);
+
+            if (cities is not null)
+            {
+                foreach (var result in cities)
+                {
+                    Debug.WriteLine(result);
+                }
+            }
+            else
+            {
+                Debug.WriteLine("Operation failed");
+            }
+
+
+        }
+
+        private static void BetweenStringItems()
+        {
+            List<string> periods = new List<string>
+            {
+                "2010 Fya",
+                "2011 FYA",
+                "2012 FYA",
+                "2013 FYA",
+                "1Q 2014A",
+                "2Q 2014A",
+                "3Q 2014A",
+                "4Q 2014A",
+                "2014 FYA"
+            };
+
+
+            var result = periods.BetweenItems("2010 FYA", "3Q 2014A");
+            if (result is not null)
+            {
+                foreach (var item in result)
+                {
+                    Debug.WriteLine(item);
+                }
+            }
+            else
+            {
+                Debug.WriteLine("Start or end value not located");
+            }
+        }
+
+
         private static string[] SomeOregonCities =>
             new[]
             {
@@ -104,7 +222,7 @@ namespace Ranges_examples
                 Console.WriteLine(contacts[index]);
             }
 
-            DisplayText("Indexer version") ;
+            DisplayText("Indexer version");
 
 
             /*
@@ -142,10 +260,10 @@ namespace Ranges_examples
             /*
              * Find Helen Bennett, jump ahead one, iterate to end
              */
-            var findIndex = contacts.FindIndex( con => con.LastName == "Bennett");
+            var findIndex = contacts.FindIndex(con => con.LastName == "Bennett");
             if (findIndex > -1)
             {
-                startIndexer = new Index(findIndex +1);
+                startIndexer = new Index(findIndex + 1);
             }
 
             var afterHelen1 = contacts.ToArray()[startIndexer..];
@@ -156,7 +274,7 @@ namespace Ranges_examples
 
             DisplayText("Indexer version - skip IndexOf 'Helen Bennett' iterate all past her 3");
 
-            var endIndexer = new Index(findIndex +4);
+            var endIndexer = new Index(findIndex + 4);
 
             var afterHelen2 = contacts.ToArray()[startIndexer..endIndexer];
             /*
@@ -277,7 +395,7 @@ namespace Ranges_examples
                 }
             }
         }
-       
+
 
 
 
@@ -290,7 +408,7 @@ namespace Ranges_examples
             var sentence = "Just want to say, Hello World there!";
             if (!sentence.ContainsIgnoreCase("world")) return;
 
-            Index indexStart = sentence.IndexOf("world", StringComparison.InvariantCultureIgnoreCase) -1;
+            Index indexStart = sentence.IndexOf("world", StringComparison.InvariantCultureIgnoreCase) - 1;
             Console.WriteLine($"{sentence[0..indexStart]} to you!!!");
 
         }
