@@ -8,9 +8,9 @@ Written in C#, works for VB.NET also.
 
 :heavy_check_mark: [Documentation](https://github.com/karenpayneoregon/csharp-features/blob/master/ConsoleHelpers/ConsoleHelpers.md)
 
-## Wait with 
+## ReadLine Wait with 
 
-Predefined period
+Predefined period where the [base method](https://github.com/karenpayneoregon/csharp-features/blob/master/ConsoleHelpers/ConsoleKeysHelper.cs#L58) accepts an int for seconds.
 
 C# 
 
