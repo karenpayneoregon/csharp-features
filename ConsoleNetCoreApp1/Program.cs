@@ -9,11 +9,11 @@ namespace ConsoleNetCoreApp1
 {
     class Program
     {
-static void Main(string[] args)
-{
-    var value = ReadLineWithTimeout(5, "Please enter your name within the next 5 seconds.");
-    Console.WriteLine(value);
-}
+        static void Main(string[] args)
+        {
+            var value = ReadLineWithTimeout(5, "Please enter your name within the next 5 seconds.");
+            Console.WriteLine(value);
+        }
 
         private static async Task Example1()
         {
