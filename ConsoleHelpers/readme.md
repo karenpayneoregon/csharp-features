@@ -28,6 +28,8 @@ Dim value = ReadLineFiveSeconds("Please enter your name within the next 5 second
 
 ![img](assets/figure1.png)
 
+![img](assets/combined.png)
+
 ## Clone class project
 
 Using a current version of [Git](https://www.atlassian.com/git/tutorials/install-git).

@@ -12,9 +12,10 @@ namespace ConsoleNetCoreApp1
     {
         static void Main(string[] args)
         {
-            ConsoleColors.WriteHeader("Greetings");
-            var value = ReadLineWithTimeout(5, "Please enter your name within the next 5 seconds.");
-            Console.WriteLine(value);
+            ConsoleColors.WriteHeader("Please enter your name within the next 5 seconds.");
+            var userName = ReadLineWithTimeout(5);
+            Console.Clear();
+            ConsoleColors.WriteSectionYellow(!string.IsNullOrWhiteSpace(userName) ? $"Hello: {userName}" : "Nothing entered",false);
         }
 
         private static async Task Example1()
