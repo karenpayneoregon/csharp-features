@@ -26,7 +26,46 @@ namespace Ranges_examples.Classes
                     sender.FirstOrDefault(x => x.Name == lastCity).EndIndex
                 );
         }
+        /// <summary>
+        /// Get Indices for between two contacts.
+        /// </summary>
+        /// <param name="sender">List of <seealso cref="Contacts"/></param>
+        /// <param name="firstContact"><seealso cref="ContactName"/></param>
+        /// <param name="lastContact"><seealso cref="ContactName"/></param>
+        /// <returns>Start contact index, last contact index with ^ (hat)</returns>
+        public static (Index startIndex, Index endIndex) BetweenTwo(this List<Contacts> sender, ContactName firstContact, ContactName lastContact)
+        {
+            return
+            (
+                sender.FirstOrDefault(contact => contact.FirstName == 
+                    firstContact.FirstName && contact.LastName == firstContact.LastName).StartIndex,
+                
+                sender.FirstOrDefault(contact => contact.FirstName == 
+                    lastContact.FirstName && contact.LastName == lastContact.LastName).EndIndex
+                
+            );
+        }
+        /// <summary>
+        /// Set indices for each contact
+        /// </summary>
+        /// <param name="contactsArray"><see cref="Contacts"/> array</param>
+        /// <returns>start and end indices set for entire array</returns>
+        public static List<Contacts> ContactsListIndices(this Contacts[] contactsArray)
+        {
+            List<int> rangeReverse = Enumerable.Range(0, contactsArray.Length).Reverse().ToList();
 
+            List<Contacts> contacts = contactsArray.Select(
+                (contact, index) => new Contacts()
+                {
+                    FirstName = contact.FirstName,
+                    LastName = contact.LastName,
+                    StartIndex = new Index(index),
+                    EndIndex = new Index(rangeReverse[index], true)
+                }).ToList();
+            
+            return contacts;
+            
+        }
         public static string SubstringByIndexes(this string value, int startIndex, int endIndex) => value[startIndex..(endIndex + 1)];
 
         public static bool EqualsIgnoreCase(this string first, string second) => string.Equals(first, second, StringComparison.OrdinalIgnoreCase);
@@ -70,6 +109,18 @@ namespace Ranges_examples.Classes
                 null : 
                 sender.GetRange(startIndex, endIndex);
         }
+        public static List<DateTime> BetweenItems(this List<DateTime> sender, DateTime startValue, DateTime endValue)
+        {
 
+            var startIndex = sender.FindIndex(element =>
+                element.Date.Equals(startValue.Date));
+
+            var endIndex = sender.FindIndex(element =>
+                element.Date.Equals(endValue.Date)) - startIndex + 1;
+
+            return startIndex == -1 || endIndex == -1 ?
+                null :
+                sender.GetRange(startIndex, endIndex);
+        }
     }
 }

@@ -53,9 +53,11 @@ namespace Ranges_examples
 
             //BetweenInts();
 
-            BetweenStringItems();
+            //BetweenStringItems();
 
-
+            //CreatingContacts();
+            
+            BetweenDates();
             Console.ReadLine();
             
         }
@@ -70,6 +72,26 @@ namespace Ranges_examples
                 Debug.WriteLine(item);
             }
 
+        }
+
+        private static void BetweenDates()
+        {
+            var date = DateTime.Now;
+            var startDate = new DateTime(date.Year, date.Month, 3, 3, 0, 0, 0);
+            var endDate = new DateTime(date.Year, date.Month, 6, 6, 0, 0, 0);
+            
+            var list = Enumerable.Range(1, 20).Select(value => 
+                new DateTime(2021, 5, value, 1, 0, 0, 0)).ToList();
+
+
+            var dates = list.BetweenItems(startDate, endDate);
+
+            foreach (var dateTime in dates)
+            {
+                Console.WriteLine(dateTime.ToShortDateString());
+            }
+            
+            Console.WriteLine();
         }
         private static void WithString()
         {
@@ -99,10 +121,38 @@ namespace Ranges_examples
 
         }
 
+        public static void CreatingContacts()
+        {
+            /*
+             * First contact for between
+             */
+            var firstContact = new ContactName() {FirstName = "Frédérique", LastName = "Citeaux" };
+            
+            /*
+             * Last contact for between
+             */
+            var lastContact = new ContactName() {FirstName = "Elizabeth", LastName = "Brown" };
+            
+            var contactsArray = MockedData.ReadContacts().ToArray();
+            var contacts = contactsArray.ContactsListIndices();
+
+
+            var (startIndex1, endIndex1) = contacts.BetweenTwo(firstContact, lastContact);
+            var citiesBetweenTwoCities = contactsArray[startIndex1..endIndex1];
+
+            foreach (var item in citiesBetweenTwoCities)
+            {
+                Console.WriteLine(item);
+            }
+
+        }
+
+
+
         /// <summary>
         /// public static int GetCityIndex(string cityName) => SomeOregonCities.ToList().IndexOf(cityName);
         /// </summary>
-        private static void Creating()
+        private static void CreatingCities()
         {
             string startCity = "Aloha";
             string endCity = "Ashland";
