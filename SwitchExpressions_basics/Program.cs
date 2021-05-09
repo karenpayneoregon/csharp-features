@@ -55,7 +55,7 @@ namespace SwitchExpressions_basics
             DelegateContactTypeFunc();
             EmptyLine();
 
-            ReadLineWithTimeout(TimeSpan.FromSeconds(20), "Press any key to terminate.");
+            ReadLineWithTimeSpanTimeout(TimeSpan.FromSeconds(20), "Press any key to terminate.");
         }
 
         /// <summary>

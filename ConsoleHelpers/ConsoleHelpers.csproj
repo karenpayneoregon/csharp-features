@@ -5,4 +5,8 @@
 	  <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\OED\Dotnetland\VS2019\csharp-tips\ConsoleHelpers\ConsoleHelpers.xml</DocumentationFile>
+  </PropertyGroup>
+
 </Project>
