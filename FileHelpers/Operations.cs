@@ -116,7 +116,7 @@ namespace FileHelpers
 
 					foreach (string folder in Directory.GetDirectories(path))
 					{
-						Debug.WriteLine($"{new string(' ', indentLevel)}{System.IO.Path.GetFileName(folder)}");
+						Debug.WriteLine($"{new string(' ', indentLevel)}{Path.GetFileName(folder)}");
 						RecursiveFolders(folder, indentLevel + 2);
 					}
 
