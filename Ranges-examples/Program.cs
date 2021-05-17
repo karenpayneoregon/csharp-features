@@ -5,6 +5,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Text;
 using ExtensionsLibrary;
 using Ranges_examples.Classes;
 using Spectre.Console;
@@ -56,17 +57,18 @@ namespace Ranges_examples
             //BetweenStringItems();
 
             //CreatingContacts();
-            
-            BetweenDates();
-            Console.ReadLine();
-            
+
+            BetweenStringItems();
+
+
+
         }
 
         private static void BetweenInts()
         {
             List<int> list = new List<int>() { 1, 2, 3, 4, 5 };
 
-            var items = list.BetweenItems(2, 4);
+            var items = list.BetweenElements(2, 4);
             foreach (var item in items)
             {
                 Debug.WriteLine(item);
@@ -84,11 +86,11 @@ namespace Ranges_examples
                 new DateTime(2021, 5, value, 1, 0, 0, 0)).ToList();
 
 
-            var dates = list.BetweenItems(startDate, endDate);
+            var dates = list.BetweenDates(startDate, endDate);
 
             foreach (var dateTime in dates)
             {
-                Console.WriteLine(dateTime.ToShortDateString());
+                Debug.WriteLine(dateTime.ToShortDateString());
             }
             
             Console.WriteLine();
@@ -121,7 +123,7 @@ namespace Ranges_examples
 
         }
 
-        public static void CreatingContacts()
+        public static void CreatingContacts1()
         {
             /*
              * First contact for between
@@ -136,9 +138,34 @@ namespace Ranges_examples
             var contactsArray = MockedData.ReadContacts().ToArray();
             var contacts = contactsArray.ContactsListIndices();
 
+            var (startIndex, endIndex) = contacts.BetweenContacts(firstContact, lastContact);
+            
+            var citiesBetweenTwoCities = contactsArray[startIndex..endIndex];
 
-            var (startIndex1, endIndex1) = contacts.BetweenTwo(firstContact, lastContact);
-            var citiesBetweenTwoCities = contactsArray[startIndex1..endIndex1];
+            foreach (var item in citiesBetweenTwoCities)
+            {
+                Debug.WriteLine(item);
+            }
+
+        }
+        public static void CreatingContacts2()
+        {
+            /*
+             * First contact for between
+             */
+            var firstContact = new ContactName() { FirstName = "Frédérique", LastName = "Citeaux" };
+
+            /*
+             * Last contact for between
+             */
+            var lastContact = new ContactName() { FirstName = "Elizabeth", LastName = "Brown" };
+
+            var contactsArray = MockedData.ReadContacts().ToArray();
+            var contacts = contactsArray.ContactsListIndices();
+
+            var range = contacts.BetweenContacts(firstContact, lastContact);
+
+            var citiesBetweenTwoCities = contactsArray[range.startIndex..range.endIndex];
 
             foreach (var item in citiesBetweenTwoCities)
             {
@@ -146,7 +173,6 @@ namespace Ranges_examples
             }
 
         }
-
 
 
         /// <summary>
@@ -156,30 +182,23 @@ namespace Ranges_examples
         {
             string startCity = "Aloha";
             string endCity = "Ashland";
+            
             string[] oregonCities = FileOperations.OregonCities();
 
-            List<int> rangeReverse = Enumerable.Range(0, oregonCities.Length).Reverse().ToList();
-
-            List<City> cities = oregonCities.Select(
-                (cityName, index) => new City()
-                {
-                    Name = cityName,
-                    StartIndex = new Index(index),
-                    EndIndex = new Index(rangeReverse[index], true)
-                }).ToList();
-
-
-            var (startIndex1, endIndex1) = cities.BetweenTwo("Aloha", "Ashland");
+            var cities = oregonCities.CityListIndices();
+            var (startIndex1, endIndex1) = cities.BetweenCities(startCity, endCity);
 
             var citiesBetweenTwoCities = oregonCities[startIndex1..endIndex1];
 
             foreach (var item in citiesBetweenTwoCities)
             {
-                Console.WriteLine(item);
+                Debug.WriteLine(item);
             }
 
             Console.WriteLine();
         }
+
+
 
         private static void Creating1()
         {
@@ -219,7 +238,7 @@ namespace Ranges_examples
             };
 
 
-            var result = periods.BetweenItems("2010 FYA", "3Q 2014A");
+            var result = periods.BetweenElements("2010 FYA", "3Q 2014A");
             if (result is not null)
             {
                 foreach (var item in result)

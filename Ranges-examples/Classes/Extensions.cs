@@ -18,7 +18,7 @@ namespace Ranges_examples.Classes
         /// <remarks>
         /// To keep code short null checks are excluded
         /// </remarks>
-        public static (Index startIndex, Index endIndex) BetweenTwo(this List<City> sender, string firstCity, string lastCity)
+        public static (Index startIndex, Index endIndex) BetweenCities(this List<City> sender, string firstCity, string lastCity)
         {
             return
                 (
@@ -33,7 +33,7 @@ namespace Ranges_examples.Classes
         /// <param name="firstContact"><seealso cref="ContactName"/></param>
         /// <param name="lastContact"><seealso cref="ContactName"/></param>
         /// <returns>Start contact index, last contact index with ^ (hat)</returns>
-        public static (Index startIndex, Index endIndex) BetweenTwo(this List<Contacts> sender, ContactName firstContact, ContactName lastContact)
+        public static (Index startIndex, Index endIndex) BetweenContacts(this List<Contacts> sender, ContactName firstContact, ContactName lastContact)
         {
             return
             (
@@ -44,6 +44,13 @@ namespace Ranges_examples.Classes
                     lastContact.FirstName && contact.LastName == lastContact.LastName).EndIndex
                 
             );
+        }
+        public static Range BetweenContacts1(this List<Contacts> sender, ContactName firstContact, ContactName lastContact)
+        {
+            var startIndex = sender.FirstOrDefault(contact => contact.FirstName == firstContact.FirstName && contact.LastName == firstContact.LastName).StartIndex;
+            var endIndex = sender.FirstOrDefault(contact => contact.FirstName == lastContact.FirstName && contact.LastName == lastContact.LastName).EndIndex;
+            return startIndex..endIndex;
+            
         }
         /// <summary>
         /// Set indices for each contact
@@ -66,6 +73,19 @@ namespace Ranges_examples.Classes
             return contacts;
             
         }
+        public static List<City> CityListIndices(this string[] citiesArray)
+        {
+            List<int> rangeReverse = Enumerable.Range(0, citiesArray.Length).Reverse().ToList();
+
+            List<City> cities = citiesArray.Select(
+                (cityName, index) => new City()
+                {
+                    Name = cityName,
+                    StartIndex = new Index(index),
+                    EndIndex = new Index(rangeReverse[index], true)
+                }).ToList();
+            return cities;
+        }
         public static string SubstringByIndexes(this string value, int startIndex, int endIndex) => value[startIndex..(endIndex + 1)];
 
         public static bool EqualsIgnoreCase(this string first, string second) => string.Equals(first, second, StringComparison.OrdinalIgnoreCase);
@@ -77,14 +97,18 @@ namespace Ranges_examples.Classes
         /// <param name="startValue">first element to start the range</param>
         /// <param name="endValue">last element to end the range</param>
         /// <returns>range between startValue and endValue or null if neither start or end values do not exist in sender array</returns>
-        public static List<string> BetweenItems(this List<string> sender, string startValue, string endValue)
+        public static List<string> BetweenElements(this List<string> sender, string startValue, string endValue)
         {
 
             var startIndex = sender.FindIndex(element => 
-                element.Equals(startValue, StringComparison.OrdinalIgnoreCase));
+                element.Equals(
+                    startValue, 
+                    StringComparison.OrdinalIgnoreCase));
             
             var endIndex = sender.FindIndex(element => 
-                element.Equals(endValue, StringComparison.OrdinalIgnoreCase)) - startIndex + 1;
+                element.Equals(
+                    endValue, 
+                    StringComparison.OrdinalIgnoreCase)) - startIndex + 1;
 
             return startIndex == -1 || endIndex == -1 ? null : sender.GetRange(startIndex, endIndex);
             
@@ -96,7 +120,7 @@ namespace Ranges_examples.Classes
         /// <param name="startValue">first element to start the range</param>
         /// <param name="endValue">last element to end the range</param>
         /// <returns>range between startValue and endValue or null if neither start or end values do not exist in sender array</returns>
-        public static List<int> BetweenItems(this List<int> sender, int startValue, int endValue)
+        public static List<int> BetweenElements(this List<int> sender, int startValue, int endValue)
         {
 
             var startIndex = sender.FindIndex(element => 
@@ -109,7 +133,9 @@ namespace Ranges_examples.Classes
                 null : 
                 sender.GetRange(startIndex, endIndex);
         }
-        public static List<DateTime> BetweenItems(this List<DateTime> sender, DateTime startValue, DateTime endValue)
+        
+        
+        public static List<DateTime> BetweenDates(this List<DateTime> sender, DateTime startValue, DateTime endValue)
         {
 
             var startIndex = sender.FindIndex(element =>
