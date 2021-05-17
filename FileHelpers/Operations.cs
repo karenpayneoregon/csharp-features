@@ -14,15 +14,26 @@ namespace FileHelpers
 	public class Operations
 	{
 		public delegate void OnException(Exception exception);
+        /// <summary>
+		/// Inform the caller a general exception was encountered
+		/// </summary>
 		public static event OnException OnExceptionEvent;
         
 		public delegate void OnUnauthorizedAccessException(string message);
+        /// <summary>
+		/// Raised when attempting to access a folder the user does not have permissions tooo
+		/// </summary>
 		public static event OnUnauthorizedAccessException UnauthorizedAccessExceptionEvent;
         
 		public delegate void OnTraverseFolder(string status);
+        
 		public static event OnTraverseFolder OnTraverseEvent;
         
 		public delegate void OnTraverseExcludeFolder(string sender);
+        
+        /// <summary>
+		/// Called each time a folder is being traversed
+		/// </summary>
 		public static event OnTraverseExcludeFolder OnTraverseExcludeFolderEvent;
         
 		public static bool Cancelled = false;
