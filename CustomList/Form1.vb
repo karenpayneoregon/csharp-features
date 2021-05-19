@@ -3,8 +3,8 @@ Imports System.Runtime.CompilerServices
 
 Public Class Form1
 
-	WithEvents mBindingSource As New BindingSource
-	Private mBindingList As New BindingList(Of Work)
+	WithEvents workBindingSource As New BindingSource
+	Private workBindingList As New BindingList(Of Work)
 
 
 	Private Sub PopulateButton_Click(sender As Object, e As EventArgs) Handles PopulateButton.Click
@@ -16,15 +16,15 @@ Public Class Form1
 			New Work With {.Id = 100, .Description = "One hundred", .UnitCost = 100, .Quantity = 5}
 		}
 
-		mBindingList = New BindingList(Of Work)(list)
-		mBindingSource.DataSource = mBindingList
-		DataGridView1.DataSource = mBindingSource
+		workBindingList = New BindingList(Of Work)(list)
+		workBindingSource.DataSource = workBindingList
+		DataGridView1.DataSource = workBindingSource
 
 	End Sub
 
 	Private Sub TotalButton_Click(sender As Object, e As EventArgs) Handles TotalButton.Click
-		If mBindingSource.DataSource IsNot Nothing Then
-			Dim total = mBindingList.ToList().Total()
+		If workBindingSource.DataSource IsNot Nothing Then
+			Dim total = workBindingList.ToList().Total()
 			TotalLabel.Text = $"Total: {total}"
 		Else
 			MessageBox.Show("No work items")
@@ -33,13 +33,14 @@ Public Class Form1
 
 	Private Sub ChangeButton_Click(sender As Object, e As EventArgs) Handles ChangeButton.Click
 
-		If mBindingSource.DataSource IsNot Nothing Then
-
-		    Dim quantity As Integer
+		If workBindingSource.DataSource IsNot Nothing Then
+			Dim quantity As Integer
 
 			If Integer.TryParse(QuantityTextBox.Text, quantity) Then
-				mBindingList(mBindingSource.Position).Quantity = quantity
-				mBindingSource.ResetCurrentItem()
+				Dim current As Work = workBindingList(workBindingSource.Position)
+
+				current.Quantity = quantity
+				workBindingSource.ResetCurrentItem()
 			End If
 
 		Else
