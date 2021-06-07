@@ -58,9 +58,13 @@ namespace Ranges_examples
 
             //CreatingContacts();
 
-            BetweenStringItems();
+            //BetweenStringItems();
 
-
+            var list = new List<string> { "abc", "def", "ghi" };
+            Range range = new Range(0, ^1);
+            var subList1 = list.GetRange(range);
+            var subList = list.GetRange(0..1);
+            Console.WriteLine();
 
         }
 

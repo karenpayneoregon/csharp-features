@@ -36,6 +36,7 @@ namespace RecursivePatterns
             this.ResultsTextBox = new System.Windows.Forms.TextBox();
             this.ValidBirthYearButton = new System.Windows.Forms.Button();
             this.WriteExceptionMockButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Example1Button
@@ -108,11 +109,22 @@ namespace RecursivePatterns
             this.WriteExceptionMockButton.UseVisualStyleBackColor = true;
             this.WriteExceptionMockButton.Click += new System.EventHandler(this.WriteExceptionMockButton_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(266, 234);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(161, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "if (a is \"bcd\" or \"efg\")";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 319);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.WriteExceptionMockButton);
             this.Controls.Add(this.ValidBirthYearButton);
             this.Controls.Add(this.ResultsTextBox);
@@ -138,6 +150,7 @@ namespace RecursivePatterns
         private System.Windows.Forms.TextBox ResultsTextBox;
         private System.Windows.Forms.Button ValidBirthYearButton;
         private System.Windows.Forms.Button WriteExceptionMockButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 

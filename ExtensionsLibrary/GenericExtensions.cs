@@ -55,5 +55,11 @@ namespace ExtensionsLibrary
         public static bool LessThan<T>(this IComparable<T> sender, T maximumValue) =>
             sender.CompareTo(maximumValue) <= 0;
 
+        public static List<T> GetRange<T>(this List<T> list, Range range)
+        {
+            var (start, length) = range.GetOffsetAndLength(list.Count);
+            return list.GetRange(start, length);
+        }
+
     }
 }

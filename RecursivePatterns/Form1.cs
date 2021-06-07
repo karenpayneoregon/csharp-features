@@ -173,5 +173,27 @@ namespace RecursivePatterns
             WriteConventional(dummyException, ExceptionLogType.Post);
             WriteByExpression(dummyException, ExceptionLogType.Post);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var value = "Accounting Manager";
+            Debug.WriteLine($"Conventional = {Conventional(value)}");
+            Debug.WriteLine($"PattenMatching = {PattenMatching(value)}");
+            Debug.WriteLine("");
+            
+            value = "Sales Manager";
+            Debug.WriteLine($"Conventional = {Conventional(value)}");
+            Debug.WriteLine($"PattenMatching = {PattenMatching(value)}");
+            Debug.WriteLine("");
+
+            value = "Sales associate";
+            Debug.WriteLine($"Conventional = {Conventional(value)}");
+            Debug.WriteLine($"PattenMatching = {PattenMatching(value)}");
+
+        }
+
+        private static bool Conventional(string value) => value == "Accounting Manager" || value == "Sales Associate";
+        private static bool PattenMatching(string value) => value is "Accounting Manager" or "Sales Associate";
+        static bool IsConferenceDay(DateTime date) => date is { Year: 2020, Month: 5, Day: 19 or 20 or 21 };
     }
 }
