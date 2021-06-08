@@ -16,6 +16,7 @@ namespace FileLibraryConsole
             //Debug.WriteLine(Operations.UniqueFileName);
             //Debug.WriteLine(Operations.GenerateFileName());
             //Debug.WriteLine(Operations.GetTempFileName(null));
+            
 
             //for (int index = 0; index < 20; index++)
             //{
