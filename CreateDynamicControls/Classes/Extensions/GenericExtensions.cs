@@ -7,7 +7,7 @@ namespace CreateDynamicControls.Classes.Extensions
     public static class GenericExtensions
     {
         /// <summary>
-        /// Iterate T, present property names, values and type
+        /// Iterate T, present property names, values and type.
         /// </summary>
         /// <typeparam name="T">Class type</typeparam>
         /// <param name="sender">Instance of T</param>        

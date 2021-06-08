@@ -133,6 +133,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DescendantsDemo", "Descenda
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithClasses", "WorkingWithClasses\WorkingWithClasses.csproj", "{A420D810-33B1-4CB7-9B9A-23940357BABE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IterateTwoList", "IterateTwoList\IterateTwoList.csproj", "{26226167-F84D-469E-93D8-677E35476739}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -343,6 +345,10 @@ Global
 		{A420D810-33B1-4CB7-9B9A-23940357BABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A420D810-33B1-4CB7-9B9A-23940357BABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A420D810-33B1-4CB7-9B9A-23940357BABE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26226167-F84D-469E-93D8-677E35476739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26226167-F84D-469E-93D8-677E35476739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26226167-F84D-469E-93D8-677E35476739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26226167-F84D-469E-93D8-677E35476739}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -391,6 +397,7 @@ Global
 		{2B598C09-0854-485D-8B27-A9E46CFEC890} = {3C246579-C520-4BC8-8D46-869CE1D9B99E}
 		{87BB2E22-0040-4CB0-8008-3B88B597909E} = {518C84FE-5F56-4232-BC7D-3CDDD558E784}
 		{A420D810-33B1-4CB7-9B9A-23940357BABE} = {EE7FC863-5F38-4D0D-8170-189D9821B369}
+		{26226167-F84D-469E-93D8-677E35476739} = {518C84FE-5F56-4232-BC7D-3CDDD558E784}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C03FED31-47C8-4D1D-BCF5-C77EFDBA54AE}
