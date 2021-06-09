@@ -11,13 +11,17 @@ namespace EntityCoreExtensions
 {
     public static class DbContexts
     {
+        public static void GetModelNames(this DbContext context)
+        {
+            var entityTypes = context.Model.GetEntityTypes().Select(item => item.ClrType).ToList();
+        }
         /// <summary>
         /// Get details for a model
         /// </summary>
         /// <param name="context">Active dbContext</param>
         /// <param name="modelName">Model name in context</param>
         /// <returns>List&lt;SqlColumn&gt;</returns>
-        public static List<SqlColumn> GetEntityProperties(this DbContext context, string modelName) 
+        public static List<SqlColumn> GetEntityProperties(this DbContext context, string modelName)
         {
 
             if (context == null) throw new ArgumentNullException(nameof(context));
@@ -37,7 +41,7 @@ namespace EntityCoreExtensions
 
                 sqlColumn.IsPrimaryKey = itemProperty.IsKey();
                 sqlColumn.IsForeignKey = itemProperty.IsForeignKey();
-                sqlColumn.IsNullable = itemProperty .IsColumnNullable();
+                sqlColumn.IsNullable = itemProperty.IsColumnNullable();
 
                 sqlColumnsList.Add(sqlColumn);
 
@@ -124,7 +128,7 @@ namespace EntityCoreExtensions
 
             var commentList = new List<ModelComment>();
 
-            IEnumerable<IProperty> properties = context.Model.FindEntityType(entityType ?? 
+            IEnumerable<IProperty> properties = context.Model.FindEntityType(entityType ??
                 throw new InvalidOperationException()).GetProperties();
 
             foreach (IProperty itemProperty in properties)
@@ -156,7 +160,7 @@ namespace EntityCoreExtensions
 
             foreach (var entry in entries)
             {
-               
+
                 entry.State = entry.State switch
                 {
                     EntityState.Modified => EntityState.Unchanged,
@@ -167,5 +171,7 @@ namespace EntityCoreExtensions
                 };
             }
         }
+
+
     }
 }

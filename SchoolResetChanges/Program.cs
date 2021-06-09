@@ -12,8 +12,6 @@ namespace SchoolResetChanges
             Console.ReadLine();
 
         }
-
     }
-
 
 }
