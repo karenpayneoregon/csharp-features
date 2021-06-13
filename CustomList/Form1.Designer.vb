@@ -28,6 +28,7 @@ Partial Class Form1
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.QuantityTextBox = New System.Windows.Forms.TextBox()
         Me.TotalLabel = New System.Windows.Forms.Label()
+        Me.GetDesktopFilesButton = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -83,11 +84,21 @@ Partial Class Form1
         Me.TotalLabel.TabIndex = 5
         Me.TotalLabel.Text = "000"
         '
+        'GetDesktopFilesButton
+        '
+        Me.GetDesktopFilesButton.Location = New System.Drawing.Point(331, 214)
+        Me.GetDesktopFilesButton.Name = "GetDesktopFilesButton"
+        Me.GetDesktopFilesButton.Size = New System.Drawing.Size(148, 23)
+        Me.GetDesktopFilesButton.TabIndex = 6
+        Me.GetDesktopFilesButton.Text = "Get desktop files"
+        Me.GetDesktopFilesButton.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(495, 246)
+        Me.Controls.Add(Me.GetDesktopFilesButton)
         Me.Controls.Add(Me.TotalLabel)
         Me.Controls.Add(Me.QuantityTextBox)
         Me.Controls.Add(Me.DataGridView1)
@@ -110,4 +121,5 @@ Partial Class Form1
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents QuantityTextBox As TextBox
     Friend WithEvents TotalLabel As Label
+    Friend WithEvents GetDesktopFilesButton As Button
 End Class

@@ -11,7 +11,7 @@ namespace SchoolDatabase
         public static void GetModelNames()
         {
             using var context = new SchoolContext();
-            context.GetModelNames();
+            
             
         }
         public static void TestReset()

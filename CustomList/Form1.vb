@@ -1,4 +1,5 @@
 ﻿Imports System.ComponentModel
+Imports System.IO
 
 Public Class Form1
 
@@ -46,5 +47,19 @@ Public Class Form1
 			MessageBox.Show("No work items")
 		End If
 
+	End Sub
+	Public Shared Sub GetDesktopFiles()
+		Dim fileInfos = (New DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory))).
+				GetFiles().Concat((New DirectoryInfo(
+					Environment.GetFolderPath(Environment.SpecialFolder.CommonDesktopDirectory))).
+									 GetFiles()).OrderBy(Function(item) item.Name)
+
+		For Each file In fileInfos
+			Debug.WriteLine(file.Name)
+		Next
+	End Sub
+
+	Private Sub GetDesktopFilesButton_Click(sender As Object, e As EventArgs) Handles GetDesktopFilesButton.Click
+		GetDesktopFiles()
 	End Sub
 End Class

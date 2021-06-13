@@ -11,9 +11,9 @@ namespace EntityCoreExtensions
 {
     public static class DbContexts
     {
-        public static void GetModelNames(this DbContext context)
+        public static List<Type> ModelTypeInformation(this DbContext context)
         {
-            var entityTypes = context.Model.GetEntityTypes().Select(item => item.ClrType).ToList();
+            return context.Model.GetEntityTypes().Select(entityType => entityType.ClrType).ToList();
         }
         /// <summary>
         /// Get details for a model
