@@ -1,0 +1,34 @@
+﻿{
+  "Fruits": [
+    {
+      "Id": 100001,
+      "Item": "Manngo",
+      "Qty": 20,
+      "price": 10000
+    },
+    {
+      "Id": 100002,
+      "Item": "Durian",
+      "Qty": 50,
+      "price": 50000
+    },
+    {
+      "Id": 100003,
+      "Item": "Pisang",
+      "Qty": 110,
+      "price": 70000
+    },
+    {
+      "Id": 100004,
+      "Item": "Aple",
+      "Qty": 90,
+      "price": 900000
+    },
+    {
+      "Id": 100005,
+      "Item": "Salak",
+      "Qty": 100,
+      "price": 75000
+    }
+  ]
+}
