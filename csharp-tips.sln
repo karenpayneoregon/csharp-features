@@ -143,7 +143,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChunkArrayFromFIle", "Chunk
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{9B7D2FC8-6DDA-4724-8576-C05FC6B4A115}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchExpressionConsole", "SwitchExpressionConsole\SwitchExpressionConsole.csproj", "{78C8EFC6-79B3-4250-99B0-93697178B5BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchExpressionConsole", "SwitchExpressionConsole\SwitchExpressionConsole.csproj", "{78C8EFC6-79B3-4250-99B0-93697178B5BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetStackTrace", "GetStackTrace\GetStackTrace.csproj", "{91DD64AF-950B-4C56-B24A-0A6100069F08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -375,6 +377,10 @@ Global
 		{78C8EFC6-79B3-4250-99B0-93697178B5BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78C8EFC6-79B3-4250-99B0-93697178B5BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78C8EFC6-79B3-4250-99B0-93697178B5BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91DD64AF-950B-4C56-B24A-0A6100069F08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91DD64AF-950B-4C56-B24A-0A6100069F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91DD64AF-950B-4C56-B24A-0A6100069F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91DD64AF-950B-4C56-B24A-0A6100069F08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -429,6 +435,7 @@ Global
 		{DDEA2DDB-FF11-4A12-8500-24ED807A2DDF} = {EE7FC863-5F38-4D0D-8170-189D9821B369}
 		{9B7D2FC8-6DDA-4724-8576-C05FC6B4A115} = {518C84FE-5F56-4232-BC7D-3CDDD558E784}
 		{78C8EFC6-79B3-4250-99B0-93697178B5BF} = {71D633FC-91E8-4C0B-9F1E-E03E127BDA25}
+		{91DD64AF-950B-4C56-B24A-0A6100069F08} = {EE7FC863-5F38-4D0D-8170-189D9821B369}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C03FED31-47C8-4D1D-BCF5-C77EFDBA54AE}
