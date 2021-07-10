@@ -31,6 +31,7 @@ namespace GetDateTimeFromInternet
         {
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.GetDateTimeButton = new System.Windows.Forms.Button();
+            this.TimeTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -51,11 +52,20 @@ namespace GetDateTimeFromInternet
             this.GetDateTimeButton.UseVisualStyleBackColor = true;
             this.GetDateTimeButton.Click += new System.EventHandler(this.GetDateTimeButton_Click);
             // 
+            // TimeTextBox
+            // 
+            this.TimeTextBox.Location = new System.Drawing.Point(28, 68);
+            this.TimeTextBox.Name = "TimeTextBox";
+            this.TimeTextBox.Size = new System.Drawing.Size(200, 23);
+            this.TimeTextBox.TabIndex = 2;
+            this.TimeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(424, 103);
+            this.Controls.Add(this.TimeTextBox);
             this.Controls.Add(this.GetDateTimeButton);
             this.Controls.Add(this.dateTimePicker1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -63,6 +73,7 @@ namespace GetDateTimeFromInternet
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Local time from Internet";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -70,6 +81,7 @@ namespace GetDateTimeFromInternet
 
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button GetDateTimeButton;
+        private System.Windows.Forms.TextBox TimeTextBox;
     }
 }
 
