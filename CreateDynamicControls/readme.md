@@ -2,9 +2,7 @@
 
 ![screen](assets/CreateButtons.png)
 
-![img](../assets/ConventionFramework.png)
 
-![img](../assets/kpTraining.png)
 
 
 The following sets up constant values for creating buttons

@@ -60,12 +60,38 @@ namespace Ranges_examples
 
             //BetweenStringItems();
 
-            var list = new List<string> { "abc", "def", "ghi" };
-            Range range = new Range(0, ^1);
-            var subList1 = list.GetRange(range);
-            var subList = list.GetRange(0..1);
-            Console.WriteLine();
+            //Ranger();
 
+            //TimeSpan timeSpan = new TimeSpan(1, 13, 3, 0);
+            //DateTime dateTime = timeSpan.ToDateTime();
+            //Console.WriteLine(dateTime);
+
+            //var person = new Person("Karen", "Anne", "Payne");
+
+            //var (first, middle, last) = person; // This calls the Deconstruct method
+
+            //Console.WriteLine(first);
+            //Console.WriteLine(middle);
+            //Console.WriteLine(last);
+
+            double value = -2;
+            Console.WriteLine(value.IsPositive());
+
+
+            Console.ReadLine();
+        }
+
+        private static void Ranger()
+        {
+            var list = new List<string> {"abc", "def", "ghi"};
+            Range range = new Range(0, ^1);
+            List<string> subList1 = list.GetRange(range);
+            List<string> subList = list.GetRange(0..1);
+
+
+            Console.WriteLine($"{string.Join(",", subList1.ToArray())}");
+            Console.WriteLine($"{string.Join(",", subList.ToArray())}");
+            Console.WriteLine();
         }
 
         private static void BetweenInts()
@@ -178,7 +204,6 @@ namespace Ranges_examples
 
         }
 
-
         /// <summary>
         /// public static int GetCityIndex(string cityName) => SomeOregonCities.ToList().IndexOf(cityName);
         /// </summary>
@@ -201,9 +226,7 @@ namespace Ranges_examples
 
             Console.WriteLine();
         }
-
-
-
+        
         private static void Creating1()
         {
             string startCity = "Aloha";
@@ -469,10 +492,6 @@ namespace Ranges_examples
             }
         }
 
-
-
-
-
         /// <summary>
         /// Indexer sub string from start of string
         /// </summary>
@@ -566,5 +585,31 @@ namespace Ranges_examples
         }
 
         #endregion
+    }
+    public static class DateTimeExtensions
+    {
+        public static DateTime ToDateTime(this TimeSpan sender) => DateTime.ParseExact(sender.Formatted("hh:mm"), "H:mm", null, DateTimeStyles.None);
+        public static string Formatted(this TimeSpan sender, string format = "hh:mm tt") => DateTime.Today.Add(sender).ToString(format);
+    }
+
+    public class Person
+    {
+        public Person(string firstName, string middleName, string lastName) => 
+            (FirstName, MiddleName, LastName) = (firstName, middleName, lastName);
+
+        public void Deconstruct(out string firstName, out string middleName, out string lastName)
+        {
+            firstName = FirstName;
+            middleName = MiddleName;
+            lastName = LastName;
+        }
+
+        public string FirstName { get; set; }
+        public string MiddleName { get; set; }
+        public string LastName { get; set; }
+
+        public override string ToString() => 
+            $"{FirstName} {MiddleName} {LastName}";
+
     }
 }

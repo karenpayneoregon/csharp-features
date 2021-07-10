@@ -14,8 +14,7 @@ namespace ExtensionsLibrary
         /// <typeparam name="T">Type implementing IComparable</typeparam>
         /// <param name="value">Value to test</param>
         /// <returns>true if positive, false otherwise</returns>
-        public static bool IsPositive<T>(this T value) where T : struct, IComparable<T> =>
-            value.CompareTo(default(T)) > 0;
+        public static bool IsPositive<T>(this T value) where T : struct, IComparable<T> => value.CompareTo(default(T)) > 0;
 
         /// <summary>
         /// Determine if value is negative
