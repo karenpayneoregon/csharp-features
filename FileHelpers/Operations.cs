@@ -51,7 +51,7 @@ namespace FileHelpers
 
 			if (!excludeFileExtensions.Any(directoryInfo.FullName.Contains))
 			{
-				await Task.Delay(1);
+				await Task.Delay(1, ct);
                 OnTraverseEvent?.Invoke(directoryInfo.FullName);
             }
 			else
@@ -96,7 +96,7 @@ namespace FileHelpers
 								   }
 
 							   }
-				});
+				}, ct);
 
 			}
 			catch (Exception ex)
