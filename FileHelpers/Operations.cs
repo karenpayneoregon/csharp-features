@@ -70,8 +70,9 @@ namespace FileHelpers
 
 								   folder = dir;
 
-								   if ((folder.Attributes & FileAttributes.Hidden) == FileAttributes.Hidden || (folder.Attributes & FileAttributes.System) == FileAttributes.System || (folder.Attributes & FileAttributes.ReparsePoint) == FileAttributes.ReparsePoint)
-								   {
+								   if ((folder.Attributes & FileAttributes.Hidden) == FileAttributes.Hidden || 
+                                       (folder.Attributes & FileAttributes.System) == FileAttributes.System ||
+                                       (folder.Attributes & FileAttributes.ReparsePoint) == FileAttributes.ReparsePoint) {
                                        OnTraverseExcludeFolderEvent?.Invoke($"* {folder.FullName}");
 
                                        continue;
