@@ -1,4 +1,6 @@
-﻿# About
+﻿# Json Code Samples
+
+## About
 
 Demonstrates using Newtonshoft Json.net how to
 
@@ -29,7 +31,7 @@ Demonstrates using Newtonshoft Json.net how to
 
 ---
 
-# Requires
+## Requires
 
 NuGet packages
 

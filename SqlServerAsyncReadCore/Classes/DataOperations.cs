@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -19,30 +20,23 @@ namespace SqlServerAsyncReadCore.Classes
             {
                 var productTable = new DataTable();
 
-                using (var cn = new SqlConnection(_connectionString))
+                using var cn = new SqlConnection(_connectionString);
+                using var cmd = new SqlCommand {Connection = cn, CommandText = SelectStatement()};
+                try
                 {
-
-                    using (var cmd = new SqlCommand() { Connection = cn })
-                    {
-
-                        cmd.CommandText = SelectStatement();
-                        try
-                        {
-                            await cn.OpenAsync(ct);
-                        }
-                        catch (TaskCanceledException tce)
-                        {
-                            return null;
-                        }
-                        catch (Exception ex)
-                        {
-                            return null;
-                        }
-
-                        productTable.Load(await cmd.ExecuteReaderAsync());
-                    }
-
+                    await cn.OpenAsync(ct);
+                    Debug.WriteLine("Open");
                 }
+                catch (TaskCanceledException tce)
+                {
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    return null;
+                }
+
+                productTable.Load(await cmd.ExecuteReaderAsync());
 
                 return productTable;
 

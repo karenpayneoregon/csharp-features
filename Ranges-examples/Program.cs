@@ -74,13 +74,40 @@ namespace Ranges_examples
             //Console.WriteLine(middle);
             //Console.WriteLine(last);
 
-            double value = -2;
-            Console.WriteLine(value.IsPositive());
+            //double value = -2;
+            //Console.WriteLine(value.IsPositive());
 
+            DayNamesIndexing();
 
             Console.ReadLine();
         }
 
+        private static void DayNamesIndexing()
+        {
+            var days = DateTimeFormatInfo.CurrentInfo?.DayNames;
+
+            var workDays = days?[1..6];
+
+            foreach (var day in workDays)
+            {
+                Debug.WriteLine(day);
+            }
+
+            Debug.WriteLine("");
+
+            var indexed = days!
+                .Select((name, index) => new
+                {
+                    Name = name, 
+                    Index = index
+                });
+
+            foreach (var dayItem in indexed)
+            {
+                Debug.WriteLine($"{dayItem.Index,-3}{dayItem.Name}");
+            }
+
+        }
         private static void Ranger()
         {
             var list = new List<string> {"abc", "def", "ghi"};

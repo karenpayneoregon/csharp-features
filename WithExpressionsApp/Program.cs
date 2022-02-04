@@ -28,7 +28,7 @@ namespace WithExpressionsApp
 
             if (person is not null)
             {
-                var otherPerson = person with { LastName = "Black" };
+                Person? otherPerson = person with { LastName = "Black" };
 
                 WriteSectionBold("using with", false);
 
