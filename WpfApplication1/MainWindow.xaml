@@ -14,7 +14,7 @@
     </Window.DataContext>
 
     <Window.Resources>
-        <DataTemplate x:Key="Template">
+        <DataTemplate x:Key="Template" DataType="classes:ViewData">
             <StackPanel Orientation="Horizontal">
 
                 <Image

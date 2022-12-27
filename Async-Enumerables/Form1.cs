@@ -18,7 +18,7 @@ namespace Async_Enumerables
 {
     public partial class Form1 : Form
     {
-        private CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
+        private CancellationTokenSource _cancellationTokenSource = new ();
         public Form1()
         {
             InitializeComponent();
@@ -44,8 +44,11 @@ namespace Async_Enumerables
             if (_cancellationTokenSource.IsCancellationRequested)
             {
                 _cancellationTokenSource.Dispose();
-                _cancellationTokenSource = new CancellationTokenSource(TimeSpan.FromSeconds(1));
-                _cancellationTokenSource.CancelAfter(200);
+
+                _cancellationTokenSource = ShouldTimeoutCheckBox.Checked ? 
+                    new CancellationTokenSource(TimeSpan.FromSeconds(TimeoutUpDown.AsInteger)) : 
+                    new CancellationTokenSource();
+                
             }
 
             try

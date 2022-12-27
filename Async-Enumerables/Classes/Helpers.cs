@@ -14,7 +14,14 @@ namespace Async_Enumerables.Classes
         /// Provides current iteration value
         /// </summary>
         public static event OnIterate OnIterateEvent;
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="start">start value</param>
+        /// <param name="count">iterations</param>
+        /// <param name="delay">pause value</param>
+        /// <param name="cancellationToken">new token</param>
+        /// <returns></returns>
         public static async IAsyncEnumerable<int> RangeAsync(int start, int count, int delay, [EnumeratorCancellation] CancellationToken cancellationToken = default)
         {
             for (var index = 0; index < count; index++)
@@ -32,6 +39,7 @@ namespace Async_Enumerables.Classes
         {
             await foreach (var item in RangeAsync(1, 90, 99, token))
             {
+
                 if (token.IsCancellationRequested)
                 {
                     token.ThrowIfCancellationRequested();
@@ -41,6 +49,7 @@ namespace Async_Enumerables.Classes
                 {
                     throw new Exception("Well now");
                 }
+
                 OnIterateEvent?.Invoke(item);
             }
         }
